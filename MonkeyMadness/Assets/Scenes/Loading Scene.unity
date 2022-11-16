@@ -407,6 +407,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: XROrigin
       objectReference: {fileID: 0}
+    - target: {fileID: 7488574137283324894, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
+      propertyPath: secondaryB.m_Action.m_Id
+      value: 5d845576-4eee-49fd-a423-9ab8851854a4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7488574137283324894, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
+      propertyPath: secondaryB.m_Action.m_Name
+      value: Secondary B
+      objectReference: {fileID: 0}
     - target: {fileID: 7786832109538012423, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
       propertyPath: sceneViewId
       value: 1
