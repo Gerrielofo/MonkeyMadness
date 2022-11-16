@@ -20,12 +20,14 @@ public class AnimateHand : MonoBehaviour
     {
         float triggerValue = triggerAnimation.action.ReadValue<float>();
 
+        print(triggerValue);
         // sets animation state of the "placeholderanimation1" animation if the animation has a different name change this "placeholderanimation1" name
-        handAnimator.SetFloat("placeholderanimation1", triggerValue);
+        //handAnimator.SetFloat("placeholderanimation1", triggerValue);
 
         float gripValue = gripAnimation.action.ReadValue<float>();
+        print(gripValue);
 
         // sets animation state of the "placeholderanimation2" animation if the animation has a different name change this "placeholderanimation2" name
-        handAnimator.SetFloat("placeholderanimation2", gripValue);
+        //handAnimator.SetFloat("placeholderanimation2", gripValue);
     }
 }
