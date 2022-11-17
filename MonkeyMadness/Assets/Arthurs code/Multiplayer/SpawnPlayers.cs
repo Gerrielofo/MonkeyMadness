@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class SpawnPlayers : MonoBehaviour
+public class SpawnPlayers : MonoBehaviourPunCallbacks
 {
-    public GameObject PlayerPrefab;
+    public GameObject spawnedPlayerPrefab;
     public float minX, maxX, minY, maxY;
 
     // Start is called before the first frame update
-    void Start() {
+    private void Start() {
+        Debug.Log("Joined room");
         Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-        PhotonNetwork.Instantiate(PlayerPrefab.name, randomPosition, Quaternion.identity);
+        spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player", randomPosition, Quaternion.identity);
+        Debug.Log(spawnedPlayerPrefab.name);
+    }
+    public override void OnLeftRoom() {
+        base.OnLeftRoom();
+        PhotonNetwork.Destroy(spawnedPlayerPrefab);
     }
 }
