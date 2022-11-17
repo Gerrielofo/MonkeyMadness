@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using TMPro;
 
 public class Keyboard : MonoBehaviour
 {
-    public TMP_InputField inputfield;
+    public TMP_InputField joinInputfield, createInputfield, inputfield;
     public GameObject normalButtons;
     public GameObject capsButtons;
     bool caps;
@@ -14,6 +15,18 @@ public class Keyboard : MonoBehaviour
         caps = false;
     }
 
+    private void Update()
+    {
+        if (joinInputfield.isFocused)
+        {
+            inputfield = joinInputfield;
+        }
+        else
+        {
+            inputfield = createInputfield;
+        }
+       
+    }
     public void InsertChar(string c)
     {
         inputfield.text += c;
