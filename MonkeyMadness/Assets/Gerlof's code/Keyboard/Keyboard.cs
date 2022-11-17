@@ -25,7 +25,7 @@ public class Keyboard : MonoBehaviour
             inputfield.text = inputfield.text.Substring(0, inputfield.text.Length - 1);
         }
     }
-    public void InsertSpace(string c)
+    public void InsertSpace()
     {
         inputfield.text += " ";
     }
