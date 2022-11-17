@@ -1,8 +1,3 @@
-/**************************************************
-Copyright : Copyright (c) RealaryVR. All rights reserved.
-Description: Script for VR Button functionality.
-***************************************************/
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
