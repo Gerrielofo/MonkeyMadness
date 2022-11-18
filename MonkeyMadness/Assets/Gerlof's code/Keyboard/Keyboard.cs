@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using TMPro;
 
 public class Keyboard : MonoBehaviour
 {
-    public TMP_InputField joinInputfield, createInputfield, inputfield;
+    public TMP_InputField createInputfield, joinInputfield, inputfield;
     public GameObject normalButtons;
     public GameObject capsButtons;
     bool caps;
