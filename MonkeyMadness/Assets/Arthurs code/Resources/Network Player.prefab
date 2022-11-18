@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3972814267809905560}
   - component: {fileID: 3972814267809905542}
   - component: {fileID: 3972814267809905561}
-  - component: {fileID: 4286691800941091831}
   - component: {fileID: 2670068488932791675}
   m_Layer: 0
   m_Name: LeftHand Controller
@@ -225,29 +224,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
---- !u!114 &4286691800941091831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3972814267809905563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 0
-  ObservedComponents:
-  - {fileID: 2670068488932791675}
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!114 &2670068488932791675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +268,6 @@ GameObject:
   - component: {fileID: 3972814268024787340}
   - component: {fileID: 3972814268024787338}
   - component: {fileID: 3972814268024787341}
-  - component: {fileID: 4551545835366039813}
   - component: {fileID: 1380137257333792025}
   m_Layer: 0
   m_Name: RightHand Controller
@@ -506,29 +481,6 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
---- !u!114 &4551545835366039813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3972814268024787343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 0
-  ObservedComponents:
-  - {fileID: 1380137257333792025}
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!114 &1380137257333792025
 MonoBehaviour:
   m_ObjectHideFlags: 0
