@@ -20,8 +20,9 @@ public class NetworkPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (photonView.IsMine) {
-            //head.gameObject.SetActive(false);
+            head.gameObject.SetActive(true);
             //leftHand.gameObject.SetActive(false);
             //rightHand.gameObject.SetActive(false);
             
