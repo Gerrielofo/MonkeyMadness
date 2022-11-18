@@ -10,8 +10,8 @@ using TMPro;
 public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 {
     [Header("Input fields", order = 0)]
-    public TMP_InputField createInput;
-    public TMP_InputField joinInput;
+    public InputField createInput;
+    public InputField joinInput;
     [Header("Room Options", order = 1)]
     public float maxPlayers;
     public void CreateRoom() {
