@@ -13,7 +13,7 @@ public class SpawnPlayers : MonoBehaviourPunCallbacks
         Debug.Log("Joined room");
         Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
         Vector2 fixedspawn = new Vector2(10, 10);
-        spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player", fixedspawn, Quaternion.identity);
+        spawnedPlayerPrefab = PhotonNetwork.Instantiate(spawnedPlayerPrefab.name, fixedspawn, Quaternion.identity);
         Debug.Log(spawnedPlayerPrefab.name);
     }
     public override void OnLeftRoom() {
