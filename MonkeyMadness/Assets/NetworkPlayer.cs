@@ -10,12 +10,11 @@ public class NetworkPlayer : MonoBehaviour
     public Transform head;
     public Transform leftHand;
     public Transform rightHand;
-    private PhotonView photonView;
+    public PhotonView photonView;
 
     // Start is called before the first frame update
     void Start()
     {
-        photonView = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
