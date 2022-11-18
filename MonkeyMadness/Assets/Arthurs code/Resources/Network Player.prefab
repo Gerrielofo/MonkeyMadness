@@ -493,7 +493,6 @@ GameObject:
   - component: {fileID: 3972814268327289970}
   - component: {fileID: 3972814268327289973}
   - component: {fileID: 6546884368362869147}
-  - component: {fileID: 5506533089342294530}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -674,27 +673,10 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents:
-  - {fileID: 5506533089342294530}
+  ObservedComponents: []
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &5506533089342294530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3972814268327289975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!1 &3972814268541465656
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +739,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ff69419676810c34db9cfa9f2f0e3424, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -895,7 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6ef4c013f0bc841a0d4e694ecbff71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 3972814268327289972}
+  head: {fileID: 3972814269546391572}
   leftHand: {fileID: 3972814267809905560}
   rightHand: {fileID: 3972814268024787340}
 --- !u!1 &3972814269501971438
@@ -960,7 +942,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ff69419676810c34db9cfa9f2f0e3424, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
