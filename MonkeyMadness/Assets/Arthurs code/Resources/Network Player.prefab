@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3972814267809905560}
   - component: {fileID: 3972814267809905542}
   - component: {fileID: 3972814267809905561}
+  - component: {fileID: 4286691800941091831}
   - component: {fileID: 2670068488932791675}
   m_Layer: 0
   m_Name: LeftHand Controller
@@ -224,6 +225,29 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
+--- !u!114 &4286691800941091831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972814267809905563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 0
+  ObservedComponents:
+  - {fileID: 2670068488932791675}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!114 &2670068488932791675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +292,7 @@ GameObject:
   - component: {fileID: 3972814268024787340}
   - component: {fileID: 3972814268024787338}
   - component: {fileID: 3972814268024787341}
+  - component: {fileID: 4551545835366039813}
   - component: {fileID: 1380137257333792025}
   m_Layer: 0
   m_Name: RightHand Controller
@@ -481,6 +506,29 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
+--- !u!114 &4551545835366039813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972814268024787343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 0
+  ObservedComponents:
+  - {fileID: 1380137257333792025}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!114 &1380137257333792025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,7 +887,7 @@ GameObject:
   - component: {fileID: 3972814268875215905}
   - component: {fileID: 699667354651209359}
   - component: {fileID: 4259201909168073283}
-  - component: {fileID: 5901356868881601782}
+  - component: {fileID: 2738754266226646914}
   m_Layer: 0
   m_Name: Network Player
   m_TagString: Untagged
@@ -911,11 +959,9 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 3
   OwnershipTransfer: 0
-  observableSearch: 2
+  observableSearch: 0
   ObservedComponents:
-  - {fileID: 5901356868881601782}
-  - {fileID: 2670068488932791675}
-  - {fileID: 1380137257333792025}
+  - {fileID: 2738754266226646914}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -936,7 +982,7 @@ MonoBehaviour:
   leftHand: {fileID: 3972814267809905560}
   rightHand: {fileID: 3972814268024787340}
   photonView: {fileID: 699667354651209359}
---- !u!114 &5901356868881601782
+--- !u!114 &2738754266226646914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -945,30 +991,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3972814268875215904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PositionModel:
-    SynchronizeEnabled: 1
-    TeleportEnabled: 1
-    TeleportIfDistanceGreaterThan: 3
-    InterpolateOption: 2
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 1
-    ExtrapolateOption: 0
-    ExtrapolateSpeed: 1
-    ExtrapolateIncludingRoundTripTime: 1
-    ExtrapolateNumberOfStoredPositions: 1
-  m_RotationModel:
-    SynchronizeEnabled: 1
-    InterpolateOption: 1
-    InterpolateRotateTowardsSpeed: 180
-    InterpolateLerpSpeed: 5
-  m_ScaleModel:
-    SynchronizeEnabled: 0
-    InterpolateOption: 0
-    InterpolateMoveTowardsSpeed: 1
-    InterpolateLerpSpeed: 0
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &3972814269501971438
 GameObject:
   m_ObjectHideFlags: 0
