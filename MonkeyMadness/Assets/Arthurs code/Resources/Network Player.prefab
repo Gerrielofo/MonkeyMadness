@@ -895,6 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6ef4c013f0bc841a0d4e694ecbff71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 3972814268327289971}
   head: {fileID: 3972814269546391572}
   leftHand: {fileID: 3972814267809905560}
   rightHand: {fileID: 3972814268024787340}
