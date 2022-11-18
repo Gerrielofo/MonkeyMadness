@@ -21,7 +21,6 @@ public class HandInputs : MonoBehaviour
 
         secondaryB.action.performed += ctx => secondaryInput = true;
         secondaryB.action.canceled += ctx => secondaryInput = false;
-
     }
 
 
