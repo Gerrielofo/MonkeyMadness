@@ -899,7 +899,7 @@ MonoBehaviour:
   head: {fileID: 3972814269546391572}
   leftHand: {fileID: 3972814267809905560}
   rightHand: {fileID: 3972814268024787340}
-  photonView: {fileID: 0}
+  photonView: {fileID: 699667354651209359}
 --- !u!1 &3972814269501971438
 GameObject:
   m_ObjectHideFlags: 0
