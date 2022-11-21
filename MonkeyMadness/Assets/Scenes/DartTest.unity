@@ -300,8 +300,9 @@ GameObject:
   - component: {fileID: 221482111}
   - component: {fileID: 221482110}
   - component: {fileID: 221482112}
+  - component: {fileID: 221482113}
   m_Layer: 0
-  m_Name: DRIEKANKERHOEK (5)
+  m_Name: driehoek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,6 +386,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameID: 3
+--- !u!64 &221482113
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221482108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: d0cd11e956f52ea4fb24c011364ab0d3, type: 3}
 --- !u!1001 &301631594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -706,8 +721,9 @@ GameObject:
   - component: {fileID: 610778439}
   - component: {fileID: 610778438}
   - component: {fileID: 610778440}
+  - component: {fileID: 610778441}
   m_Layer: 0
-  m_Name: DRIEKANKERHOEK (3)
+  m_Name: driehoek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -791,7 +807,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameID: 4
+<<<<<<< Updated upstream
 --- !u!1 &736982878
+=======
+--- !u!64 &610778441
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610778436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: d0cd11e956f52ea4fb24c011364ab0d3, type: 3}
+--- !u!1 &1094766387
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1044,8 +1078,9 @@ GameObject:
   - component: {fileID: 1226839768}
   - component: {fileID: 1226839767}
   - component: {fileID: 1226839769}
+  - component: {fileID: 1226839770}
   m_Layer: 0
-  m_Name: DRIEKANKERHOEK (2)
+  m_Name: driehoek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1129,6 +1164,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameID: 2
+--- !u!64 &1226839770
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226839765}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: d0cd11e956f52ea4fb24c011364ab0d3, type: 3}
 --- !u!1 &1491149793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,8 +1190,9 @@ GameObject:
   - component: {fileID: 1491149796}
   - component: {fileID: 1491149795}
   - component: {fileID: 1491149797}
+  - component: {fileID: 1491149798}
   m_Layer: 0
-  m_Name: DRIEKANKERHOEK (1)
+  m_Name: driehoek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1226,6 +1276,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameID: 1
+--- !u!64 &1491149798
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491149793}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: d0cd11e956f52ea4fb24c011364ab0d3, type: 3}
 --- !u!1 &1594246552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,8 +1339,9 @@ GameObject:
   - component: {fileID: 1637601480}
   - component: {fileID: 1637601479}
   - component: {fileID: 1637601481}
+  - component: {fileID: 1637601482}
   m_Layer: 0
-  m_Name: DRIEKANKERHOEK (4)
+  m_Name: driehoek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1360,6 +1425,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameID: 5
+--- !u!64 &1637601482
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637601477}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: d0cd11e956f52ea4fb24c011364ab0d3, type: 3}
 --- !u!1 &1693736141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,8 +1773,9 @@ GameObject:
   - component: {fileID: 339245934118533279}
   - component: {fileID: 2545036441712430165}
   - component: {fileID: 4058083395305876865}
+  - component: {fileID: 4058083395305876866}
   m_Layer: 0
-  m_Name: DRIEKANKERHOEK
+  m_Name: driehoek
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1714,3 +1794,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameID: 6
+--- !u!64 &4058083395305876866
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058083395305876864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: d0cd11e956f52ea4fb24c011364ab0d3, type: 3}
