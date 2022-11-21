@@ -138,6 +138,10 @@ PlayerSettings:
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: -4652872763368781119, guid: 5bb5ee23dbce7ea4996160ea5e773f1d, type: 2}
+  - {fileID: -6300889235378932667, guid: 8568763877eabdb4fb55e992ef9eecc7, type: 2}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
