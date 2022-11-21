@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 5220566291261500310}
   - component: {fileID: 5622959242061595688}
   m_Layer: 0
-  m_Name: XROrigin CloseGrabbibng
+  m_Name: XROriginCloseGrabbibng
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
