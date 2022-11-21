@@ -908,7 +908,8 @@ GameObject:
   - component: {fileID: 4091232219232971801}
   - component: {fileID: 4091232219232971798}
   - component: {fileID: 4091232219232971799}
-  - component: {fileID: 1579049154584052013}
+  - component: {fileID: 8321518999131821850}
+  - component: {fileID: 4421237941574821873}
   m_Layer: 0
   m_Name: XROriginCloseGrabbibng
   m_TagString: Untagged
@@ -1080,7 +1081,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1579049154584052013
+--- !u!114 &8321518999131821850
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1089,61 +1090,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 4091232219232971796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9403f930e3f6c3b46a8dd25bda0df151, type: 3}
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charachter: {fileID: 4091232219232971799}
-  velocityRight:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Velocity Right
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 7d97a5da-b4ae-4ce2-a847-0e1b0a5c86df
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 524182503400128080, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  velocityLeft:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Velocity Left
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 0013da85-c7dc-4d3c-a8ef-d9c1e293e5a6
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 8712398830596042961, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  gripLeft:
-    m_UseReference: 1
-    m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  gripRight:
-    m_UseReference: 1
-    m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  gripLeftInput: 0
-  gripRightInput: 0
-  movementprovider: {fileID: 4091232219232971801}
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &4421237941574821873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091232219232971796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f599e125f879c994c997710a03ab640e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftController: {fileID: 4091232217465188961}
+  rightController: {fileID: 4091232218423508634}
+  photonView: {fileID: 8321518999131821850}
 --- !u!1 &4091232219343999095
 GameObject:
   m_ObjectHideFlags: 0
