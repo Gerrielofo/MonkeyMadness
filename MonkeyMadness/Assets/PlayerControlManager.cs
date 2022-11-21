@@ -16,7 +16,7 @@ public class PlayerControlManager : MonoBehaviourPunCallbacks {
         if (!photonView.IsMine) {
             MonoBehaviour[] comps = GetComponents<MonoBehaviour>();
             foreach (MonoBehaviour c in comps) {
-                if (c != photonView) {
+                if (c != this) {
                     c.enabled = false;
                 }
             }
