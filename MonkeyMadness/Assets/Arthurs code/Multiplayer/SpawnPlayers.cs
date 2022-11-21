@@ -17,7 +17,7 @@ public class SpawnPlayers : MonoBehaviourPunCallbacks
         playerName = PhotonNetwork.LocalPlayer.NickName;
         Debug.Log("Joined room");
         Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-        Vector2 fixedspawn = new Vector2(10, 10);
+        Vector2 fixedspawn = new Vector2(10, 2);
         spawnedPlayerPrefab = PhotonNetwork.Instantiate("XROriginCloseGrabbibng", fixedspawn, Quaternion.identity);
         Debug.Log(spawnedPlayerPrefab.name);
         Debug.Log(PhotonNetwork.LocalPlayer.NickName);

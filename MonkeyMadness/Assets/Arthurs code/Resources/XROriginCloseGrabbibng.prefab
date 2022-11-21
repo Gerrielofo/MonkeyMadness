@@ -1117,6 +1117,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftController: {fileID: 4091232217465188961}
   rightController: {fileID: 4091232218423508634}
+  leftControllerClimbing: {fileID: 4966123268614822560}
+  rightControllerClimbing: {fileID: 3353761393785672163}
+  inputActionManager: {fileID: 4091232219232971803}
+  charControl: {fileID: 4091232219232971799}
+  componentsToDissable: []
+  cam: {fileID: 4091232218363148629}
   photonView: {fileID: 8321518999131821850}
 --- !u!1 &4091232219343999095
 GameObject:
