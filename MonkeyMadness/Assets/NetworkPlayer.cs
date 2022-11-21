@@ -6,22 +6,26 @@ using Photon.Pun;
 
 public class NetworkPlayer : MonoBehaviour
 {
+    public Camera cam;
     public Transform head;
     public Transform leftHand;
     public Transform rightHand;
-    private PhotonView photonView;
+    public PhotonView photonView;
 
     // Start is called before the first frame update
     void Start()
     {
-        photonView = GetComponent<PhotonView>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!photonView.IsMine) {
+            cam.gameObject.SetActive(false);
+        }
         if (photonView.IsMine) {
-            //head.gameObject.SetActive(false);
+            //head.gameObject.SetActive(true);
             //leftHand.gameObject.SetActive(false);
             //rightHand.gameObject.SetActive(false);
             

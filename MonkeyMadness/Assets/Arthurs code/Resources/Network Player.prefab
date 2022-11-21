@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3972814267809905560}
   - component: {fileID: 3972814267809905542}
   - component: {fileID: 3972814267809905561}
-  - component: {fileID: 6959614232826444762}
+  - component: {fileID: 2670068488932791675}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -224,7 +224,7 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
---- !u!114 &6959614232826444762
+--- !u!114 &2670068488932791675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -233,13 +233,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 3972814267809905563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!1 &3972814268024787343
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +268,7 @@ GameObject:
   - component: {fileID: 3972814268024787340}
   - component: {fileID: 3972814268024787338}
   - component: {fileID: 3972814268024787341}
-  - component: {fileID: 1002946960121151794}
+  - component: {fileID: 1380137257333792025}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -464,7 +481,7 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
---- !u!114 &1002946960121151794
+--- !u!114 &1380137257333792025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -473,13 +490,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 3972814268024787343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!1 &3972814268327289975
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +527,7 @@ GameObject:
   - component: {fileID: 3972814268327289970}
   - component: {fileID: 3972814268327289973}
   - component: {fileID: 6546884368362869147}
+  - component: {fileID: 7915684719372128412}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -586,12 +621,12 @@ MonoBehaviour:
       m_Name: Position
       m_Type: 0
       m_ExpectedControlType: Vector3
-      m_Id: 
+      m_Id: 61830d79-b580-48dd-be33-4e84a3a35ae6
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 
+        m_Id: cc56f0da-4e8e-4bcc-8754-a5fba4db0597
         m_Path: <XRHMD>/centerEyePosition
         m_Interactions: 
         m_Processors: 
@@ -614,12 +649,12 @@ MonoBehaviour:
       m_Name: Rotation
       m_Type: 0
       m_ExpectedControlType: Quaternion
-      m_Id: 
+      m_Id: 4350dd5f-68e8-4696-ad09-da35a1ecba4c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 
+        m_Id: f820f13d-9413-401b-8a9a-bc16450b5752
         m_Path: <XRHMD>/centerEyeRotation
         m_Interactions: 
         m_Processors: 
@@ -672,11 +707,28 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 3
   OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
+  observableSearch: 0
+  ObservedComponents:
+  - {fileID: 7915684719372128412}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &7915684719372128412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972814268327289975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &3972814268541465656
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +791,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ff69419676810c34db9cfa9f2f0e3424, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -787,6 +839,7 @@ GameObject:
   - component: {fileID: 3972814268875215905}
   - component: {fileID: 699667354651209359}
   - component: {fileID: 4259201909168073283}
+  - component: {fileID: 2738754266226646914}
   m_Layer: 0
   m_Name: Network Player
   m_TagString: Untagged
@@ -825,7 +878,7 @@ MonoBehaviour:
   m_Camera: {fileID: 3972814268327289971}
   m_OriginBaseGameObject: {fileID: 3972814268875215904}
   m_CameraFloorOffsetObject: {fileID: 3972814269546391575}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.1176
 --- !u!114 &3972814268875215905
 MonoBehaviour:
@@ -858,10 +911,9 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 3
   OwnershipTransfer: 0
-  observableSearch: 2
+  observableSearch: 0
   ObservedComponents:
-  - {fileID: 6959614232826444762}
-  - {fileID: 1002946960121151794}
+  - {fileID: 2738754266226646914}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -877,9 +929,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6ef4c013f0bc841a0d4e694ecbff71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 3972814268327289971}
   head: {fileID: 3972814269546391572}
   leftHand: {fileID: 3972814267809905560}
   rightHand: {fileID: 3972814268024787340}
+  photonView: {fileID: 699667354651209359}
+--- !u!114 &2738754266226646914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972814268875215904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &3972814269501971438
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +1012,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ff69419676810c34db9cfa9f2f0e3424, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
