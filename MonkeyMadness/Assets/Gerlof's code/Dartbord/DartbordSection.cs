@@ -9,7 +9,27 @@ public class DartbordSection : MonoBehaviour
     {
         if(collision.transform.tag == "Dart")
         {
-            print(minigameID);
+            switch (minigameID)
+            {
+                case 1:
+                    print("Playing minigame 1");
+                    break;
+                case 2:
+                    print("Playing minigame 2");
+                    break;
+                case 3:
+                    print("Playing minigame 3");
+                    break;
+                case 4:
+                    print("Playing minigame 4");
+                    break;
+                case 5:
+                    print("Playing minigame 5");
+                    break;
+                case 6:
+                    print("Playing minigame 6");
+                    break;
+            }
         }
     }
 }
