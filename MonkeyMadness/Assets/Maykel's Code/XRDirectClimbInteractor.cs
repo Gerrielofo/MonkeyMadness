@@ -15,7 +15,7 @@ public class XRDirectClimbInteractor : XRDirectInteractor
 
     public bool gripInput;
 
-
+    public bool canClimb;
     protected override void Start()
     {
         base.Start();
@@ -27,18 +27,18 @@ public class XRDirectClimbInteractor : XRDirectInteractor
 
         if(args.interactableObject.transform.gameObject.tag == "Climbable")
         {
-            if (gripInput)
-            {
-                ClimbHandActivated?.Invoke(_controllerName);
-            }
+            canClimb = true;
         }
     }
 
     public void FixedUpdate()
     {
-        if (gripInput)
+        if (canClimb)
         {
-            ClimbHandActivated?.Invoke(_controllerName);
+            if (gripInput)
+            {
+                ClimbHandActivated?.Invoke(_controllerName);
+            }
         }
         else
         {
@@ -50,7 +50,7 @@ public class XRDirectClimbInteractor : XRDirectInteractor
     {
         base.OnSelectExited(args);
 
-        ClimbHandActivated?.Invoke(_controllerName);
+        canClimb = false;
     }
 
     private void Update()
