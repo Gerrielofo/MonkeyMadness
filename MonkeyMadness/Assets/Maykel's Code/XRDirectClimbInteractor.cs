@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
 public class XRDirectClimbInteractor : XRDirectInteractor
 {
     public static event Action<string> ClimbHandActivated;
     public static event Action<string> ClimbHandDeactivated;
 
     private string _controllerName;
+
+    public InputActionProperty grip;
+
+    public bool gripInput;
+
 
     protected override void Start()
     {
@@ -21,7 +27,22 @@ public class XRDirectClimbInteractor : XRDirectInteractor
 
         if(args.interactableObject.transform.gameObject.tag == "Climbable")
         {
+            if (gripInput)
+            {
+                ClimbHandActivated?.Invoke(_controllerName);
+            }
+        }
+    }
+
+    public void FixedUpdate()
+    {
+        if (gripInput)
+        {
             ClimbHandActivated?.Invoke(_controllerName);
+        }
+        else
+        {
+            ClimbHandDeactivated?.Invoke(_controllerName);
         }
     }
 
@@ -30,5 +51,11 @@ public class XRDirectClimbInteractor : XRDirectInteractor
         base.OnSelectExited(args);
 
         ClimbHandActivated?.Invoke(_controllerName);
+    }
+
+    private void Update()
+    {
+        grip.action.performed += hfhi => gripInput = true;
+        grip.action.canceled += hfhi => gripInput = false;
     }
 }
