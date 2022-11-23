@@ -1098,9 +1098,8 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 3
   OwnershipTransfer: 0
-  observableSearch: 0
-  ObservedComponents:
-  - {fileID: 0}
+  observableSearch: 2
+  ObservedComponents: []
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1166,10 +1165,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4091232217465188986}
     m_Modifications:
-    - target: {fileID: 467212234396760337, guid: 1392f805216c47742996d4742c80721c, type: 3}
-      propertyPath: ObservedComponents.Array.data[0]
-      value: 
-      objectReference: {fileID: 6706786268942821753}
     - target: {fileID: 1591450736581743243, guid: 1392f805216c47742996d4742c80721c, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1190,6 +1185,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4141116618104824188, guid: 1392f805216c47742996d4742c80721c, type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 8981869564335728106}
     - target: {fileID: 5350001822289929954, guid: 1392f805216c47742996d4742c80721c, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1269,9 +1268,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8270855663187062767, guid: 1392f805216c47742996d4742c80721c, type: 3}
   m_PrefabInstance: {fileID: 4091232218534644167}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6706786268942821753 stripped
+--- !u!114 &8981869564335728106 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7337965322397933758, guid: 1392f805216c47742996d4742c80721c, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4927211500801338413, guid: 1392f805216c47742996d4742c80721c, type: 3}
   m_PrefabInstance: {fileID: 4091232218534644167}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1347,10 +1346,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 3719923084646791869, guid: 9f3369e30fbd31f4bb596b1a99babe83, type: 3}
-      propertyPath: ObservedComponents.Array.data[0]
-      value: 
-      objectReference: {fileID: 5220582754765595432}
     - target: {fileID: 4022625689426332818, guid: 9f3369e30fbd31f4bb596b1a99babe83, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1390,14 +1385,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3475118261464492563, guid: 9f3369e30fbd31f4bb596b1a99babe83, type: 3}
   m_PrefabInstance: {fileID: 4091232218809410130}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5220582754765595432 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8121615609484132730, guid: 9f3369e30fbd31f4bb596b1a99babe83, type: 3}
+--- !u!1 &742659686245314422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3641317572183526692, guid: 9f3369e30fbd31f4bb596b1a99babe83, type: 3}
   m_PrefabInstance: {fileID: 4091232218809410130}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &522519804054329365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742659686245314422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 0
+  ObservedComponents:
+  - {fileID: 4234525592097474973}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &4234525592097474973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742659686245314422}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
