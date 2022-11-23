@@ -627,8 +627,8 @@ GameObject:
   - component: {fileID: 5729059251352797873}
   - component: {fileID: 7013576290909491880}
   - component: {fileID: 2937204069651033959}
-  - component: {fileID: 4141116618104824188}
-  - component: {fileID: 4927211500801338413}
+  - component: {fileID: 467212234396760337}
+  - component: {fileID: 7337965322397933758}
   m_Layer: 0
   m_Name: Controller_Base
   m_TagString: Untagged
@@ -701,7 +701,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4141116618104824188
+--- !u!114 &467212234396760337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -724,7 +724,7 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &4927211500801338413
+--- !u!114 &7337965322397933758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

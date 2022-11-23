@@ -17,6 +17,7 @@ public class PlayerControlManager : MonoBehaviourPunCallbacks {
     // Start is called before the first frame update
     void Start()
     {
+        /*
         if (!photonView.IsMine) {
             MonoBehaviour[] comps = GetComponents<MonoBehaviour>();
             foreach (MonoBehaviour c in comps) {
@@ -32,6 +33,7 @@ public class PlayerControlManager : MonoBehaviourPunCallbacks {
             leftControllerClimbing.enabled = false;
             rightControllerClimbing.enabled = false;
         }
+        */
     }
 
     // Update is called once per frame
