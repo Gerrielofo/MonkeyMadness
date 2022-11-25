@@ -7,6 +7,7 @@ TagManager:
   - Bullet
   - Climbable
   - Dart
+  - balling
   layers:
   - Default
   - TransparentFX

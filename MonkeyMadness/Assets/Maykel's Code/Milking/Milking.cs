@@ -36,6 +36,5 @@ public class Milking : MonoBehaviour
                 up = false;
             }
         }
-
     }
 }

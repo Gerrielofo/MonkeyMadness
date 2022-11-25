@@ -4,45 +4,35 @@ using UnityEngine;
 
 public class PinManager : MonoBehaviour
 {
-
-
     public Transform pinTransform;
+    public Quaternion pinrot;
 
-    public bool up;
-    public bool balling;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float pinrotxf;
+    private float pinrotzf;
 
-    // Update is called once per frame
-    void Update()
+    private int pinrotxi;
+    private int pinrotzi;
+
+    public bool down;
+    public void CheckPins()
     {
-        if (balling)
+        pinrot = pinTransform.rotation;
+
+        pinrotxf = pinrot.x;
+        pinrotzf = pinrot.z;
+
+        pinrotxi = Mathf.RoundToInt(pinrotxf);
+        pinrotzi = Mathf.RoundToInt(pinrotzf);
+
+        if (pinrotxi != 0 || pinrotzi != 0)
         {
-            if (pinTransform.rotation.x != 0)
-            {
-                up = false;
-            }
-            else
-            {
-                up = true;
-            }
+            down = true;
+            print(pinrotxi);
+            print(pinrotzi);
         }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("ball"))
+        else
         {
-            balling = true;
+            down = false;
         }
-    }
-
-    public IEnumerator ResetPinTime()
-    {
-        yield return new WaitForSeconds(1);
-
-        balling = false;
     }
 }
