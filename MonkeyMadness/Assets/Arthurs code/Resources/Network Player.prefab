@@ -122,11 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6ef4c013f0bc841a0d4e694ecbff71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  head: {fileID: 0}
-  leftHand: {fileID: 0}
-  rightHand: {fileID: 0}
-  photonView: {fileID: 0}
+  head: {fileID: 2228910245365195265}
+  leftHand: {fileID: 2555247952678988890}
+  rightHand: {fileID: 6769838496221550657}
 --- !u!1 &4116329271848805446
 GameObject:
   m_ObjectHideFlags: 0
