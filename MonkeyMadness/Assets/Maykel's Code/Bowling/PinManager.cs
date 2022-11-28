@@ -27,8 +27,6 @@ public class PinManager : MonoBehaviour
         if (pinrotxi != 0 || pinrotzi != 0)
         {
             down = true;
-            print(pinrotxi);
-            print(pinrotzi);
         }
         else
         {
