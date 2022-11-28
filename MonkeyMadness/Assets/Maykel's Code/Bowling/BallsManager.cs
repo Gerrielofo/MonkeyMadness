@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BallsManager : MonoBehaviour
 {
     public List<GameObject> pins = new List<GameObject>();
+
+    public TMP_Text pointsTxt;
 
     public int pinIndex;
     public GameObject pin;
@@ -141,6 +144,10 @@ public class BallsManager : MonoBehaviour
                 }
             }
         }
+        if (roundNumber >= 2)
+        {
+            GetPointTotal();
+        }
     }
 
     public void GetPointTotal()
@@ -154,11 +161,17 @@ public class BallsManager : MonoBehaviour
         if (roundNumber >= 2 || strike)
         {
             spare = false;
-            previousStrike = true;
+
+            if (strike)
+            {
+                previousStrike = true;
+            }
+
             Debug.Log(pointsThisRound);
             pointTotal += pointsThisRound;
             pointsThisRound = 0;
         }
+        pointsTxt.text = "Points: " + pointTotal;
     }
     public IEnumerator Respawnpins()
     {
