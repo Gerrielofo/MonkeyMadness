@@ -19,7 +19,7 @@ public class BallsManager : MonoBehaviour
     //public List<int> pinNumber = new List<int>();
     public int[] pinNumber;
 
-    public bool retard;
+    public bool restart;
 
     public bool strike;
     public bool spare;
@@ -39,7 +39,8 @@ public class BallsManager : MonoBehaviour
     {
         if (other.CompareTag("balling"))
         {
-            
+            Destroy(other.gameObject);
+
             for (int i = 0; i < pinIndex; i++)
             {
                 pins[i].GetComponent<PinManager>().CheckPins();
@@ -48,7 +49,7 @@ public class BallsManager : MonoBehaviour
             RemoveNonStandingPins();
             GetPoints();
 
-            retard = true;
+            restart = true;
             roundNumber++;
         }
     }
@@ -108,9 +109,9 @@ public class BallsManager : MonoBehaviour
         {
             StartCoroutine(Respawnpins());
         }
-        if (retard)
+        if (restart)
         {
-            retard = false;
+            restart = false;
             candospawnpins = true;
             StartCoroutine(Respawnpins());
         }
