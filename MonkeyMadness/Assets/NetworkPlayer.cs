@@ -22,18 +22,21 @@ public class NetworkPlayer : MonoBehaviour {
     void Start() {
         photonView = GetComponent<PhotonView>();
         XRRig rig = FindObjectOfType<XRRig>();
-        headRig = rig.transform.Find("Camera Offset/Main Camera");
+        headRig = rig.transform.Find("Camera Offset/MainCamera");
         leftHandRig = rig.transform.Find("Camera Offset/LeftHand Controller");
         rightHandRig = rig.transform.Find("Camera Offset/RightHand Controller");
-        
+        leftHandAnimator = rig.transform.Find("Camera Offset/LeftHand Controller/Custom Left Hand Model").GetComponent<Animator>();
+        rightHandAnimator = rig.transform.Find("Camera Offset/RightHand Controller/Custom right Hand Model").GetComponent<Animator>();
+        if (photonView.IsMine) {
+            foreach (var item in GetComponentsInChildren<Renderer>()) {
+                item.enabled = false;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update() {
         if (photonView.IsMine) {
-            rightHand.gameObject.SetActive(false);
-            leftHand.gameObject.SetActive(false);
-            head.gameObject.SetActive(false);
 
             MapPosition(head, headRig);
             MapPosition(leftHand, leftHandRig);
