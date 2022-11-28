@@ -377,6 +377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Hand Presence
       objectReference: {fileID: 0}
+    - target: {fileID: 3621981467535291327, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
+      propertyPath: networkPlayer
+      value: 
+      objectReference: {fileID: 5463338773774228877}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
 --- !u!4 &2445597157826748981 stripped
@@ -440,9 +444,9 @@ PrefabInstance:
       value: Left Hand Presence
       objectReference: {fileID: 0}
     - target: {fileID: 3621981467535291327, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
-      propertyPath: showController
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: networkPlayer
+      value: 
+      objectReference: {fileID: 5463338773774228877}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c2509c76b281144cb0099fc45f17a09, type: 3}
 --- !u!4 &2172804991447736122 stripped
