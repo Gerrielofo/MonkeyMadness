@@ -11,14 +11,21 @@ public class NetworkPlayer : MonoBehaviour {
     public Transform rightHand;
     private PhotonView photonView;
 
-    public Transform headRig;
-    public Transform leftHandRig;
-    public Transform rightHandRig;
+    public Animator leftHandAnimator;
+    public Animator rightHandAnimator;
+
+    private Transform headRig;
+    private Transform leftHandRig;
+    private Transform rightHandRig;
 
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
         XRRig rig = FindObjectOfType<XRRig>();
+        headRig = rig.transform.Find("Camera Offset/Main Camera");
+        leftHandRig = rig.transform.Find("Camera Offset/LeftHand Controller");
+        rightHandRig = rig.transform.Find("Camera Offset/RightHand Controller");
+        
     }
 
     // Update is called once per frame
@@ -32,9 +39,23 @@ public class NetworkPlayer : MonoBehaviour {
             MapPosition(leftHand, leftHandRig);
             MapPosition(rightHand, rightHandRig);
 
+            UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.LeftHand), leftHandAnimator);
+            UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.RightHand), rightHandAnimator);
+        }
+    }
+
+    void UpdateHandAnimation(InputDevice targetDevice, Animator handAnimator) {
+        if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue)) {
+            handAnimator.SetFloat("Trigger", triggerValue);
+        } else {
+            handAnimator.SetFloat("Trigger", 0);
         }
 
-
+        if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue)) {
+            handAnimator.SetFloat("Grip", gripValue);
+        } else {
+            handAnimator.SetFloat("Grip", 0);
+        }
     }
 
     void MapPosition(Transform target, Transform rigTransform) {

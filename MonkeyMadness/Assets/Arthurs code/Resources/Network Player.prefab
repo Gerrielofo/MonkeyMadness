@@ -125,6 +125,8 @@ MonoBehaviour:
   head: {fileID: 2228910245365195265}
   leftHand: {fileID: 2555247952678988890}
   rightHand: {fileID: 6769838496221550657}
+  leftHandAnimator: {fileID: 0}
+  rightHandAnimator: {fileID: 0}
 --- !u!1 &4116329271848805446
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +384,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3621981467535291324, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
   m_PrefabInstance: {fileID: 1419580958285943177}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2445597157826748983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3621981467535291326, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
+  m_PrefabInstance: {fileID: 1419580958285943177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &736915883171364271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445597157826748983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters: []
+  m_SynchronizeLayers: []
 --- !u!1001 &3198829334199348358
 PrefabInstance:
   m_ObjectHideFlags: 0
