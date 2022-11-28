@@ -12,9 +12,11 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     [Header("Input fields", order = 0)]
     public TMP_InputField createInput;
     public TMP_InputField joinInput;
+    public TMP_InputField playerName;
     [Header("Room Options", order = 1)]
     public float maxPlayers;
     public void CreateRoom() {
+        PhotonNetwork.LocalPlayer.NickName = playerName.text;
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = (byte)maxPlayers;
         Debug.Log("Creating room with name: " + createInput.text);
