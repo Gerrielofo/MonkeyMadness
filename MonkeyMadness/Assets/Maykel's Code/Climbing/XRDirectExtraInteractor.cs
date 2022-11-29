@@ -15,12 +15,12 @@ public class XRDirectExtraInteractor : XRDirectInteractor
     public bool gripInput;
 
     public bool canClimb;
-    public static bool canMove;
-
+    public bool canMove;
     protected override void Start()
     {
         base.Start();
         _controllerName = gameObject.name;
+        canClimb = true;
     }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {

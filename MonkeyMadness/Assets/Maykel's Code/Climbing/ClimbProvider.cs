@@ -24,7 +24,9 @@ public class ClimbProvider : MonoBehaviour
     private bool _rightActive = false;
     private bool _leftActive = false;
 
-    public bool cantmove;
+    public XRDirectExtraInteractor extrainteractorLeft;
+    public XRDirectExtraInteractor extrainteractorRight;
+
     public ContinuousMoveProviderBase movementprovider;
 
     private void Start()
@@ -47,12 +49,14 @@ public class ClimbProvider : MonoBehaviour
         gripRight.action.performed += hfhi => gripRightInput = true;
         gripRight.action.canceled += hfhi => gripRightInput = false;
 
-        if (XRDirectExtraInteractor.canMove)
+        if (extrainteractorLeft.canMove || extrainteractorRight.canMove)
         {
+            charachter.enabled = false;
             EnableMovement();
         }
         else
         {
+            charachter.enabled = false;
             DisableMovement();
         }
 
@@ -107,7 +111,15 @@ public class ClimbProvider : MonoBehaviour
         }
         else
         {
-            EnableMovement();
+            if (extrainteractorLeft.canMove || extrainteractorRight.canMove)
+            {
+                EnableMovement();
+            }
+            else
+            {
+                return;
+            }
+            
             movementprovider.useGravity = true;
         }
     }
