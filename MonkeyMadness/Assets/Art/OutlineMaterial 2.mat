@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutlineMaterial
+  m_Name: OutlineMaterial 2
   m_Shader: {fileID: -6465566751694194690, guid: c5c482b0fdf78b541be3c5599223ac0c, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -37,7 +37,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Scale: 0.027
+    - _Scale: 0.053
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
