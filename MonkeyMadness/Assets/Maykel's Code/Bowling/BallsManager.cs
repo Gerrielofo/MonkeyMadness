@@ -5,41 +5,45 @@ using TMPro;
 
 public class BallsManager : MonoBehaviour
 {
+    [Header("Pins")]
+    #region
     public List<GameObject> pins = new List<GameObject>();
-
-    public TMP_Text pointsTxt;
-
-    public int pinIndex;
     public GameObject pin;
     public GameObject clonePin;
-
     public Transform[] spawnlocations;
+    #endregion
+    [Header("Balls")]
+    #region
+    public GameObject ball;
+    public GameObject cloneBall;
+    public Transform ballSpawnpoint;
+    #endregion
+    [Header("Placing pins")]
+    #region
+    public int pinIndex;
     public bool[] canRespawn;
-
-    //public List<int> pinNumber = new List<int>();
     public int[] pinNumber;
-
+    public int numberofpins;
+    public bool candospawnpins;
     public bool restart;
-
+    #endregion
+    [Header("Points")]
+    #region
     public bool strike;
     public bool spare;
-
-    public int roundNumber;
-
-    public int numberofpins;
-
-    public bool candospawnpins;
-
-    public int pointsThisRound;
-
-    public int pointTotal;
-
     public bool previousStrike;
+
+    public TMP_Text pointsTxt;
+    public int roundNumber;
+    public int pointsThisRound;
+    public int pointTotal;
+    #endregion
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("balling"))
         {
-            Destroy(other.gameObject);
+            Destroy(cloneBall);
 
             for (int i = 0; i < pinIndex; i++)
             {
@@ -53,13 +57,13 @@ public class BallsManager : MonoBehaviour
             roundNumber++;
         }
     }
-
     private void Start()
     {
         roundNumber = 1;
-        StartSpawnPins();
+        RoundStartPins();
+        SpawnBall();
     }
-    public void StartSpawnPins()
+    public void RoundStartPins()
     {
         for (int i = 0; i < spawnlocations.Length; i++)
         {
@@ -68,8 +72,7 @@ public class BallsManager : MonoBehaviour
             pins.Add(clonePin);
         }
     }
-
-    public void SpawnPins(int pinNumber)
+    public void BetweenRoundPins(int pinNumber)
     {
         if (canRespawn[pinNumber])
         {
@@ -78,45 +81,60 @@ public class BallsManager : MonoBehaviour
             pins.Add(clonePin);
         }
     }
-    public void RemoveNonStandingPins()
+    public void SpawnBall()
     {
-        for (int i = 0; i < pinIndex; i++)
+        cloneBall = Instantiate(ball, ballSpawnpoint);
+    }
+    public IEnumerator RespawnPins()
+    {
+        yield return new WaitForSeconds(3);
+
+        if (roundNumber >= 3 || strike)
         {
-            if (pins[i].GetComponent<PinManager>().down)
-            {
-                Destroy(pins[i]);
-                canRespawn[i] = false;
-            }
-            else
-            {
-                Destroy(pins[i]);
-                pinNumber[i] = i;
-                canRespawn[i] = true;
-            }
+            RoundStartPins();
 
-            if (i == pinIndex - 1)
-            {
-                pinIndex = 0;
+            roundNumber = 1;
 
-                pins.Clear();
+            candospawnpins = false;
+
+            if (strike)
+            {
+                strike = false;
+            }
+        }
+
+        if (candospawnpins && roundNumber != 3)
+        {
+            for (int i = 0; i < pinNumber.Length; i++)
+            {
+                BetweenRoundPins(i);
+
+                if (i == pinNumber.Length - 1)
+                {
+                    candospawnpins = false;
+                }
             }
         }
     }
+    public IEnumerator RespawnBall()
+    {
+        yield return new WaitForSeconds(3);
 
+        SpawnBall();
+    }
     private void Update()
     {
         if (strike)
         {
-            StartCoroutine(Respawnpins());
+            StartCoroutine(RespawnPins());
         }
         if (restart)
         {
             restart = false;
             candospawnpins = true;
-            StartCoroutine(Respawnpins());
+            StartCoroutine(RespawnPins());
         }
     }
-
     public void GetPoints()
     {
         for (int i = 0; i < canRespawn.Length; i++)
@@ -150,7 +168,6 @@ public class BallsManager : MonoBehaviour
             GetPointTotal();
         }
     }
-
     public void GetPointTotal()
     {
         if (previousStrike)
@@ -174,34 +191,27 @@ public class BallsManager : MonoBehaviour
         }
         pointsTxt.text = "Points: " + pointTotal;
     }
-    public IEnumerator Respawnpins()
+    public void RemoveNonStandingPins()
     {
-        yield return new WaitForSeconds(3);
-
-        if (roundNumber >= 3 || strike)
+        for (int i = 0; i < pinIndex; i++)
         {
-            StartSpawnPins();
-
-            roundNumber = 1;
-
-            candospawnpins = false;
-
-            if (strike)
+            if (pins[i].GetComponent<PinManager>().down)
             {
-                strike = false;
+                Destroy(pins[i]);
+                canRespawn[i] = false;
             }
-        }
-
-        if (candospawnpins && roundNumber != 3)
-        {
-            for (int i = 0; i < pinNumber.Length; i++)
+            else
             {
-                SpawnPins(i);
+                Destroy(pins[i]);
+                pinNumber[i] = i;
+                canRespawn[i] = true;
+            }
 
-                if (i == pinNumber.Length - 1)
-                {
-                    candospawnpins = false;
-                }
+            if (i == pinIndex - 1)
+            {
+                pinIndex = 0;
+
+                pins.Clear();
             }
         }
     }
