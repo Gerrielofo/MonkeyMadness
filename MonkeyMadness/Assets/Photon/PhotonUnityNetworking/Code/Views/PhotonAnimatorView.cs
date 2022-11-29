@@ -136,7 +136,7 @@ namespace Photon.Pun
                 this.m_StreamQueue.Reset();
                 return;
             }
-
+            if(this.photonView == null) { Debug.LogError("Photon view niet gevonden in photonAnimatorView"); }
             if (this.photonView.IsMine == true)
             {
                 this.SerializeDataContinuously();

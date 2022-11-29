@@ -15,7 +15,7 @@ public class SpawnPlayers : MonoBehaviourPunCallbacks
 
     // Start is called before the first frame update
     private void Start() {
-        if (photonView.IsMine == false) {
+        //if (photonView.IsMine == false) {
             playerName = PhotonNetwork.LocalPlayer.NickName;
             Debug.Log("Joined room");
             Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
@@ -23,7 +23,7 @@ public class SpawnPlayers : MonoBehaviourPunCallbacks
             spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player", fixedspawn, Quaternion.identity);
             Debug.Log(spawnedPlayerPrefab.name);
             Debug.Log(PhotonNetwork.LocalPlayer.NickName);
-        }
+        //}
     }
 
     public override void OnLeftRoom() {
