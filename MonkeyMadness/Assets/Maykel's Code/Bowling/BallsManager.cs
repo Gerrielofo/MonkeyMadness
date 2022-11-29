@@ -41,7 +41,7 @@ public class BallsManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("balling"))
+        if (other.CompareTag("Balling"))
         {
             Destroy(other.gameObject);
 

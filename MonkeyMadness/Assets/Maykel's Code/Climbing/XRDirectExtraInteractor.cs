@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
-public class XRDirectClimbInteractor : XRDirectInteractor
+public class XRDirectExtraInteractor : XRDirectInteractor
 {
     public static event Action<string> ClimbHandActivated;
     public static event Action<string> ClimbHandDeactivated;
@@ -12,10 +12,13 @@ public class XRDirectClimbInteractor : XRDirectInteractor
     private string _controllerName;
 
     public InputActionProperty grip;
-
     public bool gripInput;
 
+    public ContinuousMoveProviderBase movementprovider;
+
     public bool canClimb;
+    public bool canMove;
+
     protected override void Start()
     {
         base.Start();
@@ -29,30 +32,38 @@ public class XRDirectClimbInteractor : XRDirectInteractor
         {
             canClimb = true;
         }
-    }
-
-    public void FixedUpdate()
-    {
-        if (canClimb)
+        if (args.interactableObject.transform.gameObject.tag == "CrossBox")
         {
-            if (gripInput)
-            {
-                ClimbHandActivated?.Invoke(_controllerName);
-            }
-        }
-        else
-        {
-            ClimbHandDeactivated?.Invoke(_controllerName);
+            canMove = false;
         }
     }
-
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         base.OnSelectExited(args);
 
         canClimb = false;
+        canMove = true;
     }
+    public void FixedUpdate()
+    {
+        if (canClimb && gripInput)
+        {
+            ClimbHandActivated?.Invoke(_controllerName);
+        }
+        else
+        {
+            ClimbHandDeactivated?.Invoke(_controllerName);
+        }
 
+        if (canMove && gripInput)
+        {
+            movementprovider.enabled = true;
+        }
+        else
+        {
+            movementprovider.enabled = false;
+        }
+    }
     private void Update()
     {
         grip.action.performed += hfhi => gripInput = true;

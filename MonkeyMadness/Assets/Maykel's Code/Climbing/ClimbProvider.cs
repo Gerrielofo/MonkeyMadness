@@ -9,6 +9,8 @@ public class ClimbProvider : MonoBehaviour
     public static event Action ClimbActive;
     public static event Action ClimbInActive;
 
+    public static event Action canMove;
+
     public CharacterController charachter;
     public InputActionProperty velocityRight;
     public InputActionProperty velocityLeft;
@@ -24,17 +26,17 @@ public class ClimbProvider : MonoBehaviour
 
     public ContinuousMoveProviderBase movementprovider;
     
-    private void Start()
-    {
-        XRDirectClimbInteractor.ClimbHandActivated += HandActivated;
-        XRDirectClimbInteractor.ClimbHandDeactivated += HandDeactivated;
-    }
+    //private void Start()
+    //{
+    //    XRDirectClimbInteractor.ClimbHandActivated += HandActivated;
+    //    XRDirectClimbInteractor.ClimbHandDeactivated += HandDeactivated;
+    //}
 
-    private void OnDestroy()
-    {
-        XRDirectClimbInteractor.ClimbHandActivated += HandActivated;
-        XRDirectClimbInteractor.ClimbHandDeactivated += HandDeactivated;
-    }
+    //private void OnDestroy()
+    //{
+    //    XRDirectClimbInteractor.ClimbHandActivated += HandActivated;
+    //    XRDirectClimbInteractor.ClimbHandDeactivated += HandDeactivated;
+    //}
 
     private void Update()
     {
@@ -88,17 +90,24 @@ public class ClimbProvider : MonoBehaviour
     {
         if (_rightActive || _leftActive)
         {
-            movementprovider.enabled = false;
+            DisableMovement();
             movementprovider.useGravity = false;
             Climb();
         }
         else
         {
-            movementprovider.enabled = true;
+            EnableMovement();
             movementprovider.useGravity = true;
         }
     }
-
+    private void EnableMovement()
+    {
+        movementprovider.enabled = true;
+    }
+    private void DisableMovement()
+    {
+        movementprovider.enabled = false;
+    }
     private void Climb()
     {
         Vector3 velocity = _leftActive ? velocityLeft.action.ReadValue<Vector3>() : velocityRight.action.ReadValue<Vector3>();
