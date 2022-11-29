@@ -8,7 +8,7 @@ public class AutoScaler : MonoBehaviour
 
     public GameObject cameraHight;
     public GameObject player;
-    // Start is called before the first frame update
+    
     void Resize()
     {
         float headHight = cameraHight.transform.localPosition.y;
@@ -16,7 +16,7 @@ public class AutoScaler : MonoBehaviour
         transform.localScale = Vector3.one * scale;
     }
 
-    // Update is called once per frame
+    
     void OnEnable()
     {
         Resize();
