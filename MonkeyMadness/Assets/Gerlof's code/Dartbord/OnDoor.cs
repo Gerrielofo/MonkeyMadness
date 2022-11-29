@@ -15,6 +15,7 @@ public class OnDoor : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.transform.tag == "Hands")
         knockSound.Play();
     }
 }
