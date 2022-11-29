@@ -378,6 +378,10 @@ PrefabInstance:
       value: Right Hand Presence
       objectReference: {fileID: 0}
     - target: {fileID: 3621981467535291327, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
+      propertyPath: photonView
+      value: 
+      objectReference: {fileID: 326131859443020162}
+    - target: {fileID: 3621981467535291327, guid: ddc38db09f9124241b4b4e9b2b9831eb, type: 3}
       propertyPath: networkPlayer
       value: 
       objectReference: {fileID: 5463338773774228877}

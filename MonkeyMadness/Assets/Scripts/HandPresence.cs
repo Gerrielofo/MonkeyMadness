@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using Photon.Pun;
 
 public class HandPresence : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class HandPresence : MonoBehaviour
     public List<GameObject> controllerPrefabs;
     public GameObject handModelPrefab;
     public NetworkPlayer networkPlayer;
+    public PhotonView photonView;
     
     private InputDevice targetDevice;
     private GameObject spawnedController;
