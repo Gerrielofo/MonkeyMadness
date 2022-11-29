@@ -6,16 +6,18 @@ public class OnDoor : MonoBehaviour
 {
     public Animator openDoor;
     [SerializeField] private AudioSource knockSound;
-    // Start is called before the first frame update
+
     void Start()
     {
         openDoor = GetComponentInParent<Animator>();
         knockSound = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.transform.tag == "Hands")
-        knockSound.Play();
+        if (other.transform.tag == "Hands")
+        {
+            knockSound.Play();
+        }
     }
 }
