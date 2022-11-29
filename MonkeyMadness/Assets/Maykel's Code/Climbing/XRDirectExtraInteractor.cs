@@ -14,10 +14,8 @@ public class XRDirectExtraInteractor : XRDirectInteractor
     public InputActionProperty grip;
     public bool gripInput;
 
-    public ContinuousMoveProviderBase movementprovider;
-
     public bool canClimb;
-    public bool canMove;
+    public static bool canMove;
 
     protected override void Start()
     {
@@ -34,6 +32,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         }
         if (args.interactableObject.transform.gameObject.tag == "CrossBox")
         {
+            print("box"); 
             canMove = false;
         }
     }
@@ -53,15 +52,6 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         else
         {
             ClimbHandDeactivated?.Invoke(_controllerName);
-        }
-
-        if (canMove && gripInput)
-        {
-            movementprovider.enabled = true;
-        }
-        else
-        {
-            movementprovider.enabled = false;
         }
     }
     private void Update()

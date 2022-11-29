@@ -24,36 +24,47 @@ public class ClimbProvider : MonoBehaviour
     private bool _rightActive = false;
     private bool _leftActive = false;
 
+    public bool cantmove;
     public ContinuousMoveProviderBase movementprovider;
-    
-    //private void Start()
-    //{
-    //    XRDirectClimbInteractor.ClimbHandActivated += HandActivated;
-    //    XRDirectClimbInteractor.ClimbHandDeactivated += HandDeactivated;
-    //}
 
-    //private void OnDestroy()
-    //{
-    //    XRDirectClimbInteractor.ClimbHandActivated += HandActivated;
-    //    XRDirectClimbInteractor.ClimbHandDeactivated += HandDeactivated;
-    //}
+    private void Start()
+    {
+        XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
+        XRDirectExtraInteractor.ClimbHandDeactivated += HandDeactivated;
+    }
+
+    private void OnDestroy()
+    {
+        XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
+        XRDirectExtraInteractor.ClimbHandDeactivated += HandDeactivated;
+    }
 
     private void Update()
     {
-        //gripLeft.action.performed += hfhi => gripLeftInput = true;
-        //gripLeft.action.canceled += hfhi => gripLeftInput = false;
+        gripLeft.action.performed += hfhi => gripLeftInput = true;
+        gripLeft.action.canceled += hfhi => gripLeftInput = false;
 
-        //gripRight.action.performed += hfhi => gripRightInput = true;
-        //gripRight.action.canceled += hfhi => gripRightInput = false;
+        gripRight.action.performed += hfhi => gripRightInput = true;
+        gripRight.action.canceled += hfhi => gripRightInput = false;
 
-        //if (!gripRightInput)
-        //{
-        //    _rightActive = false;
-        //}
-        //if (!gripLeftInput)
-        //{
-        //    _leftActive = false;
-        //}
+        if (XRDirectExtraInteractor.canMove)
+        {
+            EnableMovement();
+        }
+        else
+        {
+            DisableMovement();
+        }
+
+
+        if (!gripRightInput)
+        {
+            _rightActive = false;
+        }
+        if (!gripLeftInput)
+        {
+            _leftActive = false;
+        }
     }
 
     private void HandActivated(string _controllerName)
