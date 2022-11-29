@@ -4,12 +4,10 @@ using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
-public class ClimbProvider : MonoBehaviour
+public class ExpandedMovementProvider : MonoBehaviour
 {
     public static event Action ClimbActive;
     public static event Action ClimbInActive;
-
-    public static event Action canMove;
 
     public CharacterController charachter;
     public InputActionProperty velocityRight;
@@ -34,13 +32,11 @@ public class ClimbProvider : MonoBehaviour
         XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
         XRDirectExtraInteractor.ClimbHandDeactivated += HandDeactivated;
     }
-
     private void OnDestroy()
     {
         XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
         XRDirectExtraInteractor.ClimbHandDeactivated += HandDeactivated;
     }
-
     private void Update()
     {
         gripLeft.action.performed += hfhi => gripLeftInput = true;
@@ -49,14 +45,14 @@ public class ClimbProvider : MonoBehaviour
         gripRight.action.performed += hfhi => gripRightInput = true;
         gripRight.action.canceled += hfhi => gripRightInput = false;
 
-        if (extrainteractorLeft.canMove || extrainteractorRight.canMove)
+        if (extrainteractorLeft.canMove && extrainteractorRight.canMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
         {
-            charachter.enabled = false;
+            Debug.Log("both is true");
             EnableMovement();
         }
         else
         {
-            charachter.enabled = false;
+            Debug.Log("one is false");
             DisableMovement();
         }
 
@@ -70,7 +66,6 @@ public class ClimbProvider : MonoBehaviour
             _leftActive = false;
         }
     }
-
     private void HandActivated(string _controllerName)
     {
         if (_controllerName == "LeftHand Controller")
@@ -86,7 +81,6 @@ public class ClimbProvider : MonoBehaviour
 
         ClimbActive?.Invoke();
     }
-
     private void HandDeactivated(string _controllerName)
     {
         if (_rightActive && _controllerName == "RightHand Controller")
@@ -100,18 +94,18 @@ public class ClimbProvider : MonoBehaviour
             ClimbActive?.Invoke();
         }
     }
-
     private void FixedUpdate()
     {
         if (_rightActive || _leftActive)
         {
             DisableMovement();
+
             movementprovider.useGravity = false;
             Climb();
         }
         else
         {
-            if (extrainteractorLeft.canMove || extrainteractorRight.canMove)
+            if (!extrainteractorLeft.canMove && !extrainteractorRight.canMove)
             {
                 EnableMovement();
             }

@@ -20,7 +20,6 @@ public class XRDirectExtraInteractor : XRDirectInteractor
     {
         base.Start();
         _controllerName = gameObject.name;
-        canClimb = true;
     }
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
@@ -32,8 +31,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         }
         if (args.interactableObject.transform.gameObject.tag == "CrossBox")
         {
-            print("box"); 
-            canMove = false;
+            canMove = true;
         }
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
@@ -41,7 +39,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         base.OnSelectExited(args);
 
         canClimb = false;
-        canMove = true;
+        canMove = false;
     }
     public void FixedUpdate()
     {
