@@ -2,28 +2,7 @@ fileFormatVersion: 2
 guid: 1b6d43482366e6045ba9aa56ee3ededa
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable:
-  - first:
-      74: 9134227459492317328
-    second: Door|bekerAction
-  - first:
-      74: 2068473037065263916
-    second: Door|bierflesAction
-  - first:
-      74: 8522523230434387470
-    second: Door|Cube.015Action
-  - first:
-      74: 2253714704677129530
-    second: Door|DoorIdleClosed
-  - first:
-      74: 5529963745848489855
-    second: Door|DoorOpen
-  - first:
-      74: -2743277388693095396
-    second: Door|kamertemplateAction
-  - first:
-      74: 8034092369561274204
-    second: Door|wijnflesAction
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2

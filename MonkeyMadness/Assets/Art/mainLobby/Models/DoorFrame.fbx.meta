@@ -1,23 +1,8 @@
 fileFormatVersion: 2
-guid: d89c7ee048e9f1f4aa2cb8c83e36ec05
+guid: d745846da1ff6bb4fb2d23b1ad85e56c
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable:
-  - first:
-      74: -6083073866622747417
-    second: Cube.015|bekerAction
-  - first:
-      74: 5587937741024481436
-    second: Cube.015|bierflesAction
-  - first:
-      74: -7070755367565475379
-    second: Cube.015|Cube.015Action
-  - first:
-      74: 9155296282772367962
-    second: Cube.015|kamertemplateAction
-  - first:
-      74: -8144452492986626118
-    second: Cube.015|wijnflesAction
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
