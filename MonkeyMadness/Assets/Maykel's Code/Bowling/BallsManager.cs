@@ -43,8 +43,9 @@ public class BallsManager : MonoBehaviour
     {
         if (other.CompareTag("balling"))
         {
-            Destroy(cloneBall);
+            Destroy(other.gameObject);
 
+            StartCoroutine(RespawnBall());
             for (int i = 0; i < pinIndex; i++)
             {
                 pins[i].GetComponent<PinManager>().CheckPins();
@@ -61,6 +62,7 @@ public class BallsManager : MonoBehaviour
     {
         roundNumber = 1;
         RoundStartPins();
+        SpawnBall();
         SpawnBall();
     }
     public void RoundStartPins()

@@ -1778,8 +1778,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pins: []
-  pointsTxt: {fileID: 1085874688508573029}
-  pinIndex: 0
   pin: {fileID: 1004434985741680967, guid: 4636cf460625f5747b7968ee7b114a4e, type: 3}
   clonePin: {fileID: 0}
   spawnlocations:
@@ -1793,14 +1791,19 @@ MonoBehaviour:
   - {fileID: 1085874689523036838}
   - {fileID: 1085874689170273958}
   - {fileID: 1085874689213423389}
+  ball: {fileID: 1048825883426612844, guid: a0d6a4e77c4876f4fa67aea3478c2157, type: 3}
+  cloneBall: {fileID: 0}
+  ballSpawnpoint: {fileID: 0}
+  pinIndex: 0
   canRespawn: 00000000000000000000
   pinNumber: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  numberofpins: 0
+  candospawnpins: 0
   restart: 0
   strike: 0
   spare: 0
+  previousStrike: 0
+  pointsTxt: {fileID: 1085874688508573029}
   roundNumber: 2
-  numberofpins: 0
-  candospawnpins: 0
   pointsThisRound: 0
   pointTotal: 0
-  previousStrike: 0
