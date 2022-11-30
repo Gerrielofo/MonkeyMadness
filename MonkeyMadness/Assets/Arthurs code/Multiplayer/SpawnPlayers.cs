@@ -7,6 +7,7 @@ using Photon.Realtime;
 public class SpawnPlayers : MonoBehaviourPunCallbacks
 {
     public GameObject spawnedPlayerPrefab;
+    public GameObject ghostPrefab;
     public float minX, maxX, minY, maxY;
     private string playerName;
     private int playerNumber;
@@ -14,13 +15,15 @@ public class SpawnPlayers : MonoBehaviourPunCallbacks
 
     // Start is called before the first frame update
     private void Start() {
-        playerName = PhotonNetwork.LocalPlayer.NickName;
-        Debug.Log("Joined room");
-        Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-        Vector2 fixedspawn = new Vector2(10, 10);
-        spawnedPlayerPrefab = PhotonNetwork.Instantiate("XROriginCloseGrabbibng", fixedspawn, Quaternion.identity);
-        Debug.Log(spawnedPlayerPrefab.name);
-        Debug.Log(PhotonNetwork.LocalPlayer.NickName);
+        //if (photonView.IsMine == false) {
+            playerName = PhotonNetwork.LocalPlayer.NickName;
+            Debug.Log("Joined room");
+            Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+            Vector2 fixedspawn = new Vector2(0, 0);
+            spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player", fixedspawn, Quaternion.identity);
+            Debug.Log(spawnedPlayerPrefab.name);
+            Debug.Log(PhotonNetwork.LocalPlayer.NickName);
+        //}
     }
 
     public override void OnLeftRoom() {

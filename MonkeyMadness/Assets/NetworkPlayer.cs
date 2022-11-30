@@ -3,44 +3,78 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using Photon.Pun;
+using UnityEngine.XR.Interaction.Toolkit;
+using Unity.XR.CoreUtils;
 
-public class NetworkPlayer : MonoBehaviour
-{
-    public Camera cam;
+public class NetworkPlayer : MonoBehaviour {
     public Transform head;
     public Transform leftHand;
     public Transform rightHand;
-    public PhotonView photonView;
+    private PhotonView photonView;
+
+    public Animator leftHandAnimator;
+    public Animator rightHandAnimator;
+
+    private Transform headRig;
+    private Transform leftHandRig;
+    private Transform rightHandRig;
 
     // Start is called before the first frame update
-    void Start()
-    {
-
+    void Start() {
+        photonView = GetComponent<PhotonView>();
+        XROrigin rig = FindObjectOfType<XROrigin>();
+        headRig = Camera.main.transform;
+        leftHandRig = rig.transform.Find("Camera Offset/LeftHand Controller");
+        rightHandRig = rig.transform.Find("Camera Offset/RightHand Controller");
+        //leftHandAnimator = rig.transform.Find("Camera Offset/LeftHand Controller/Custom Left Hand Model").GetComponent<Animator>();
+        //rightHandAnimator = rig.transform.Find("Camera Offset/RightHand Controller/Custom right Hand Model").GetComponent<Animator>();
+        if (photonView.IsMine) {
+            foreach (var item in GetComponentsInChildren<Renderer>()) {
+                item.enabled = false;
+            }
+        }
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (!photonView.IsMine) {
-            cam.gameObject.SetActive(false);
-        }
+    void Update() {
         if (photonView.IsMine) {
-            //head.gameObject.SetActive(true);
-            //leftHand.gameObject.SetActive(false);
-            //rightHand.gameObject.SetActive(false);
-            
-            MapPosition(head, XRNode.Head);
-            MapPosition(leftHand, XRNode.LeftHand);
-            MapPosition(rightHand, XRNode.RightHand);
-        }
 
+            MapPosition(head, headRig);
+            MapPosition(leftHand, leftHandRig);
+            MapPosition(rightHand, rightHandRig);
+
+            if(leftHandAnimator != null && rightHandAnimator != null) {
+                UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.LeftHand), leftHandAnimator);
+                UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.RightHand), rightHandAnimator);
+            }
+        }
     }
 
-    void MapPosition(Transform target, XRNode node) {
-        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 position);
-        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion rotation);
+    void UpdateHandAnimation(InputDevice targetDevice, Animator handAnimator) {
+        if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue)) {
+            handAnimator.SetFloat("Trigger", triggerValue);
+        } else {
+            handAnimator.SetFloat("Trigger", 0);
+        }
 
-        target.position = position;
-        target.rotation = rotation;
+        if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue)) {
+            handAnimator.SetFloat("Grip", gripValue);
+        } else {
+            handAnimator.SetFloat("Grip", 0);
+        }
+    }
+
+    void MapPosition(Transform target, Transform rigTransform) {
+        
+        target.position = rigTransform.position;
+        target.rotation = rigTransform.rotation;
+    }
+
+    public void SetRightHandAnimator(Animator hand) {
+        rightHandAnimator = hand;
+    }
+
+    public void SetLeftHandAnimator(Animator hand) {
+        leftHandAnimator = hand;
     }
 }
