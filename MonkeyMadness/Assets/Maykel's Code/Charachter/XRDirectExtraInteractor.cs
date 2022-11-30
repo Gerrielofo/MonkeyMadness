@@ -15,7 +15,11 @@ public class XRDirectExtraInteractor : XRDirectInteractor
     public bool gripInput;
 
     public bool canClimb;
+    public bool canSwing;
     public bool canMove;
+
+    public GameObject swingableVelocity;
+
     protected override void Start()
     {
         base.Start();
@@ -25,19 +29,29 @@ public class XRDirectExtraInteractor : XRDirectInteractor
     {
         base.OnSelectEntered(args);
 
-        if(args.interactableObject.transform.gameObject.tag == "Climbable")
+        
+
+        if(args.interactableObject.transform.tag == "Climbable")
         {
             canClimb = true;
         }
-        if (args.interactableObject.transform.gameObject.tag == "CrossBox")
+        if (args.interactableObject.transform.tag == "Swingable")
+        {
+            canSwing = true;
+            Debug.Log("swingAble");
+        }
+        if (args.interactableObject.transform.tag == "CrossBox")
         {
             canMove = true;
+
+            swingableVelocity = args.interactableObject.transform.gameObject;
         }
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         base.OnSelectExited(args);
 
+        canSwing = false;
         canClimb = false;
         canMove = false;
     }

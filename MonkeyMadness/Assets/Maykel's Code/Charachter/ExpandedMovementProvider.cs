@@ -101,7 +101,14 @@ public class ExpandedMovementProvider : MonoBehaviour
             DisableMovement();
 
             movementprovider.useGravity = false;
-            Climb();
+            if (extrainteractorLeft.canClimb || extrainteractorRight.canClimb)
+            {
+                Climb();
+            }
+            if (extrainteractorLeft.canSwing || extrainteractorRight.canSwing)
+            {
+                Swing();
+            }
         }
         else
         {
@@ -130,5 +137,18 @@ public class ExpandedMovementProvider : MonoBehaviour
         Vector3 velocity = _leftActive ? velocityLeft.action.ReadValue<Vector3>() : velocityRight.action.ReadValue<Vector3>();
         Debug.Log(velocity);
         charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
+    }
+    private void Swing()
+    {
+        if (_leftActive)
+        {
+            Vector3 velocity = extrainteractorLeft.swingableVelocity.GetComponent<Rigidbody>().velocity;
+            charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
+        }
+        else
+        {
+            Vector3 velocity = extrainteractorRight.swingableVelocity.GetComponent<Rigidbody>().velocity;
+            charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
+        }
     }
 }
