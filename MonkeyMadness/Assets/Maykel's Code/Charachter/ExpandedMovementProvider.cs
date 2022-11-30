@@ -45,7 +45,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         gripRight.action.performed += hfhi => gripRightInput = true;
         gripRight.action.canceled += hfhi => gripRightInput = false;
 
-        if (extrainteractorLeft.canMove && extrainteractorRight.canMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
+        if (!extrainteractorLeft.canMove && !extrainteractorRight.canMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
         {
             Debug.Log("both is true");
             EnableMovement();
