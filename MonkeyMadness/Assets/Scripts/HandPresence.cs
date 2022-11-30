@@ -2,22 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using Photon.Pun;
 
 public class HandPresence : MonoBehaviour
 {
+    public enum HandType { Left, Right };
+    public HandType type;
+
     public bool showController = false;
     public InputDeviceCharacteristics controllerCharacteristics;
     public List<GameObject> controllerPrefabs;
     public GameObject handModelPrefab;
+    public NetworkPlayer networkPlayer;
+    public PhotonView photonView;
     
     private InputDevice targetDevice;
     private GameObject spawnedController;
     private GameObject spawnedHandModel;
     private Animator handAnimator;
 
+
     // Start is called before the first frame update
     void Start()
     {
+        if (networkPlayer == null) Debug.LogError("Networkplayer is unassigned on HandPresence!");
+
         TryInitialize();
     }
 
@@ -47,6 +56,15 @@ public class HandPresence : MonoBehaviour
 
             spawnedHandModel = Instantiate(handModelPrefab, transform);
             handAnimator = spawnedHandModel.GetComponent<Animator>();
+            
+            switch(type) {
+                case HandType.Left:
+                networkPlayer.SetLeftHandAnimator(handAnimator);
+                break;
+                case HandType.Right:
+                networkPlayer.SetRightHandAnimator(handAnimator);
+                break;
+            }
         }
     }
 
