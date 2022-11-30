@@ -14,7 +14,6 @@ public class HandPresence : MonoBehaviour
     public List<GameObject> controllerPrefabs;
     public GameObject handModelPrefab;
     public NetworkPlayer networkPlayer;
-    public PhotonView photonView;
     
     private InputDevice targetDevice;
     private GameObject spawnedController;
