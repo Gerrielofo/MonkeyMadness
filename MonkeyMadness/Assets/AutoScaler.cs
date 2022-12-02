@@ -9,7 +9,7 @@ public class AutoScaler : MonoBehaviour
     public GameObject cameraHight;
     public GameObject player;
     // Start is called before the first frame update
-    void Resize()
+    public void Resize()
     {
         float headHight = cameraHight.transform.localPosition.y;
         float scale = MonkeyHight / headHight;
@@ -18,6 +18,10 @@ public class AutoScaler : MonoBehaviour
 
     // Update is called once per frame
     void OnEnable()
+    {
+        Resize();
+    }
+    private void Start()
     {
         Resize();
     }
