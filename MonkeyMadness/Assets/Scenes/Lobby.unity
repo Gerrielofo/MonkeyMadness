@@ -762,6 +762,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5957702df6418f4daa05410c78d6087, type: 3}
+--- !u!1 &341625832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7488574136839397615, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
+  m_PrefabInstance: {fileID: 1238371959}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &379232730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,6 +1918,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7488574135830181289, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7488574135830181290, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
       propertyPath: m_Name
       value: XR Origin
@@ -2027,8 +2036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d773eb7b8a11dde46b8737be3fbe7307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyHeight: 1
-  cameraHeight: {fileID: 0}
+  MonkeyHeight: 0.75
+  cameraHeight: {fileID: 341625832}
   player: {fileID: 1238371963}
 --- !u!1 &1491970336
 GameObject:
@@ -3066,11 +3075,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6954860677412248126, guid: 4d7e171e70dc5b54cb7032f746a1d1a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.783
       objectReference: {fileID: 0}
     - target: {fileID: 6954860677412248126, guid: 4d7e171e70dc5b54cb7032f746a1d1a5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5
+      value: -1.316
       objectReference: {fileID: 0}
     - target: {fileID: 6954860677412248126, guid: 4d7e171e70dc5b54cb7032f746a1d1a5, type: 3}
       propertyPath: m_LocalRotation.w

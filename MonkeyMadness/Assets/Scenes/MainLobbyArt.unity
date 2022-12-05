@@ -1295,6 +1295,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1175669028}
+    - target: {fileID: 8321518999131821850, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8674937494977113854, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
       propertyPath: sceneViewId
       value: 2
@@ -1395,6 +1399,8 @@ MonoBehaviour:
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripLeftInput: 0
   gripRightInput: 0
+  extrainteractorLeft: {fileID: 0}
+  extrainteractorRight: {fileID: 0}
   movementprovider: {fileID: 441655989}
 --- !u!114 &441655992
 MonoBehaviour:
