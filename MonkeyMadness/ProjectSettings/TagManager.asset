@@ -15,6 +15,7 @@ TagManager:
   - Ground
   - CrossBox
   - Balling
+  - Poop
   layers:
   - Default
   - TransparentFX
