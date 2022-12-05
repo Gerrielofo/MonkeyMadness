@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 1568124380069123001}
   - component: {fileID: 1568124380069123003}
   - component: {fileID: 1568124380069123002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,9 @@ MonoBehaviour:
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripInput: 0
   canClimb: 0
+  canSwing: 0
   canMove: 0
+  swingableVelocity: {fileID: 0}
 --- !u!135 &1568124380069123003
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -612,7 +614,7 @@ GameObject:
   - component: {fileID: 1568124380520925032}
   - component: {fileID: 1568124380520925031}
   - component: {fileID: 1568124380520925030}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,7 +778,9 @@ MonoBehaviour:
     m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripInput: 0
   canClimb: 0
+  canSwing: 0
   canMove: 0
+  swingableVelocity: {fileID: 0}
 --- !u!135 &1568124380520925031
 SphereCollider:
   m_ObjectHideFlags: 0
