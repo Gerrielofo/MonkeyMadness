@@ -14,7 +14,6 @@ public class HandPresence : MonoBehaviour
     public List<GameObject> controllerPrefabs;
     public GameObject handModelPrefab;
     public NetworkPlayer networkPlayer;
-    public PhotonView photonView;
     
     private InputDevice targetDevice;
     private GameObject spawnedController;
@@ -53,6 +52,8 @@ public class HandPresence : MonoBehaviour
             {
                 Debug.Log("Did not find corresponding controller model");
             }
+
+            
 
             spawnedHandModel = Instantiate(handModelPrefab, transform);
             handAnimator = spawnedHandModel.GetComponent<Animator>();
