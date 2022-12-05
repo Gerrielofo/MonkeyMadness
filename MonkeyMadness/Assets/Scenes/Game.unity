@@ -292,6 +292,14 @@ PrefabInstance:
       propertyPath: ObservedComponents.Array.data[0]
       value: 
       objectReference: {fileID: 652797576}
+    - target: {fileID: 6258835858315118537, guid: 2895c890660b84a48b3ccf2bfaf70de7, type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258835858315118537, guid: 2895c890660b84a48b3ccf2bfaf70de7, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8921193939633654217, guid: 2895c890660b84a48b3ccf2bfaf70de7, type: 3}
       propertyPath: m_Name
       value: Simple Interactable (2)
@@ -603,9 +611,9 @@ MonoBehaviour:
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripLeftInput: 0
   gripRightInput: 0
-  extrainteractorLeft: {fileID: 0}
-  extrainteractorRight: {fileID: 0}
-  movementprovider: {fileID: 0}
+  extrainteractorLeft: {fileID: 1185757549}
+  extrainteractorRight: {fileID: 1623365824}
+  movementprovider: {fileID: 657827754}
 --- !u!1001 &983235579
 PrefabInstance:
   m_ObjectHideFlags: 0
