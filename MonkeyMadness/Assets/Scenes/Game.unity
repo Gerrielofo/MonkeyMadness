@@ -276,6 +276,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2777289587824563483, guid: 2895c890660b84a48b3ccf2bfaf70de7, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777289587824563483, guid: 2895c890660b84a48b3ccf2bfaf70de7, type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 652797575}
     - target: {fileID: 8921193939633654217, guid: 2895c890660b84a48b3ccf2bfaf70de7, type: 3}
       propertyPath: m_Name
       value: Simple Interactable (2)
@@ -326,6 +334,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2895c890660b84a48b3ccf2bfaf70de7, type: 3}
+--- !u!114 &652797575 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5960592627117407222, guid: 2895c890660b84a48b3ccf2bfaf70de7, type: 3}
+  m_PrefabInstance: {fileID: 652797574}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &657827749
 GameObject:
   m_ObjectHideFlags: 0
