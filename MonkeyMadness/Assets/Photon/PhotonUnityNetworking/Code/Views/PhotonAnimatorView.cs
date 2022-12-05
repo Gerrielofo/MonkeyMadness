@@ -13,6 +13,7 @@ namespace Photon.Pun
 {
     using System.Collections.Generic;
     using UnityEngine;
+    
 
 
     /// <summary>
@@ -123,10 +124,18 @@ namespace Photon.Pun
         {
             this.m_Animator = GetComponent<Animator>();
         }
+        public void OnOwnershipRequest(object[] viewAndPlayer) {
+            PhotonView view = viewAndPlayer[0] as PhotonView;
+            PhotonPlayer requestingPlayer = viewAndPlayer[1] as PhotonPlayer;
 
+            Debug.Log("OnOwnershipRequest(): Player " + requestingPlayer + " requests ownership of: " + view + ".");
+            if (this.TransferOwnershipOnRequest) {
+                view.TransferOwnership(requestingPlayer.ID);
+            }
+        }
         private void Update()
         {
-            if (this.m_Animator.applyRootMotion && this.photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+            if (/*this.m_Animator.applyRootMotion && */ this.photonView.IsMine == false && PhotonNetwork.IsConnected == true)
             {
                 this.m_Animator.applyRootMotion = false;
             }
@@ -137,6 +146,7 @@ namespace Photon.Pun
                 return;
             }
             if(this.photonView == null) { Debug.LogError("Photon view niet gevonden in photonAnimatorView"); }
+            this.photonView.RequestOwnership();
             if (this.photonView.IsMine == true)
             {
                 this.SerializeDataContinuously();
