@@ -1,5 +1,6 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using Photon.Pun;
 
 public class MinigameLoader : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public class MinigameLoader : MonoBehaviour
     {
         if (MinigameName != string.Empty && other.transform.tag == "Hands") 
         {
-            print("Loading minigame");
-            SceneManager.LoadScene(MinigameName);
+            print("Loading minigame:" + MinigameName);
+            PhotonNetwork.LoadLevel(MinigameName);
         }
     }
 }
