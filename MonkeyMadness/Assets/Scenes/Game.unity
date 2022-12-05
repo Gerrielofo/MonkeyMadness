@@ -368,6 +368,7 @@ GameObject:
   - component: {fileID: 657827754}
   - component: {fileID: 657827753}
   - component: {fileID: 657827752}
+  - component: {fileID: 657827757}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -539,6 +540,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &657827757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657827749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9403f930e3f6c3b46a8dd25bda0df151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charachter: {fileID: 657827752}
+  velocityRight:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Velocity Right
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 8e72b34e-0b40-4971-bf75-7dc0d3005fd9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 524182503400128080, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  velocityLeft:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Velocity Left
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 64411865-55c2-4554-b1b4-90c7d3cd5c93
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 8712398830596042961, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  gripLeft:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip Left
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 2b46c358-763f-47ac-9372-6e47cd55e1ad
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  gripRight:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip Right
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: b803a7bd-2ac2-4446-bf5b-cb5b061356db
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  gripLeftInput: 0
+  gripRightInput: 0
+  extrainteractorLeft: {fileID: 0}
+  extrainteractorRight: {fileID: 0}
+  movementprovider: {fileID: 0}
 --- !u!1001 &983235579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -871,8 +938,8 @@ GameObject:
   - component: {fileID: 1185757545}
   - component: {fileID: 1185757547}
   - component: {fileID: 1185757546}
-  - component: {fileID: 1185757549}
   - component: {fileID: 1185757548}
+  - component: {fileID: 1185757549}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -961,7 +1028,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1185757544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bb41a55198eafd4aa292b3a402c6763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 1185570683}
@@ -969,7 +1036,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 2
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -1036,6 +1103,23 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
+  grip:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 890b13ee-ca21-42d7-8a3e-4a99b0ac5bbd
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  gripInput: 0
+  canClimb: 0
+  canSwing: 0
+  canMove: 0
+  swingableVelocity: {fileID: 0}
 --- !u!1 &1286583959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,8 +1357,8 @@ GameObject:
   - component: {fileID: 1623365820}
   - component: {fileID: 1623365822}
   - component: {fileID: 1623365821}
-  - component: {fileID: 1623365824}
   - component: {fileID: 1623365823}
+  - component: {fileID: 1623365824}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -1363,7 +1447,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1623365819}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4253f32900bcc4d499d675566142ded0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bb41a55198eafd4aa292b3a402c6763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 1185570683}
@@ -1371,7 +1455,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 4294967295
+    m_Bits: 2
   m_AttachTransform: {fileID: 0}
   m_KeepSelectedTargetValid: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -1438,6 +1522,23 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
+  grip:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: de6329f7-2d52-44e7-b7d7-cd96a8198025
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  gripInput: 0
+  canClimb: 0
+  canSwing: 0
+  canMove: 0
+  swingableVelocity: {fileID: 0}
 --- !u!1 &1836415825
 GameObject:
   m_ObjectHideFlags: 0
