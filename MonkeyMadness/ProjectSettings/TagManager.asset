@@ -12,6 +12,9 @@ TagManager:
   - Banana
   - Door
   - Hands
+  - Ground
+  - CrossBox
+  - Balling
   layers:
   - Default
   - TransparentFX

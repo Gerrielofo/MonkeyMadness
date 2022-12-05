@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8731170721372759262}
   m_Layer: 10
   m_Name: Sphere
-  m_TagString: balling
+  m_TagString: Balling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
