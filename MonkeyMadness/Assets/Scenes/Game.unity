@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 657827753}
   - component: {fileID: 657827752}
   - component: {fileID: 657827757}
+  - component: {fileID: 657827758}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -461,6 +462,21 @@ MonoBehaviour:
   extrainteractorLeft: {fileID: 1185757549}
   extrainteractorRight: {fileID: 1623365824}
   movementprovider: {fileID: 657827754}
+--- !u!114 &657827758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657827749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d773eb7b8a11dde46b8737be3fbe7307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MonkeyHeight: 0.75
+  cameraHeight: {fileID: 1286583959}
+  player: {fileID: 657827749}
 --- !u!1001 &829298600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -831,9 +847,10 @@ GameObject:
   - component: {fileID: 1185757546}
   - component: {fileID: 1185757548}
   - component: {fileID: 1185757549}
+  - component: {fileID: 1185757550}
   m_Layer: 0
   m_Name: LeftHand Controller
-  m_TagString: Untagged
+  m_TagString: Hands
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1011,6 +1028,22 @@ MonoBehaviour:
   canSwing: 0
   canMove: 0
   swingableVelocity: {fileID: 0}
+--- !u!54 &1185757550
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185757544}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1284260090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,9 +1320,10 @@ GameObject:
   - component: {fileID: 1623365821}
   - component: {fileID: 1623365823}
   - component: {fileID: 1623365824}
+  - component: {fileID: 1623365825}
   m_Layer: 0
   m_Name: RightHand Controller
-  m_TagString: Untagged
+  m_TagString: Hands
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1467,3 +1501,19 @@ MonoBehaviour:
   canSwing: 0
   canMove: 0
   swingableVelocity: {fileID: 0}
+--- !u!54 &1623365825
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623365819}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
