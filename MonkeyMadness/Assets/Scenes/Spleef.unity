@@ -2087,7 +2087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499471200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.191, y: -0.194, z: 0.079}
+  m_LocalPosition: {x: 0.191, y: -0.194, z: 0.217}
   m_LocalScale: {x: 0.098439, y: 0.098439, z: 0.098439}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2114,7 +2114,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499471200}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5186,6 +5186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XROrigin CloseGrabbibng
       objectReference: {fileID: 0}
+    - target: {fileID: 4091232219232971796, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
+      propertyPath: m_TagString
+      value: IsPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 4091232219232971799, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
       propertyPath: m_Height
       value: 1
@@ -5285,6 +5289,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4091232219232971796, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
   m_PrefabInstance: {fileID: 1439529717}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1439529719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4091232218363148625, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
+  m_PrefabInstance: {fileID: 1439529717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!143 &1439529720 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 4091232219232971799, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
@@ -5319,7 +5328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MonkeyHeight: 1
-  cameraHeight: {fileID: 0}
+  cameraHeight: {fileID: 1439529719}
   player: {fileID: 1439529718}
 --- !u!114 &1439529724
 MonoBehaviour:
@@ -5387,6 +5396,7 @@ MonoBehaviour:
   extrainteractorLeft: {fileID: 0}
   extrainteractorRight: {fileID: 0}
   movementprovider: {fileID: 1439529721}
+  stunTime: 3
 --- !u!1 &1458123978
 GameObject:
   m_ObjectHideFlags: 0
