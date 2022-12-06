@@ -60,6 +60,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/SlotCar-Scene.unity
     guid: 711b38c07f2cf904f81b3422c67f1825
+  - enabled: 1
+    path: Assets/Scenes/MainMenuDev.unity
+    guid: 0de35d961412feb4c93f5c6c90ce65b0
+  - enabled: 1
+    path: Assets/Scenes/MainLobbyArt.unity
+    guid: 7ad9670c7debdb841a00ce815fdbe0c0
+  - enabled: 1
+    path: Assets/Scenes/Banana tag.unity
+    guid: ad37fde29786be746ae3660b5415ae91
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1e643b60bf32a5049901e04a977ca4c0, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8568763877eabdb4fb55e992ef9eecc7, type: 2}

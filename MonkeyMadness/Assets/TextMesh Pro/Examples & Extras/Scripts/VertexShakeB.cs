@@ -109,16 +109,16 @@ namespace TMPro.Examples
                         if (!textInfo.characterInfo[j].isVisible)
                             continue;
 
-                        // Get the index of the material used by the current character.
+                        // Get the pinIndex of the material used by the current character.
                         int materialIndex = textInfo.characterInfo[j].materialReferenceIndex;
 
-                        // Get the index of the first vertex used by this text element.
+                        // Get the pinIndex of the first vertex used by this text element.
                         int vertexIndex = textInfo.characterInfo[j].vertexIndex;
 
                         // Get the vertices of the mesh used by this text element (character or sprite).
                         Vector3[] sourceVertices = textInfo.meshInfo[materialIndex].vertices;
 
-                        // Determine the center point of each character at the baseline.
+                        // Determine the center pointsThisRound of each character at the baseline.
                         Vector3 charCenter = (sourceVertices[vertexIndex + 0] + sourceVertices[vertexIndex + 2]) / 2;
 
                         // Need to translate all 4 vertices of each quad to aligned with center of character.
