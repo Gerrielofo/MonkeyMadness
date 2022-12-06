@@ -7,6 +7,15 @@ TagManager:
   - Bullet
   - Climbable
   - Dart
+  - Dartbord
+  - Table
+  - Banana
+  - Door
+  - Hands
+  - Ground
+  - CrossBox
+  - Balling
+  - Poop
   layers:
   - Default
   - TransparentFX

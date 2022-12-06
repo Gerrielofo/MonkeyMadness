@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class AutoScaler : MonoBehaviour
 {
-    public float MonkeyHight = 1f;
+    public float MonkeyHeight = 1f;
 
-    public GameObject cameraHight;
+    public GameObject cameraHeight;
     public GameObject player;
-    // Start is called before the first frame update
-    public void Resize()
+
+
+    private void Start()
     {
-        float headHight = cameraHight.transform.localPosition.y;
-        float scale = MonkeyHight / headHight;
+        StartCoroutine(WaitAndResize());
+    }
+
+    void Resize()
+    {
+        float headHeight = cameraHeight.transform.localPosition.y;
+        float scale = MonkeyHeight / headHeight;
         transform.localScale = Vector3.one * scale;
     }
 
-    // Update is called once per frame
-    void OnEnable()
+
+    public IEnumerator WaitAndResize()
     {
-        Resize();
-    }
-    private void Start()
-    {
+        yield return new WaitForSeconds(5);
         Resize();
     }
 }

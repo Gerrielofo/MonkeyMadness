@@ -4,30 +4,45 @@ using UnityEngine;
 
 public class DartbordSection : MonoBehaviour
 {
-    public int minigameID;
+    [SerializeField] private int MinigameID;
+    [SerializeField] private string MinigameName;
+    
+    private MinigameLoader MinigameLoader;
+
+    private void Start()
+    {
+        
+        MinigameLoader = GameObject.Find("MinigameHitbox").GetComponent<MinigameLoader>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.transform.tag == "Dart")
         {
-            switch (minigameID)
+            switch (MinigameID)
             {
                 case 1:
-                    print("Playing minigame 1");
+                    print("Playing " + MinigameName);
+                    MinigameLoader.MinigameName = MinigameName;
                     break;
                 case 2:
-                    print("Playing minigame 2");
+                    print("Playing " + MinigameName);
+                    MinigameLoader.MinigameName = MinigameName;
                     break;
                 case 3:
-                    print("Playing minigame 3");
+                    print("Playing " + MinigameName);
+                    MinigameLoader.MinigameName = MinigameName;
                     break;
                 case 4:
-                    print("Playing minigame 4");
+                    print("Playing " + MinigameName);
+                    MinigameLoader.MinigameName = MinigameName;
                     break;
                 case 5:
-                    print("Playing minigame 5");
+                    print("Playing " + MinigameName);
+                    MinigameLoader.MinigameName = MinigameName;
                     break;
                 case 6:
-                    print("Playing minigame 6");
+                    print("Playing " + MinigameName);
+                    MinigameLoader.MinigameName = MinigameName;
                     break;
             }
         }

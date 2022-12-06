@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
-public class ClimbProvider : MonoBehaviour
+public class ExpandedMovementProvider : MonoBehaviour
 {
     public static event Action ClimbActive;
     public static event Action ClimbInActive;
@@ -22,20 +22,21 @@ public class ClimbProvider : MonoBehaviour
     private bool _rightActive = false;
     private bool _leftActive = false;
 
+    public XRDirectExtraInteractor extrainteractorLeft;
+    public XRDirectExtraInteractor extrainteractorRight;
+
     public ContinuousMoveProviderBase movementprovider;
-    
+
     private void Start()
     {
-        XRDirectClimbInteractor.ClimbHandActivated += HandActivated;
-        XRDirectClimbInteractor.ClimbHandDeactivated += HandDeactivated;
+        XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
+        XRDirectExtraInteractor.ClimbHandDeactivated += HandDeactivated;
     }
-
     private void OnDestroy()
     {
-        XRDirectClimbInteractor.ClimbHandActivated += HandActivated;
-        XRDirectClimbInteractor.ClimbHandDeactivated += HandDeactivated;
+        XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
+        XRDirectExtraInteractor.ClimbHandDeactivated += HandDeactivated;
     }
-
     private void Update()
     {
         gripLeft.action.performed += hfhi => gripLeftInput = true;
@@ -43,6 +44,18 @@ public class ClimbProvider : MonoBehaviour
 
         gripRight.action.performed += hfhi => gripRightInput = true;
         gripRight.action.canceled += hfhi => gripRightInput = false;
+
+        if (!extrainteractorLeft.canMove && !extrainteractorRight.canMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
+        {
+            Debug.Log("both is true");
+            EnableMovement();
+        }
+        else
+        {
+            Debug.Log("one is false");
+            DisableMovement();
+        }
+
 
         if (!gripRightInput)
         {
@@ -53,7 +66,6 @@ public class ClimbProvider : MonoBehaviour
             _leftActive = false;
         }
     }
-
     private void HandActivated(string _controllerName)
     {
         if (_controllerName == "LeftHand Controller")
@@ -69,7 +81,6 @@ public class ClimbProvider : MonoBehaviour
 
         ClimbActive?.Invoke();
     }
-
     private void HandDeactivated(string _controllerName)
     {
         if (_rightActive && _controllerName == "RightHand Controller")
@@ -83,26 +94,61 @@ public class ClimbProvider : MonoBehaviour
             ClimbActive?.Invoke();
         }
     }
-
     private void FixedUpdate()
     {
         if (_rightActive || _leftActive)
         {
-            movementprovider.enabled = false;
+            DisableMovement();
+
             movementprovider.useGravity = false;
-            Climb();
+            if (extrainteractorLeft.canClimb || extrainteractorRight.canClimb)
+            {
+                Climb();
+            }
+            if (extrainteractorLeft.canSwing || extrainteractorRight.canSwing)
+            {
+                Swing();
+            }
         }
         else
         {
-            movementprovider.enabled = true;
+            if (!extrainteractorLeft.canMove && !extrainteractorRight.canMove)
+            {
+                EnableMovement();
+            }
+            else
+            {
+                return;
+            }
+            
             movementprovider.useGravity = true;
         }
     }
-
+    private void EnableMovement()
+    {
+        movementprovider.enabled = true;
+    }
+    private void DisableMovement()
+    {
+        movementprovider.enabled = false;
+    }
     private void Climb()
     {
         Vector3 velocity = _leftActive ? velocityLeft.action.ReadValue<Vector3>() : velocityRight.action.ReadValue<Vector3>();
-
+        Debug.Log(velocity);
         charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
+    }
+    private void Swing()
+    {
+        if (_leftActive)
+        {
+            Vector3 velocity = extrainteractorLeft.swingableVelocity.GetComponent<Rigidbody>().velocity;
+            charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
+        }
+        else
+        {
+            Vector3 velocity = extrainteractorRight.swingableVelocity.GetComponent<Rigidbody>().velocity;
+            charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
+        }
     }
 }
