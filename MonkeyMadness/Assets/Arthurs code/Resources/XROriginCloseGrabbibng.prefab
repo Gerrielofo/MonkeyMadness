@@ -339,23 +339,6 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
-  grip:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Grip
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 23115527-5317-4b1b-8ef9-284cc2381b63
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  gripInput: 0
-  canClimb: 0
-  canSwing: 0
-  canMove: 0
-  swingableVelocity: {fileID: 0}
 --- !u!1 &4091232218363148625
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,23 +893,6 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
-  grip:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Grip
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 43122609-e524-4d2a-a733-36f741b96e0c
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  gripInput: 0
-  canClimb: 0
-  canSwing: 0
-  canMove: 0
-  swingableVelocity: {fileID: 0}
 --- !u!1 &4091232219232971796
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using TMPro;
 
 public class Keyboard : MonoBehaviour
 {
-    public TMP_InputField selectedInputField;
+    public TMP_InputField sellectedInputField;
     public TMP_InputField[] inputfields;
     public GameObject normalButtons;
     public GameObject capsButtons;
@@ -17,29 +17,25 @@ public class Keyboard : MonoBehaviour
     {
         foreach (TMP_InputField inputfield in inputfields) {
             if (inputfield.isFocused) {
-                selectedInputField = inputfield;
+                sellectedInputField = inputfield;
             }
         }
        
     }
     public void InsertChar(string c)
     {
-        selectedInputField.text += c;
-        selectedInputField.MoveTextEnd(true);
+        sellectedInputField.text += c;
     }
     public void DeleteChar()
     {
-        if (selectedInputField.text.Length > 0)
+        if (sellectedInputField.text.Length > 0)
         {
-            selectedInputField.text = selectedInputField.text.Substring(0, selectedInputField.text.Length - 1);
-            selectedInputField.MoveTextEnd(true);
+            sellectedInputField.text = sellectedInputField.text.Substring(0, sellectedInputField.text.Length - 1);
         }
-       
     }
     public void InsertSpace()
     {
-        selectedInputField.text += " ";
-        selectedInputField.MoveTextEnd(true);
+        sellectedInputField.text += " ";
     }
 
     public void CapsPressed()

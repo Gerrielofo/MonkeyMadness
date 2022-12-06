@@ -8,7 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 public class PlayerControlManager : MonoBehaviourPunCallbacks {
     public ActionBasedController leftController, rightController;
-    public XRDirectExtraInteractor leftControllerClimbing, rightControllerClimbing;
+    public XRDirectClimbInteractor leftControllerClimbing, rightControllerClimbing;
     public InputActionManager inputActionManager;
     public CharacterController charControl;
     public Component[] componentsToDissable;
