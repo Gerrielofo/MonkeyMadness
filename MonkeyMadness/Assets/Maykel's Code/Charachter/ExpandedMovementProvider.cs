@@ -50,15 +50,12 @@ public class ExpandedMovementProvider : MonoBehaviour
 
         if (!extrainteractorLeft.canMove && !extrainteractorRight.canMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
         {
-            Debug.Log("both is true");
             EnableMovement();
         }
         else
         {
-            Debug.Log("one is false");
             DisableMovement();
         }
-
 
         if (!gripRightInput)
         {
@@ -141,37 +138,37 @@ public class ExpandedMovementProvider : MonoBehaviour
     private void Climb()
     {
         Vector3 velocity = _leftActive ? velocityLeft.action.ReadValue<Vector3>() : velocityRight.action.ReadValue<Vector3>();
-        Debug.Log(velocity);
         charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
     }
     private void Swing()
     {
         if (_leftActive)
         {
-            Vector3 velocity = extrainteractorLeft.swingableVelocity.GetComponent<Rigidbody>().velocity;
-            charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
+            Vector3 velocity = extrainteractorLeft.GetComponent<XRDirectExtraInteractor>().heldItem.GetComponent<Rigidbody>().velocity;
+            charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
         }
         else
         {
-            Vector3 velocity = extrainteractorRight.swingableVelocity.GetComponent<Rigidbody>().velocity;
-            charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
+            Vector3 velocity = extrainteractorRight.GetComponent<XRDirectExtraInteractor>().heldItem.GetComponent<Rigidbody>().velocity;
+            charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
         }
     }
-
     public void Stun()
     {
         if (isStunned)
+        {
             return;
+        }
         else
         {
             DisableMovement();
             StartCoroutine(Stunned());
         }
     }
-
     private IEnumerator Stunned()
     {
         yield return new WaitForSeconds(stunTime);
+
         EnableMovement();
     }
 }

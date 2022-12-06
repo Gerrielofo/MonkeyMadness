@@ -42,6 +42,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         }
         if (args.interactableObject.transform.tag == "Swingable")
         {
+            heldItem = args.interactableObject.transform.gameObject;
             canSwing = true;
         }
         if (args.interactableObject.transform.tag == "CrossBox")
@@ -50,7 +51,6 @@ public class XRDirectExtraInteractor : XRDirectInteractor
 
             swingableVelocity = args.interactableObject.transform.gameObject;
         }
-        
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
