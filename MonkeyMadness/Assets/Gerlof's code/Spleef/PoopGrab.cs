@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PoopGrab : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject poopPrefap;
+    private bool isInCollider;
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Hands"))
+        {
+            GameObject poop = (GameObject)Instantiate(poopPrefap, transform.position, transform.rotation);
+            //poop.GetComponent<MeshRenderer>().enabled = false;
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
         
     }
