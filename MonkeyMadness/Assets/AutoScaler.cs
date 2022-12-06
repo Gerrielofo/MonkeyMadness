@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class AutoScaler : MonoBehaviour
 {
-    public float MonkeyHight = 1f;
+    public float MonkeyHeight = 1f;
 
-    public GameObject cameraHight;
+    public GameObject cameraHeight;
     public GameObject player;
-    
+
+
+    private void Start()
+    {
+        StartCoroutine(WaitAndResize());
+    }
+
     void Resize()
     {
-        float headHight = cameraHight.transform.localPosition.y;
-        float scale = MonkeyHight / headHight;
+        float headHeight = cameraHeight.transform.localPosition.y;
+        float scale = MonkeyHeight / headHeight;
         transform.localScale = Vector3.one * scale;
     }
 
-    
-    void OnEnable()
+
+    public IEnumerator WaitAndResize()
     {
+        yield return new WaitForSeconds(5);
         Resize();
     }
 }
