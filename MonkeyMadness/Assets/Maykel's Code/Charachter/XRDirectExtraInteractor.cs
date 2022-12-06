@@ -20,6 +20,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
 
     public GameObject swingableVelocity;
 
+    public GameObject heldItem;
     protected override void Start()
     {
         base.Start();
@@ -29,8 +30,12 @@ public class XRDirectExtraInteractor : XRDirectInteractor
     {
         base.OnSelectEntered(args);
 
-        
-
+        if(args.interactableObject.transform.tag == "Poop")
+        {
+            heldItem = args.interactableObject.transform.gameObject;
+            heldItem.GetComponent<MeshRenderer>().enabled = true;
+            heldItem.GetComponent<Rigidbody>().useGravity = true;
+        }
         if(args.interactableObject.transform.tag == "Climbable")
         {
             canClimb = true;
@@ -38,7 +43,6 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         if (args.interactableObject.transform.tag == "Swingable")
         {
             canSwing = true;
-            Debug.Log("swingAble");
         }
         if (args.interactableObject.transform.tag == "CrossBox")
         {
@@ -46,10 +50,13 @@ public class XRDirectExtraInteractor : XRDirectInteractor
 
             swingableVelocity = args.interactableObject.transform.gameObject;
         }
+        
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         base.OnSelectExited(args);
+
+        heldItem = null;
 
         canSwing = false;
         canClimb = false;
