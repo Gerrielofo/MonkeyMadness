@@ -27,9 +27,6 @@ public class ExpandedMovementProvider : MonoBehaviour
 
     public ContinuousMoveProviderBase movementprovider;
 
-    private bool isStunned;
-    [SerializeField] private float stunTime;
-
     private void Start()
     {
         XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
@@ -68,7 +65,6 @@ public class ExpandedMovementProvider : MonoBehaviour
         {
             _leftActive = false;
         }
-
     }
     private void HandActivated(string _controllerName)
     {
@@ -131,12 +127,10 @@ public class ExpandedMovementProvider : MonoBehaviour
     private void EnableMovement()
     {
         movementprovider.enabled = true;
-        isStunned = false;
     }
     private void DisableMovement()
     {
         movementprovider.enabled = false;
-        isStunned = true;
     }
     private void Climb()
     {
@@ -156,22 +150,5 @@ public class ExpandedMovementProvider : MonoBehaviour
             Vector3 velocity = extrainteractorRight.swingableVelocity.GetComponent<Rigidbody>().velocity;
             charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
         }
-    }
-
-    public void Stun()
-    {
-        if (isStunned)
-            return;
-        else
-        {
-            DisableMovement();
-            StartCoroutine(Stunned());
-        }
-    }
-
-    private IEnumerator Stunned()
-    {
-        yield return new WaitForSeconds(stunTime);
-        EnableMovement();
     }
 }

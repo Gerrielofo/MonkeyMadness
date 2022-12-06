@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PoopGrab : MonoBehaviour
@@ -7,7 +9,13 @@ public class PoopGrab : MonoBehaviour
     {
         if (other.CompareTag("Hands") && other.GetComponent<XRDirectExtraInteractor>().heldItem == null)
         {
-            Instantiate(poopPrefap, transform.position, transform.rotation);
+            GameObject poop = (GameObject)Instantiate(poopPrefap, transform.position, transform.rotation);
         }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        
     }
 }
