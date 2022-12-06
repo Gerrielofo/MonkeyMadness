@@ -32,9 +32,9 @@ public class XRDirectExtraInteractor : XRDirectInteractor
 
         if(args.interactableObject.transform.tag == "Poop")
         {
+            
             heldItem = args.interactableObject.transform.gameObject;
             heldItem.GetComponent<MeshRenderer>().enabled = true;
-            heldItem.GetComponent<Rigidbody>().useGravity = true;
         }
         if(args.interactableObject.transform.tag == "Climbable")
         {

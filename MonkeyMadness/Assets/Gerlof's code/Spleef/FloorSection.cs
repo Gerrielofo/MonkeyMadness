@@ -16,6 +16,7 @@ public class FloorSection : MonoBehaviour
             Rigidbody.useGravity = true;
             Rigidbody.constraints &= ~RigidbodyConstraints.FreezeAll;
             Destroy(gameObject, 3f);
+            Destroy(collision.gameObject);
         }
     }
 }
