@@ -1777,6 +1777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1854999265}
   - component: {fileID: 1854999264}
+  - component: {fileID: 1854999266}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1861,6 +1862,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1854999266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854999263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &1992604977 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c016c930f5a5b3949a85f3a2218caf39, type: 3}
@@ -2402,6 +2423,8 @@ MonoBehaviour:
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripLeftInput: 0
   gripRightInput: 0
+  extrainteractorLeft: {fileID: 0}
+  extrainteractorRight: {fileID: 0}
   movementprovider: {fileID: 4992001889411266937}
 --- !u!1001 &7018257274847853435
 PrefabInstance:
@@ -2475,6 +2498,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2777289587824563483, guid: 2895c890660b84a48b3ccf2bfaf70de7, type: 3}
+      propertyPath: sceneViewId
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8921193939633654216, guid: 2895c890660b84a48b3ccf2bfaf70de7, type: 3}
       propertyPath: m_InteractionManager
       value: 
