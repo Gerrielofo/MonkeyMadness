@@ -16,6 +16,7 @@ TagManager:
   - CrossBox
   - Balling
   - Poop
+  - HipBox
   layers:
   - Default
   - TransparentFX
