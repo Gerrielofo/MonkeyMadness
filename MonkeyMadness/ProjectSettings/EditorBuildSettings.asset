@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Loading Scene.unity
     guid: 001e401a97903af43830375c0b308459
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Lobby.unity
     guid: 58981729f72e48d4d8bfb1e362c80e09
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 05429fb3830d8034ba786c2936bd88ae
   - enabled: 0
@@ -69,6 +69,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Banana tag.unity
     guid: ad37fde29786be746ae3660b5415ae91
+  - enabled: 1
+    path: Assets/Scenes/Bowling map.unity
+    guid: 52c83e4d38a031d4f9db484b16816a73
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1e643b60bf32a5049901e04a977ca4c0, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8568763877eabdb4fb55e992ef9eecc7, type: 2}
