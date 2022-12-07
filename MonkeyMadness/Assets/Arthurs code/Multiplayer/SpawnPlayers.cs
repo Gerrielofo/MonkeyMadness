@@ -22,6 +22,7 @@ public class SpawnPlayers : MonoBehaviourPunCallbacks {
         PhotonNetwork.Destroy(spawnedPlayerPrefab);
     }
     public void SpawnPlayer() {
+        PhotonNetwork.Destroy(spawnedPlayerPrefab);
         playerName = PhotonNetwork.LocalPlayer.NickName;
         Debug.Log("Joined room");
         Vector2 randomPosition = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
