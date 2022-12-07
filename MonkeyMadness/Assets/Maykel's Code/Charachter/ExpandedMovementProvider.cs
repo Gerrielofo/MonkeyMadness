@@ -28,7 +28,8 @@ public class ExpandedMovementProvider : MonoBehaviour
     public ContinuousMoveProviderBase movementprovider;
 
     private bool isStunned;
-    [SerializeField] private float stunTime;
+    public float stunTime;
+    private float stunDelay;
     public Vector3 velocity;
     private void Start()
     {
@@ -64,6 +65,11 @@ public class ExpandedMovementProvider : MonoBehaviour
         if (!gripLeftInput)
         {
             _leftActive = false;
+        }
+
+        if (isStunned)
+        {
+            stunDelay -= Time.deltaTime;
         }
 
     }
@@ -159,8 +165,9 @@ public class ExpandedMovementProvider : MonoBehaviour
         {
             return;
         }
-        else
+        else if(stunDelay <= 0)
         {
+            stunDelay = 2f;
             DisableMovement();
             StartCoroutine(Stunned());
         }
