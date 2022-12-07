@@ -7,6 +7,7 @@ using Photon.Realtime;
 public class SwitchScenesTest : MonoBehaviour
 {
     public bool maykel;
+    public SpawnPlayers spawnPlayers;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +25,6 @@ public class SwitchScenesTest : MonoBehaviour
     IEnumerator SceneSwitch() {
         yield return new WaitForSeconds(2);
         PhotonNetwork.LoadLevel("maykel");
+        spawnPlayers.SpawnPlayer();
     }
 }
