@@ -9,28 +9,39 @@ public class ExpandedMovementProvider : MonoBehaviour
     public static event Action ClimbActive;
     public static event Action ClimbInActive;
 
-    public CharacterController charachter;
-    public InputActionProperty velocityRight;
-    public InputActionProperty velocityLeft;
+    [SerializeField] private CharacterController charachter;
+    [SerializeField] private ContinuousMoveProviderBase movementprovider;
 
-    public InputActionProperty gripLeft;
-    public InputActionProperty gripRight;
+    [Header("Inputs")]
+    #region
+    [SerializeField] private InputActionProperty velocityRight;
+    [SerializeField] private InputActionProperty velocityLeft;
 
-    public bool gripLeftInput;
-    public bool gripRightInput;
+    [SerializeField] private InputActionProperty gripLeft;
+    [SerializeField] private InputActionProperty gripRight;
 
-    private bool _rightActive = false;
-    private bool _leftActive = false;
+    [SerializeField] private bool gripLeftInput;
+    [SerializeField] private bool gripRightInput;
 
-    public XRDirectExtraInteractor extrainteractorLeft;
-    public XRDirectExtraInteractor extrainteractorRight;
-
-    public ContinuousMoveProviderBase movementprovider;
-
-    private bool isStunned;
+    [SerializeField] private bool _rightActive = false;
+    [SerializeField] private bool _leftActive = false;
+    #endregion
+    [Header("Interactors")]
+    #region
+    [SerializeField] private XRDirectExtraInteractor extrainteractorLeft;
+    [SerializeField] private XRDirectExtraInteractor extrainteractorRight;
+    #endregion
+    [Header("Stun")]
+    #region
+    [SerializeField] private bool isStunned;
     public float stunTime;
-    private float stunDelay;
+    [SerializeField] private float stunDelay;
+    #endregion
+    [Header("Swing")]
+    #region
     public Vector3 velocity;
+    #endregion
+
     private void Start()
     {
         XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
@@ -43,13 +54,16 @@ public class ExpandedMovementProvider : MonoBehaviour
     }
     private void Update()
     {
+        //INPUTS
+        #region
         gripLeft.action.performed += hfhi => gripLeftInput = true;
         gripLeft.action.canceled += hfhi => gripLeftInput = false;
 
         gripRight.action.performed += hfhi => gripRightInput = true;
         gripRight.action.canceled += hfhi => gripRightInput = false;
+        #endregion
 
-        if (!extrainteractorLeft.canMove && !extrainteractorRight.canMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
+        if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
         {
             EnableMovement();
         }
@@ -119,7 +133,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         }
         else
         {
-            if (!extrainteractorLeft.canMove && !extrainteractorRight.canMove)
+            if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove)
             {
                 EnableMovement();
             }
