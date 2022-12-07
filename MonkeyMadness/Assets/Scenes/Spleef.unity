@@ -5396,7 +5396,7 @@ MonoBehaviour:
   extrainteractorLeft: {fileID: 0}
   extrainteractorRight: {fileID: 0}
   movementprovider: {fileID: 1439529721}
-  stunTime: 3
+  stunTime: 2
 --- !u!1 &1458123978
 GameObject:
   m_ObjectHideFlags: 0
