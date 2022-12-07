@@ -5,6 +5,7 @@ using UnityEngine;
 public class FloorSection : MonoBehaviour
 {
     private Rigidbody Rigidbody;
+    [SerializeField] private GameObject poopSplatter;
     private void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
@@ -13,6 +14,7 @@ public class FloorSection : MonoBehaviour
     {
         if(collision.transform.tag == "Poop")
         {
+            Instantiate(poopSplatter);
             Rigidbody.useGravity = true;
             Rigidbody.constraints &= ~RigidbodyConstraints.FreezeAll;
             Destroy(gameObject, 3f);
