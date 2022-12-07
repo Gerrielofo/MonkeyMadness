@@ -36,7 +36,7 @@ public class ExpandedMovementProvider : MonoBehaviour
     #region
     [SerializeField] private bool isStunned;
     public float stunTime;
-    [SerializeField] private float stunDelay;
+    [SerializeField] public float stunDelay;
     #endregion
     [Header("Swing")]
     #region
@@ -74,7 +74,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         #endregion
 
         //ENABLE, DISABLE MOVEMENT, TURNING
-        if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
+        if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb && !isStunned)
         {
             EnableMovement();
         }
@@ -153,7 +153,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         }
         else
         {
-            if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove)
+            if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove && !isStunned)
             {
                 EnableMovement();
             }
@@ -201,17 +201,10 @@ public class ExpandedMovementProvider : MonoBehaviour
     }
     public void Stun()
     {
-        if (isStunned)
-        {
-            return;
-        }
-        else if(stunDelay <= 0)
-        {
-            stunDelay = 2f;
-            isStunned = true;
-            DisableMovement();
-            StartCoroutine(Stunned());
-        }
+        stunDelay = 2f;
+        isStunned = true;
+        DisableMovement();
+        StartCoroutine(Stunned());
     }
     private IEnumerator Stunned()
     {
