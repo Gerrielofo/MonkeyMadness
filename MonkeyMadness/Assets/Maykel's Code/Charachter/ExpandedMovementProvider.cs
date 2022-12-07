@@ -10,7 +10,8 @@ public class ExpandedMovementProvider : MonoBehaviour
     public static event Action ClimbInActive;
 
     [SerializeField] private CharacterController charachter;
-    [SerializeField] private ContinuousMoveProviderBase movementprovider;
+    [SerializeField] private ContinuousMoveProviderBase movementProvider;
+    [SerializeField] private SnapTurnProviderBase turnProvider;
 
     [Header("Inputs")]
     #region
@@ -61,16 +62,6 @@ public class ExpandedMovementProvider : MonoBehaviour
 
         gripRight.action.performed += hfhi => gripRightInput = true;
         gripRight.action.canceled += hfhi => gripRightInput = false;
-        #endregion
-
-        if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
-        {
-            EnableMovement();
-        }
-        else
-        {
-            DisableMovement();
-        }
 
         if (!gripRightInput)
         {
@@ -80,12 +71,33 @@ public class ExpandedMovementProvider : MonoBehaviour
         {
             _leftActive = false;
         }
+        #endregion
 
+        //ENABLE, DISABLE MOVEMENT, TURNING
+        if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
+        {
+            EnableMovement();
+        }
+        else
+        {
+            DisableMovement();
+        }
+        if (!extrainteractorLeft.cantTurn && !extrainteractorRight.cantTurn)
+        {
+            EnableTurning();
+        }
+        else
+        {
+            DisableTurning();
+        }
+
+        //STUN
         if (isStunned)
         {
             stunDelay -= Time.deltaTime;
         }
 
+        //SWING
         if (extrainteractorLeft.GetComponent<XRDirectExtraInteractor>().canSwing)
         {
             Swing();
@@ -94,7 +106,6 @@ public class ExpandedMovementProvider : MonoBehaviour
         {
             Swing();
         }
-
     }
     private void HandActivated(string _controllerName)
     {
@@ -130,7 +141,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         {
             DisableMovement();
 
-            movementprovider.useGravity = false;
+            movementProvider.useGravity = false;
             if (extrainteractorLeft.canClimb || extrainteractorRight.canClimb)
             {
                 Climb();
@@ -151,18 +162,24 @@ public class ExpandedMovementProvider : MonoBehaviour
                 return;
             }
             
-            movementprovider.useGravity = true;
+            movementProvider.useGravity = true;
         }
     }
     private void EnableMovement()
     {
-        movementprovider.enabled = true;
-        isStunned = false;
+        movementProvider.enabled = true;
     }
     private void DisableMovement()
     {
-        movementprovider.enabled = false;
-        isStunned = true;
+        movementProvider.enabled = false;
+    }
+    private void EnableTurning()
+    {
+        turnProvider.enabled = true;
+    }
+    private void DisableTurning()
+    {
+        turnProvider.enabled = false;
     }
     private void Climb()
     {
@@ -191,6 +208,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         else if(stunDelay <= 0)
         {
             stunDelay = 2f;
+            isStunned = true;
             DisableMovement();
             StartCoroutine(Stunned());
         }
@@ -200,5 +218,6 @@ public class ExpandedMovementProvider : MonoBehaviour
         yield return new WaitForSeconds(stunTime);
 
         EnableMovement();
+        isStunned = false;
     }
 }

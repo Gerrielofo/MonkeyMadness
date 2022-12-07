@@ -17,6 +17,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
     public bool canClimb;
     public bool canSwing;
     public bool cantMove;
+    public bool cantTurn;
 
     public GameObject heldItem;
     protected override void Start()
@@ -43,6 +44,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
             heldItem = args.interactableObject.transform.gameObject;
             canSwing = true;
             cantMove = true;
+            cantTurn = true;
         }
         if (args.interactableObject.transform.tag == "CrossBox")
         {
@@ -58,6 +60,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         canSwing = false;
         canClimb = false;
         cantMove = false;
+        cantTurn = false;
     }
     public void FixedUpdate()
     {
