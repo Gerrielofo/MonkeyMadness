@@ -86,6 +86,15 @@ public class ExpandedMovementProvider : MonoBehaviour
             stunDelay -= Time.deltaTime;
         }
 
+        if (extrainteractorLeft.GetComponent<XRDirectExtraInteractor>().canSwing)
+        {
+            Swing();
+        }
+        else if (extrainteractorRight.GetComponent<XRDirectExtraInteractor>().canSwing)
+        {
+            Swing();
+        }
+
     }
     private void HandActivated(string _controllerName)
     {
@@ -165,12 +174,12 @@ public class ExpandedMovementProvider : MonoBehaviour
         if (_leftActive)
         {
             velocity = extrainteractorLeft.GetComponent<XRDirectExtraInteractor>().heldItem.GetComponent<Rigidbody>().velocity;
-            charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
+            charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
         }
         else
         {
             velocity = extrainteractorRight.GetComponent<XRDirectExtraInteractor>().heldItem.GetComponent<Rigidbody>().velocity;
-            charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
+            charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
         }
     }
     public void Stun()

@@ -42,6 +42,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         {
             heldItem = args.interactableObject.transform.gameObject;
             canSwing = true;
+            cantMove = true;
         }
         if (args.interactableObject.transform.tag == "CrossBox")
         {
