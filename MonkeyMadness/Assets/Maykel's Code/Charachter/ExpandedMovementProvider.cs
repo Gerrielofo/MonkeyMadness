@@ -29,7 +29,7 @@ public class ExpandedMovementProvider : MonoBehaviour
 
     private bool isStunned;
     [SerializeField] private float stunTime;
-
+    public Vector3 velocity;
     private void Start()
     {
         XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
@@ -144,12 +144,12 @@ public class ExpandedMovementProvider : MonoBehaviour
     {
         if (_leftActive)
         {
-            Vector3 velocity = extrainteractorLeft.GetComponent<XRDirectExtraInteractor>().heldItem.GetComponent<Rigidbody>().velocity;
+            velocity = extrainteractorLeft.GetComponent<XRDirectExtraInteractor>().heldItem.GetComponent<Rigidbody>().velocity;
             charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
         }
         else
         {
-            Vector3 velocity = extrainteractorRight.GetComponent<XRDirectExtraInteractor>().heldItem.GetComponent<Rigidbody>().velocity;
+            velocity = extrainteractorRight.GetComponent<XRDirectExtraInteractor>().heldItem.GetComponent<Rigidbody>().velocity;
             charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
         }
     }

@@ -42,6 +42,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         }
         if (args.interactableObject.transform.tag == "Swingable")
         {
+            print("hai");
             heldItem = args.interactableObject.transform.gameObject;
             canSwing = true;
         }
