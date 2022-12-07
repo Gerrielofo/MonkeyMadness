@@ -16,7 +16,7 @@ public class SwitchScenesTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PhotonNetwork.CurrentRoom.PlayerCount == 2 && maykel == false) {
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 2 && maykel == false && PhotonNetwork.IsMasterClient == true) {
             StartCoroutine(SceneSwitch());
             maykel = true;
         }
