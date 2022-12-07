@@ -69,6 +69,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Banana tag.unity
     guid: ad37fde29786be746ae3660b5415ae91
+  - enabled: 1
+    path: Assets/Scenes/maykel.unity
+    guid: 1a59a9aafbbadf84583f121a94f4dee6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1e643b60bf32a5049901e04a977ca4c0, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8568763877eabdb4fb55e992ef9eecc7, type: 2}

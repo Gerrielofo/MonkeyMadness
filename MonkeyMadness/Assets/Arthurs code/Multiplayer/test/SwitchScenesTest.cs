@@ -7,16 +7,16 @@ using Photon.Realtime;
 public class SwitchScenesTest : MonoBehaviour
 {
     public bool maykel;
+    public SpawnPlayers spawnPlayers;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PhotonNetwork.CurrentRoom.PlayerCount == 2 && !maykel) {
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 2 && maykel == false && PhotonNetwork.IsMasterClient == true) {
             StartCoroutine(SceneSwitch());
             maykel = true;
         }
