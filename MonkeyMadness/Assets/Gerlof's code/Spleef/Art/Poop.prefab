@@ -255,3 +255,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starsOffset: {x: 0, y: 0.7, z: 0}
   starsEffect: {fileID: 1602570454501873233, guid: 3de54866d5a659146bfeffb5950bb3a4, type: 3}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
