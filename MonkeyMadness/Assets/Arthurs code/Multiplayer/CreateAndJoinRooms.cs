@@ -16,6 +16,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     [Header("Room Options", order = 1)]
     public float maxPlayers;
     public void CreateRoom() {
+        PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.LocalPlayer.NickName = playerName.text;
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = (byte)maxPlayers;
