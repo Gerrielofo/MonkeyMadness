@@ -9,28 +9,40 @@ public class ExpandedMovementProvider : MonoBehaviour
     public static event Action ClimbActive;
     public static event Action ClimbInActive;
 
-    public CharacterController charachter;
-    public InputActionProperty velocityRight;
-    public InputActionProperty velocityLeft;
+    [SerializeField] private CharacterController charachter;
+    [SerializeField] private ContinuousMoveProviderBase movementProvider;
+    [SerializeField] private SnapTurnProviderBase turnProvider;
 
-    public InputActionProperty gripLeft;
-    public InputActionProperty gripRight;
+    [Header("Inputs")]
+    #region
+    [SerializeField] private InputActionProperty velocityRight;
+    [SerializeField] private InputActionProperty velocityLeft;
 
-    public bool gripLeftInput;
-    public bool gripRightInput;
+    [SerializeField] private InputActionProperty gripLeft;
+    [SerializeField] private InputActionProperty gripRight;
 
-    private bool _rightActive = false;
-    private bool _leftActive = false;
+    [SerializeField] private bool gripLeftInput;
+    [SerializeField] private bool gripRightInput;
 
-    public XRDirectExtraInteractor extrainteractorLeft;
-    public XRDirectExtraInteractor extrainteractorRight;
-
-    public ContinuousMoveProviderBase movementprovider;
-
-    private bool isStunned;
+    [SerializeField] private bool _rightActive = false;
+    [SerializeField] private bool _leftActive = false;
+    #endregion
+    [Header("Interactors")]
+    #region
+    [SerializeField] private XRDirectExtraInteractor extrainteractorLeft;
+    [SerializeField] private XRDirectExtraInteractor extrainteractorRight;
+    #endregion
+    [Header("Stun")]
+    #region
+    [SerializeField] private bool isStunned;
     public float stunTime;
-    private float stunDelay;
+    [SerializeField] private float stunDelay;
+    #endregion
+    [Header("Swing")]
+    #region
     public Vector3 velocity;
+    #endregion
+
     private void Start()
     {
         XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
@@ -43,20 +55,13 @@ public class ExpandedMovementProvider : MonoBehaviour
     }
     private void Update()
     {
+        //INPUTS
+        #region
         gripLeft.action.performed += hfhi => gripLeftInput = true;
         gripLeft.action.canceled += hfhi => gripLeftInput = false;
 
         gripRight.action.performed += hfhi => gripRightInput = true;
         gripRight.action.canceled += hfhi => gripRightInput = false;
-
-        if (!extrainteractorLeft.canMove && !extrainteractorRight.canMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
-        {
-            EnableMovement();
-        }
-        else
-        {
-            DisableMovement();
-        }
 
         if (!gripRightInput)
         {
@@ -66,12 +71,41 @@ public class ExpandedMovementProvider : MonoBehaviour
         {
             _leftActive = false;
         }
+        #endregion
 
+        //ENABLE, DISABLE MOVEMENT, TURNING
+        if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb)
+        {
+            EnableMovement();
+        }
+        else
+        {
+            DisableMovement();
+        }
+        if (!extrainteractorLeft.cantTurn && !extrainteractorRight.cantTurn)
+        {
+            EnableTurning();
+        }
+        else
+        {
+            DisableTurning();
+        }
+
+        //STUN
         if (isStunned)
         {
             stunDelay -= Time.deltaTime;
         }
 
+        //SWING
+        if (extrainteractorLeft.GetComponent<XRDirectExtraInteractor>().canSwing)
+        {
+            Swing();
+        }
+        else if (extrainteractorRight.GetComponent<XRDirectExtraInteractor>().canSwing)
+        {
+            Swing();
+        }
     }
     private void HandActivated(string _controllerName)
     {
@@ -107,7 +141,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         {
             DisableMovement();
 
-            movementprovider.useGravity = false;
+            movementProvider.useGravity = false;
             if (extrainteractorLeft.canClimb || extrainteractorRight.canClimb)
             {
                 Climb();
@@ -119,7 +153,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         }
         else
         {
-            if (!extrainteractorLeft.canMove && !extrainteractorRight.canMove)
+            if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove)
             {
                 EnableMovement();
             }
@@ -128,18 +162,24 @@ public class ExpandedMovementProvider : MonoBehaviour
                 return;
             }
             
-            movementprovider.useGravity = true;
+            movementProvider.useGravity = true;
         }
     }
     private void EnableMovement()
     {
-        movementprovider.enabled = true;
-        isStunned = false;
+        movementProvider.enabled = true;
     }
     private void DisableMovement()
     {
-        movementprovider.enabled = false;
-        isStunned = true;
+        movementProvider.enabled = false;
+    }
+    private void EnableTurning()
+    {
+        turnProvider.enabled = true;
+    }
+    private void DisableTurning()
+    {
+        turnProvider.enabled = false;
     }
     private void Climb()
     {
@@ -151,12 +191,12 @@ public class ExpandedMovementProvider : MonoBehaviour
         if (_leftActive)
         {
             velocity = extrainteractorLeft.GetComponent<XRDirectExtraInteractor>().heldItem.GetComponent<Rigidbody>().velocity;
-            charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
+            charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
         }
         else
         {
             velocity = extrainteractorRight.GetComponent<XRDirectExtraInteractor>().heldItem.GetComponent<Rigidbody>().velocity;
-            charachter.Move(charachter.transform.rotation * -velocity * Time.fixedDeltaTime);
+            charachter.Move(charachter.transform.rotation * velocity * Time.fixedDeltaTime);
         }
     }
     public void Stun()
@@ -168,6 +208,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         else if(stunDelay <= 0)
         {
             stunDelay = 2f;
+            isStunned = true;
             DisableMovement();
             StartCoroutine(Stunned());
         }
@@ -177,5 +218,6 @@ public class ExpandedMovementProvider : MonoBehaviour
         yield return new WaitForSeconds(stunTime);
 
         EnableMovement();
+        isStunned = false;
     }
 }

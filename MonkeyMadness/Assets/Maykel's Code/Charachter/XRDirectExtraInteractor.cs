@@ -9,16 +9,15 @@ public class XRDirectExtraInteractor : XRDirectInteractor
     public static event Action<string> ClimbHandActivated;
     public static event Action<string> ClimbHandDeactivated;
 
-    private string _controllerName;
+    [SerializeField] private string _controllerName;
 
-    public InputActionProperty grip;
-    public bool gripInput;
+    [SerializeField] private InputActionProperty grip;
+    [SerializeField] private bool gripInput;
 
     public bool canClimb;
     public bool canSwing;
-    public bool canMove;
-
-    public GameObject swingableVelocity;
+    public bool cantMove;
+    public bool cantTurn;
 
     public GameObject heldItem;
     protected override void Start()
@@ -42,15 +41,14 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         }
         if (args.interactableObject.transform.tag == "Swingable")
         {
-            print("hai");
             heldItem = args.interactableObject.transform.gameObject;
             canSwing = true;
+            cantMove = true;
+            cantTurn = true;
         }
         if (args.interactableObject.transform.tag == "CrossBox")
         {
-            canMove = true;
-
-            swingableVelocity = args.interactableObject.transform.gameObject;
+            cantMove = true;
         }
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
@@ -61,7 +59,8 @@ public class XRDirectExtraInteractor : XRDirectInteractor
 
         canSwing = false;
         canClimb = false;
-        canMove = false;
+        cantMove = false;
+        cantTurn = false;
     }
     public void FixedUpdate()
     {
