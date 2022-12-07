@@ -14,7 +14,7 @@ public class FloorSection : MonoBehaviour
     {
         if(collision.transform.tag == "Poop")
         {
-            Instantiate(poopSplatter);
+            Instantiate(poopSplatter, collision.transform.position, collision.transform.rotation);
             Rigidbody.useGravity = true;
             Rigidbody.constraints &= ~RigidbodyConstraints.FreezeAll;
             Destroy(gameObject, 3f);
