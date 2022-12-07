@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249597089}
   - component: {fileID: 249597088}
+  - component: {fileID: 249597090}
   m_Layer: 0
   m_Name: SpawnPlayers
   m_TagString: Untagged
@@ -174,6 +175,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &249597090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249597087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2a01d5169a34d48a4f031e3feff01a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maykel: 0
+  spawnPlayers: {fileID: 249597088}
+  miniGameToLoad: Bowlen
 --- !u!1 &280188823
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +425,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charachter: {fileID: 657827752}
+  movementProvider: {fileID: 0}
+  turnProvider: {fileID: 0}
   velocityRight:
     m_UseReference: 1
     m_Action:
@@ -459,10 +477,14 @@ MonoBehaviour:
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripLeftInput: 0
   gripRightInput: 0
+  _rightActive: 0
+  _leftActive: 0
   extrainteractorLeft: {fileID: 1185757549}
   extrainteractorRight: {fileID: 1623365824}
-  movementprovider: {fileID: 657827754}
+  isStunned: 0
   stunTime: 0
+  stunDelay: 0
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!114 &657827758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,7 +510,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1008215258}
   - component: {fileID: 1008215257}
-  - component: {fileID: 1008215259}
   m_Layer: 0
   m_Name: PlayerCounter
   m_TagString: Untagged
@@ -524,18 +545,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1008215259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1008215256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a56f4e7e2c60d64989b7bb68645e4ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1111200333
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +945,7 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
+  _controllerName: 
   grip:
     m_UseReference: 1
     m_Action:
@@ -951,8 +961,8 @@ MonoBehaviour:
   gripInput: 0
   canClimb: 0
   canSwing: 0
-  canMove: 0
-  swingableVelocity: {fileID: 0}
+  cantMove: 0
+  cantTurn: 0
   heldItem: {fileID: 0}
 --- !u!54 &1185757550
 Rigidbody:
@@ -1444,6 +1454,7 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
+  _controllerName: 
   grip:
     m_UseReference: 1
     m_Action:
@@ -1459,8 +1470,8 @@ MonoBehaviour:
   gripInput: 0
   canClimb: 0
   canSwing: 0
-  canMove: 0
-  swingableVelocity: {fileID: 0}
+  cantMove: 0
+  cantTurn: 0
   heldItem: {fileID: 0}
 --- !u!54 &1623365825
 Rigidbody:
@@ -1535,21 +1546,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd6b8249f418c34fa67cfb5299cb577, type: 3}
---- !u!1 &1912688976 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8536242832891603164, guid: 0cd6b8249f418c34fa67cfb5299cb577, type: 3}
-  m_PrefabInstance: {fileID: 1912688975}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1912688977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912688976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a2a01d5169a34d48a4f031e3feff01a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maykel: 0
