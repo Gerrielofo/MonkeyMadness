@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: e24a53a9886e409469e4380eddfd49ca, type: 2}
+      objectReference: {fileID: 2100000, guid: 10f9fc00967dead44855dfb42bb8733c, type: 2}
     - target: {fileID: 919132149155446097, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_Name
       value: RoundChair (1)
@@ -321,7 +321,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: e24a53a9886e409469e4380eddfd49ca, type: 2}
+      objectReference: {fileID: 2100000, guid: 10f9fc00967dead44855dfb42bb8733c, type: 2}
     - target: {fileID: 919132149155446097, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_Name
       value: RoundChair (1)
@@ -390,7 +390,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: e24a53a9886e409469e4380eddfd49ca, type: 2}
+      objectReference: {fileID: 2100000, guid: 10f9fc00967dead44855dfb42bb8733c, type: 2}
     - target: {fileID: 919132149155446097, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_Name
       value: RoundChair (1)
@@ -599,7 +599,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: e24a53a9886e409469e4380eddfd49ca, type: 2}
+      objectReference: {fileID: 2100000, guid: 10f9fc00967dead44855dfb42bb8733c, type: 2}
     - target: {fileID: 919132149155446097, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_Name
       value: RoundChair (1)
