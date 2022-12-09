@@ -17,6 +17,9 @@ TagManager:
   - Balling
   - Poop
   - HipBox
+  - IsPlayer
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX

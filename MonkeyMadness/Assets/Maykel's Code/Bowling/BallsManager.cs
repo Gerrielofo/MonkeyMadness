@@ -63,7 +63,6 @@ public class BallsManager : MonoBehaviour
         roundNumber = 1;
         RoundStartPins();
         SpawnBall();
-        SpawnBall();
     }
     public void RoundStartPins()
     {
