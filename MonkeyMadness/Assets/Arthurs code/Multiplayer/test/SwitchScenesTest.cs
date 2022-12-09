@@ -8,6 +8,7 @@ public class SwitchScenesTest : MonoBehaviour
 {
     public bool maykel;
     public SpawnPlayers spawnPlayers;
+    public string miniGameToLoad;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,6 @@ public class SwitchScenesTest : MonoBehaviour
     }
     IEnumerator SceneSwitch() {
         yield return new WaitForSeconds(2);
-        PhotonNetwork.LoadLevel("maykel");
+        PhotonNetwork.LoadLevel(miniGameToLoad);
     }
 }
