@@ -18,6 +18,8 @@ TagManager:
   - Poop
   - HipBox
   - IsPlayer
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX

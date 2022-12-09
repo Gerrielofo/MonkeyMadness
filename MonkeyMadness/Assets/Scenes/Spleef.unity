@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &11580864
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &23915711
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &67345548
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &104689758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &108809331
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &205833266
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &210810740
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &308926118
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &313543745
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &431018513
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &434981067
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &456370582
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1738,7 +1738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &472420718
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1866,7 +1866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &487667435
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1994,7 +1994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &498127565
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2185,6 +2185,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poopPrefap: {fileID: 8251440483992929728, guid: 6f94a1148ad073c41a93b45009bc9300, type: 3}
+  leftHapticAction: {fileID: -8785819595477538065, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  rightHapticAction: {fileID: -8222252007134549311, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  duration: 0.5
+  Amplitude: 10
 --- !u!1 &505956408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,7 +2237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &505956411
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2361,7 +2365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &507621259
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2441,6 +2445,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507621256}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &592304974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3353761393785672163, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
+  m_PrefabInstance: {fileID: 1439529717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb41a55198eafd4aa292b3a402c6763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &630940697
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,7 +2504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &630940700
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2617,7 +2632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &645979079
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2745,7 +2760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &715893968
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2873,7 +2888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &749662637
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3001,7 +3016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &807804959
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3129,7 +3144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &882968216
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3372,7 +3387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &956339092
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3500,7 +3515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &987068295
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3628,7 +3643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1005753861
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3756,7 +3771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1015018680
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3884,7 +3899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1056973872
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4012,7 +4027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1081569990
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4140,7 +4155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1087157302
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4268,7 +4283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1125601830
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4348,6 +4363,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125601827}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1128401465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439529719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1131705626
 GameObject:
   m_ObjectHideFlags: 0
@@ -4396,7 +4444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1131705629
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4524,7 +4572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1197406891
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4652,7 +4700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1201418004
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4780,7 +4828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1204816797
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4976,7 +5024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1361690869
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5104,7 +5152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1416522073
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5209,7 +5257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091232217465188987, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
       propertyPath: m_TagString
-      value: Hands
+      value: LeftHand
       objectReference: {fileID: 0}
     - target: {fileID: 4091232218363148624, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5217,7 +5265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091232218423508628, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
       propertyPath: m_TagString
-      value: Hands
+      value: RightHand
       objectReference: {fileID: 0}
     - target: {fileID: 4091232219232971796, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
       propertyPath: m_Name
@@ -5380,6 +5428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charachter: {fileID: 1439529720}
+  movementProvider: {fileID: 1439529721}
+  turnProvider: {fileID: 1439529727}
   velocityRight:
     m_UseReference: 1
     m_Action:
@@ -5430,11 +5480,25 @@ MonoBehaviour:
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripLeftInput: 0
   gripRightInput: 0
-  extrainteractorLeft: {fileID: 0}
-  extrainteractorRight: {fileID: 0}
-  movementprovider: {fileID: 1439529721}
+  _rightActive: 0
+  _leftActive: 0
+  extrainteractorLeft: {fileID: 1887406603}
+  extrainteractorRight: {fileID: 592304974}
+  isStunned: 0
   stunTime: 2
+  stunDelay: 0
   velocity: {x: 0, y: 0, z: 0}
+--- !u!114 &1439529727 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4091232219232971798, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
+  m_PrefabInstance: {fileID: 1439529717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439529718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2213c36610e3b1c4bbf886810ed9db12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1458123978
 GameObject:
   m_ObjectHideFlags: 0
@@ -5483,7 +5547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1458123981
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5611,7 +5675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1472638445
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5739,7 +5803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1509100123
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5867,7 +5931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1529637847
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5995,7 +6059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1540710613
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6123,7 +6187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1550013966
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6251,7 +6315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1559821751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6379,7 +6443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1567989373
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6507,7 +6571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1676274532
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6635,7 +6699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1707031509
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6858,7 +6922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1749938663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6986,7 +7050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1756570429
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7114,7 +7178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1818684801
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7242,7 +7306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1840008246
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7322,6 +7386,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840008243}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1887406603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4966123268614822560, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
+  m_PrefabInstance: {fileID: 1439529717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb41a55198eafd4aa292b3a402c6763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1889702137
 GameObject:
   m_ObjectHideFlags: 0
@@ -7370,7 +7445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1889702140
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7498,7 +7573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1918214489
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7626,7 +7701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1922903237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7754,7 +7829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &1981699009
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7882,7 +7957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &2030082726
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8010,7 +8085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &2034963139
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8138,7 +8213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &2043640261
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8266,7 +8341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &2054580318
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8394,7 +8469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &2055265660
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8522,7 +8597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &2062171714
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8650,7 +8725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &2070287888
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8778,7 +8853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &2107609688
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8906,7 +8981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a67b64b56e8c3a344a727109368d3858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopSplatter: {fileID: 0}
+  poopSplatter: {fileID: 1545114431527039307, guid: f44174c0aae6f094eb7e62042b39b631, type: 3}
 --- !u!54 &2112699399
 Rigidbody:
   m_ObjectHideFlags: 0

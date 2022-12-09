@@ -1,21 +1,28 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.OpenXR.Input;
 
 public class PoopGrab : MonoBehaviour
 {
     [SerializeField] private GameObject poopPrefap;
 
-    [SerializeField] private XRController xr;
+    [SerializeField] InputActionReference leftHapticAction;
+    [SerializeField] InputActionReference rightHapticAction;
 
     [SerializeField] private float duration;
     [SerializeField] private float Amplitude;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Hands") && other.GetComponent<XRDirectExtraInteractor>().heldItem == null)
+        if (other.CompareTag("LeftHand"))
         {
-            //xr = other.transform.GetComponent<XRController>();
-            //xr = (XRController)GameObject.FindObjectOfType(typeof(XRController));
-            //xr.SendHapticImpulse(Amplitude, duration);
+            OpenXRInput.SendHapticImpulse(leftHapticAction, Amplitude, duration, UnityEngine.InputSystem.XR.XRController.leftHand);
+        }
+        else if (other.CompareTag("RightHand"))
+        {
+            OpenXRInput.SendHapticImpulse(rightHapticAction, Amplitude, duration, UnityEngine.InputSystem.XR.XRController.rightHand);
+        }
+        if (other.CompareTag("LeftHand") && other.GetComponent<XRDirectExtraInteractor>().heldItem == null ||  other.CompareTag("RightHand") && other.GetComponent<XRDirectExtraInteractor>().heldItem == null)
+        {
             Instantiate(poopPrefap, transform.position, transform.rotation);
         }
     }

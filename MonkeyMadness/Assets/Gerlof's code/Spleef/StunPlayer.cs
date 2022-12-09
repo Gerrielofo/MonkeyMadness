@@ -11,10 +11,13 @@ public class StunPlayer : MonoBehaviour
     {
         if (collision.transform.CompareTag("IsPlayer"))
         {
-            collision.transform.GetComponent<ExpandedMovementProvider>().Stun();
-            Instantiate(starsEffect, collision.transform.position + starsOffset, collision.transform.rotation * Quaternion.Euler(-90, 0, 0));
-            Instantiate(poopSplatter, transform.position, transform.rotation);
-            Destroy(gameObject);
+            if (collision.transform.GetComponent<ExpandedMovementProvider>().stunDelay <= 0)
+            {
+                collision.transform.GetComponent<ExpandedMovementProvider>().Stun();
+                Instantiate(starsEffect, collision.transform.position + starsOffset, collision.transform.rotation * Quaternion.Euler(-90, 0, 0));
+                Instantiate(poopSplatter, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
         }
     }
 }
