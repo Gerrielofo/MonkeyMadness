@@ -199,7 +199,7 @@ Transform:
   - {fileID: 1925493422}
   - {fileID: 1110696565}
   m_Father: {fileID: 28236697}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &28236696
 GameObject:
@@ -242,7 +242,7 @@ Transform:
   - {fileID: 1267707106}
   - {fileID: 1491861218}
   - {fileID: 1396257306}
-  - {fileID: 964341697}
+  - {fileID: 36678788}
   - {fileID: 113419940}
   - {fileID: 128032513}
   - {fileID: 1459063766}
@@ -253,7 +253,6 @@ Transform:
   - {fileID: 909970924}
   - {fileID: 1464950697}
   - {fileID: 329899475}
-  - {fileID: 36678788}
   - {fileID: 13723958}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -372,7 +371,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 28236697}
-  m_RootOrder: 24
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 50, y: -103.3, z: 0}
 --- !u!114 &36678789
 MonoBehaviour:
@@ -1161,6 +1160,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 113419942, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 113419942, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 113419944, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: sceneViewId
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 113419946, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 4834904524590211171, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
       propertyPath: m_Name
       value: Bowlingball (20)
@@ -1223,6 +1238,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 128032515, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128032515, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 128032517, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: sceneViewId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 128032519, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 128032519, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 7474728964974416932, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
       propertyPath: m_Name
       value: Bowlingball (13)
@@ -1233,7 +1268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7849847579804159646, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.997055
+      value: -6.014
       objectReference: {fileID: 0}
     - target: {fileID: 7849847579804159646, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1241,7 +1276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7849847579804159646, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.6574421
+      value: 1.657442
       objectReference: {fileID: 0}
     - target: {fileID: 7849847579804159646, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1271,7 +1306,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 128032519, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032515, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032516, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032517, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032518, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
 --- !u!4 &128032513 stripped
 Transform:
@@ -1451,6 +1491,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 164301205, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: sceneViewId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 2713238812980911498, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -1596,6 +1652,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 128032515, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128032517, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: sceneViewId
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 128032519, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
+    - target: {fileID: 171357736, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7474728964974416932, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
       propertyPath: m_Name
       value: Bowlingball (16)
@@ -1825,6 +1897,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 203081731, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: sceneViewId
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 6332377731041278544, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1991,6 +2079,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 113419942, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 113419944, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: sceneViewId
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 113419946, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
+    - target: {fileID: 210890564, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4834904524590211171, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
       propertyPath: m_Name
       value: Bowlingball (21)
@@ -2001,15 +2105,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5211465904513137369, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.2950554
+      value: -6.309
       objectReference: {fileID: 0}
     - target: {fileID: 5211465904513137369, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.34736
+      value: -1.348
       objectReference: {fileID: 0}
     - target: {fileID: 5211465904513137369, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.6574421
+      value: 1.659
       objectReference: {fileID: 0}
     - target: {fileID: 5211465904513137369, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2039,7 +2143,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 113419946, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419942, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419943, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419944, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419945, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
 --- !u!4 &210890562 stripped
 Transform:
@@ -2536,6 +2645,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 320768221, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 2713238812980911498, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2584,7 +2709,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (22)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063769, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063771, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
 --- !u!4 &320768219 stripped
 Transform:
@@ -2598,6 +2728,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 329899477, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: sceneViewId
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 6332377731041278544, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -2646,7 +2792,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (14)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950700, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950702, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
 --- !u!4 &329899475 stripped
 Transform:
@@ -3602,6 +3753,7 @@ GameObject:
   - component: {fileID: 516007789}
   - component: {fileID: 516007791}
   - component: {fileID: 516007790}
+  - component: {fileID: 516007792}
   m_Layer: 0
   m_Name: bowling ball holder
   m_TagString: Untagged
@@ -3673,6 +3825,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516007788}
+  m_Mesh: {fileID: -1407623660032272785, guid: 42c3d12a4e6740e4d81ad2e7c6b1f1e1, type: 3}
+--- !u!64 &516007792
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516007788}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -1407623660032272785, guid: 42c3d12a4e6740e4d81ad2e7c6b1f1e1, type: 3}
 --- !u!1 &528993900
 GameObject:
@@ -4034,6 +4200,7 @@ GameObject:
   - component: {fileID: 582211095}
   - component: {fileID: 582211097}
   - component: {fileID: 582211096}
+  - component: {fileID: 582211098}
   m_Layer: 0
   m_Name: Plane.030
   m_TagString: Untagged
@@ -4105,6 +4272,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582211094}
+  m_Mesh: {fileID: 4679390504295679099, guid: cf786ad85f3df514883b9558b2d0f066, type: 3}
+--- !u!64 &582211098
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582211094}
+  m_Material: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4679390504295679099, guid: cf786ad85f3df514883b9558b2d0f066, type: 3}
 --- !u!1 &594212943
 GameObject:
@@ -4544,6 +4725,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 669454082, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 978297936, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978297938, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: sceneViewId
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 978297940, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 743246804410508810, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -5611,6 +5808,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 803697742, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: sceneViewId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 803697750}
+    - target: {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 2713238812980911498, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5666,6 +5887,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2713238812980911498, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
   m_PrefabInstance: {fileID: 803697739}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &803697750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1459063769, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+  m_PrefabInstance: {fileID: 803697739}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &809036931
 GameObject:
   m_ObjectHideFlags: 0
@@ -6233,13 +6465,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 909970926, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: sceneViewId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 2713238812980911498, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 2713238812980911498, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.7220554
+      value: -5.721
       objectReference: {fileID: 0}
     - target: {fileID: 2713238812980911498, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6247,7 +6495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2713238812980911498, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.6574421
+      value: 1.657442
       objectReference: {fileID: 0}
     - target: {fileID: 2713238812980911498, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6281,7 +6529,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (17)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063769, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063771, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
 --- !u!4 &909970924 stripped
 Transform:
@@ -6382,6 +6635,7 @@ GameObject:
   - component: {fileID: 920828334}
   - component: {fileID: 920828336}
   - component: {fileID: 920828335}
+  - component: {fileID: 920828337}
   m_Layer: 0
   m_Name: Plane.031
   m_TagString: Untagged
@@ -6453,6 +6707,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920828333}
+  m_Mesh: {fileID: -3169986393032714919, guid: cf786ad85f3df514883b9558b2d0f066, type: 3}
+--- !u!64 &920828337
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920828333}
+  m_Material: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -3169986393032714919, guid: cf786ad85f3df514883b9558b2d0f066, type: 3}
 --- !u!1 &922024414
 GameObject:
@@ -6631,6 +6899,7 @@ GameObject:
   - component: {fileID: 946020115}
   - component: {fileID: 946020117}
   - component: {fileID: 946020116}
+  - component: {fileID: 946020118}
   m_Layer: 0
   m_Name: Plane.009
   m_TagString: Untagged
@@ -6703,80 +6972,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946020114}
   m_Mesh: {fileID: -6968846074178130577, guid: cf786ad85f3df514883b9558b2d0f066, type: 3}
---- !u!1001 &964341696
-PrefabInstance:
+--- !u!64 &946020118
+MeshCollider:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 28236697}
-    m_Modifications:
-    - target: {fileID: 2289663544353353445, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: sceneViewId
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.1904001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.04136
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.28889275
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3151536949632434761, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: sceneViewId
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3261194709638394599, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: sceneViewId
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3493932450710490178, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-      propertyPath: m_Name
-      value: VRRig
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
---- !u!4 &964341697 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3148934507491754780, guid: e0812d00a5b357d49b840b6788573d56, type: 3}
-  m_PrefabInstance: {fileID: 964341696}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946020114}
+  m_Material: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6968846074178130577, guid: cf786ad85f3df514883b9558b2d0f066, type: 3}
 --- !u!1 &972477652
 GameObject:
   m_ObjectHideFlags: 0
@@ -6951,6 +7160,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 978297936, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978297936, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 978297938, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: sceneViewId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 978297940, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 743246804410508810, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -6999,7 +7224,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (23)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 978297940, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297936, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297937, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297938, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297939, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
 --- !u!4 &978297934 stripped
 Transform:
@@ -7096,6 +7326,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 128032515, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 128032517, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: sceneViewId
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 128032519, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
+    - target: {fileID: 1037326819, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7474728964974416932, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
       propertyPath: m_Name
       value: Bowlingball (28)
@@ -7162,6 +7408,7 @@ GameObject:
   - component: {fileID: 1038087594}
   - component: {fileID: 1038087596}
   - component: {fileID: 1038087595}
+  - component: {fileID: 1038087597}
   m_Layer: 0
   m_Name: Plane.032
   m_TagString: Untagged
@@ -7233,6 +7480,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038087593}
+  m_Mesh: {fileID: 6800249751854360846, guid: cf786ad85f3df514883b9558b2d0f066, type: 3}
+--- !u!64 &1038087597
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038087593}
+  m_Material: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 6800249751854360846, guid: cf786ad85f3df514883b9558b2d0f066, type: 3}
 --- !u!1 &1105318828
 GameObject:
@@ -7686,6 +7947,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 1213754821, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413131039, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413131041, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: sceneViewId
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413131043, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 5818707406903944809, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -7734,7 +8011,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball 1 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1413131043, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131039, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131040, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131041, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131042, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
 --- !u!4 &1213754819 stripped
 Transform:
@@ -7893,6 +8175,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 1267707108, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: sceneViewId
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 6332377731041278544, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -8518,6 +8816,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 113419942, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 113419944, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: sceneViewId
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 113419946, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
+    - target: {fileID: 1396257308, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4834904524590211171, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
       propertyPath: m_Name
       value: Bowlingball (24)
@@ -8684,6 +8998,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 1413131039, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413131039, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413131041, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: sceneViewId
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413131043, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 5818707406903944809, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -8746,6 +9076,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 1414597002, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: sceneViewId
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 6332377731041278544, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -8808,6 +9154,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: sceneViewId
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 2713238812980911498, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -8870,6 +9232,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: sceneViewId
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
     - target: {fileID: 6332377731041278544, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -8918,7 +9296,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950700, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950702, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
 --- !u!4 &1464950697 stripped
 Transform:
@@ -9168,6 +9551,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 1413131039, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413131041, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: sceneViewId
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413131043, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
+    - target: {fileID: 1491861220, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5818707406903944809, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -12452,6 +12851,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28236697}
     m_Modifications:
+    - target: {fileID: 978297936, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978297938, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: sceneViewId
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 978297940, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 69e9d668c58e2574e9ddc368d5e31499, type: 2}
+    - target: {fileID: 1969742722, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 743246804410508810, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
       propertyPath: m_RootOrder
       value: 0
