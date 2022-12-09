@@ -70,7 +70,7 @@ public class BallsManager : MonoBehaviour
         for (int i = 0; i < spawnlocations.Length; i++)
         {
             pinIndex++;
-            clonePin = Instantiate(pin, spawnlocations[i]);
+            clonePin = PhotonNetwork.Instantiate("Pin", spawnlocations[i].position, Quaternion.identity);
             pins.Add(clonePin);
         }
     }
@@ -78,7 +78,7 @@ public class BallsManager : MonoBehaviour
     {
         if (canRespawn[pinNumber])
         {
-            clonePin = Instantiate(pin, spawnlocations[pinNumber]);
+            clonePin = PhotonNetwork.Instantiate("Pin", spawnlocations[pinNumber].position, Quaternion.identity);
             pinIndex++;
             pins.Add(clonePin);
         }

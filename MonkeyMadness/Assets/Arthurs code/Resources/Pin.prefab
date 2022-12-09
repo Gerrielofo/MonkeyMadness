@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1220361800325206442}
   - component: {fileID: 8416138232185116703}
   m_Layer: 0
-  m_Name: Pion (7)
+  m_Name: Pin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
