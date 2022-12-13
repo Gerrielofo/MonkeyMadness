@@ -23,11 +23,12 @@ public class SwitchScenesTest : MonoBehaviour
     void Update()
     {
         if (autmaticSwitch) {
-            SwitchScene();
+            SwitchScene(0);
         }
     }
-    public void SwitchScene() {
+    public void SwitchScene(int RoomSwitch) {
         if (PhotonNetwork.CurrentRoom.PlayerCount == 2 && maykel == false && PhotonNetwork.IsMasterClient == true) {
+            sceneToLoad = RoomSwitch;
             StartCoroutine(SceneSwitch());
             maykel = true;
         }

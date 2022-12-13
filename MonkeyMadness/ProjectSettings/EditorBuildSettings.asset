@@ -60,10 +60,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/SlotCar-Scene.unity
     guid: 711b38c07f2cf904f81b3422c67f1825
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenuDev.unity
     guid: 0de35d961412feb4c93f5c6c90ce65b0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainLobbyArt.unity
     guid: 7ad9670c7debdb841a00ce815fdbe0c0
   - enabled: 1
