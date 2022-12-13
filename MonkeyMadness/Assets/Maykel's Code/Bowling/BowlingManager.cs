@@ -59,6 +59,8 @@ public class BowlingManager : MonoBehaviour
     }
     private void Start()
     {
+        
+
         roundNumber = 1;
         RoundStartPins();
     }
