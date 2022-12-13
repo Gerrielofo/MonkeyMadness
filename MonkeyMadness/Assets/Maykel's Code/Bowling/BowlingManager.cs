@@ -67,6 +67,7 @@ public class BowlingManager : MonoBehaviour
         for (int i = 0; i < spawnlocations.Length; i++)
         {
             pinIndex++;
+            Debug.Log("hihi");
             clonePin = PhotonNetwork.Instantiate("Pin", spawnlocations[i].position, Quaternion.identity);
             pins.Add(clonePin);
         }
@@ -75,6 +76,7 @@ public class BowlingManager : MonoBehaviour
     {
         if (canRespawn[pinNumber])
         {
+            Debug.Log("haha");
             clonePin = PhotonNetwork.Instantiate("Pin", spawnlocations[pinNumber].position, Quaternion.identity);
             pinIndex++;
             pins.Add(clonePin);
