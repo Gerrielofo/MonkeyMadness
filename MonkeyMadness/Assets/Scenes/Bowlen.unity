@@ -2426,7 +2426,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (25)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950700, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950702, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
 --- !u!4 &184655715 stripped
 Transform:
@@ -2925,7 +2930,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (23)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063769, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063771, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
 --- !u!4 &287106588 stripped
 Transform:
@@ -6810,6 +6820,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 950917728}
     m_Modifications:
+    - target: {fileID: 1085874689008578607, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.0000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085874689008578607, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651013, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_Name
       value: BowlingManager 1
@@ -7289,7 +7307,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950700, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950702, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
 --- !u!4 &662210187 stripped
 Transform:
@@ -7771,7 +7794,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 128032515, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032516, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032517, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032519, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032518, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
 --- !u!4 &715699426 stripped
 Transform:
@@ -8629,7 +8657,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 128032515, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032516, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032517, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032519, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032518, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
 --- !u!4 &806275808 stripped
 Transform:
@@ -9202,7 +9235,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063769, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063771, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
 --- !u!4 &840634393 stripped
 Transform:
@@ -9303,7 +9341,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (17)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 978297936, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297937, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297938, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297940, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297939, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
 --- !u!4 &871047725 stripped
 Transform:
@@ -10739,7 +10782,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 113419942, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419943, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419944, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419946, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419945, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
 --- !u!4 &980854881 stripped
 Transform:
@@ -10956,7 +11004,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (20)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950700, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950702, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
 --- !u!4 &1003453452 stripped
 Transform:
@@ -11002,6 +11055,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2048868264}
     m_Modifications:
+    - target: {fileID: 1085874689008578607, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.0000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085874689008578607, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651013, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_Name
       value: BowlingManager 1
@@ -11164,7 +11225,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 113419942, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419943, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419944, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419946, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419945, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
 --- !u!4 &1024688910 stripped
 Transform:
@@ -12129,7 +12195,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 978297936, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297937, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297938, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297940, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297939, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
 --- !u!4 &1165640560 stripped
 Transform:
@@ -12315,7 +12386,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 113419942, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419943, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419944, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419946, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
+    - {fileID: 113419945, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38874f33ff663a341b550a161dc01fbb, type: 3}
 --- !u!4 &1171087881 stripped
 Transform:
@@ -14274,6 +14350,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1482455843}
     m_Modifications:
+    - target: {fileID: 1085874689008578607, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.0000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085874689008578607, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651013, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_Name
       value: BowlingManager 1
@@ -15810,7 +15894,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063769, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063771, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
 --- !u!4 &1520975261 stripped
 Transform:
@@ -16042,7 +16131,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (18)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950700, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950702, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
 --- !u!4 &1544263437 stripped
 Transform:
@@ -16195,7 +16289,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (19)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063769, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063771, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
 --- !u!4 &1559412059 stripped
 Transform:
@@ -17438,7 +17537,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball 1 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1413131039, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131040, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131041, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131043, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131042, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
 --- !u!4 &1677812086 stripped
 Transform:
@@ -17852,7 +17956,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950700, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950702, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
 --- !u!4 &1741535223 stripped
 Transform:
@@ -17961,6 +18070,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1350168160}
     m_Modifications:
+    - target: {fileID: 1085874689008578607, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085874689008578607, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651013, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_Name
       value: BowlingManager 1
@@ -18972,7 +19089,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (26)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063769, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063771, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
 --- !u!4 &1877502326 stripped
 Transform:
@@ -19354,7 +19476,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball 1 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1413131039, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131040, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131041, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131043, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131042, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
 --- !u!4 &1920496552 stripped
 Transform:
@@ -20413,7 +20540,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 128032515, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032516, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032517, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032519, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
+    - {fileID: 128032518, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c7f1136dc7cb8342a9ae78212a78893, type: 3}
 --- !u!4 &2046950705 stripped
 Transform:
@@ -20582,7 +20714,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball 1 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1413131039, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131040, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131041, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131043, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
+    - {fileID: 1413131042, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 44e06451be2b75f49b5098af32eafd88, type: 3}
 --- !u!4 &2050906977 stripped
 Transform:
@@ -20714,7 +20851,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1459063768, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063769, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063770, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063772, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
+    - {fileID: 1459063771, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 721468b341f6b7142816825b5eba6d8a, type: 3}
 --- !u!4 &2059032653 stripped
 Transform:
@@ -21081,7 +21223,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1464950699, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950700, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950701, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950703, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
+    - {fileID: 1464950702, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1d1314b38b90902498e7302a8a7376cf, type: 3}
 --- !u!4 &2102940184 stripped
 Transform:
@@ -21151,7 +21298,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowlingball (24)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 978297936, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297937, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297938, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297940, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
+    - {fileID: 978297939, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 56a6bf30d4572a148a0d4fe6fbc0b250, type: 3}
 --- !u!4 &2113705886 stripped
 Transform:
