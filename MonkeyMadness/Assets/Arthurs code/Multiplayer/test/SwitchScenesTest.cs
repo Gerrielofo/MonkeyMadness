@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 public class SwitchScenesTest : MonoBehaviour
 {
-    public bool maykel;
+    private bool maykel;
     public SpawnPlayers spawnPlayers;
-    public string miniGameToLoad;
+    public InputField roomToSwitchTo;
+    public bool autmaticSwitch;
+    [Header("Choose Room")]
+    public string[] miniGameToLoad;
+    public int sceneToLoad;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +22,22 @@ public class SwitchScenesTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (autmaticSwitch) {
+            SwitchScene();
+        }
+    }
+    public void SwitchScene() {
         if (PhotonNetwork.CurrentRoom.PlayerCount == 2 && maykel == false && PhotonNetwork.IsMasterClient == true) {
             StartCoroutine(SceneSwitch());
             maykel = true;
         }
     }
     IEnumerator SceneSwitch() {
-        yield return new WaitForSeconds(2);
-        PhotonNetwork.LoadLevel(miniGameToLoad);
+        yield return new WaitForSeconds(5);
+        if (roomToSwitchTo == null) {
+            PhotonNetwork.LoadLevel(miniGameToLoad[sceneToLoad]);
+        } else {
+            PhotonNetwork.LoadLevel(roomToSwitchTo.ToString());
+        }
     }
 }

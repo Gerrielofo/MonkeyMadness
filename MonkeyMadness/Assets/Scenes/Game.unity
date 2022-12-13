@@ -189,7 +189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maykel: 0
   spawnPlayers: {fileID: 249597088}
-  miniGameToLoad: Bowlen
+  miniGameToLoad:
+  - Bowlen
+  sceneToLoad: 0
 --- !u!1 &1008215256
 GameObject:
   m_ObjectHideFlags: 0

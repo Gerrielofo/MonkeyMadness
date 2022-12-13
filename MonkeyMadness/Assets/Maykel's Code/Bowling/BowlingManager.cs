@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
-public class BallsManager : MonoBehaviour
+using Photon.Pun;
+using Photon.Realtime;
+public class BowlingManager : MonoBehaviour
 {
     [Header("Pins")]
     #region
@@ -43,9 +44,7 @@ public class BallsManager : MonoBehaviour
     {
         if (other.CompareTag("Balling"))
         {
-            Destroy(other.gameObject);
-
-            StartCoroutine(RespawnBall());
+            other.GetComponent<BallManager>().RespawnBall();
             for (int i = 0; i < pinIndex; i++)
             {
                 pins[i].GetComponent<PinManager>().CheckPins();
@@ -60,16 +59,18 @@ public class BallsManager : MonoBehaviour
     }
     private void Start()
     {
+        
+
         roundNumber = 1;
         RoundStartPins();
-        SpawnBall();
     }
     public void RoundStartPins()
     {
         for (int i = 0; i < spawnlocations.Length; i++)
         {
             pinIndex++;
-            clonePin = Instantiate(pin, spawnlocations[i]);
+            Debug.Log("hihi");
+            clonePin = PhotonNetwork.Instantiate("Pin", spawnlocations[i].position, Quaternion.identity);
             pins.Add(clonePin);
         }
     }
@@ -77,14 +78,11 @@ public class BallsManager : MonoBehaviour
     {
         if (canRespawn[pinNumber])
         {
-            clonePin = Instantiate(pin, spawnlocations[pinNumber]);
+            Debug.Log("haha");
+            clonePin = PhotonNetwork.Instantiate("Pin", spawnlocations[pinNumber].position, Quaternion.identity);
             pinIndex++;
             pins.Add(clonePin);
         }
-    }
-    public void SpawnBall()
-    {
-        cloneBall = Instantiate(ball, ballSpawnpoint);
     }
     public IEnumerator RespawnPins()
     {
@@ -116,12 +114,6 @@ public class BallsManager : MonoBehaviour
                 }
             }
         }
-    }
-    public IEnumerator RespawnBall()
-    {
-        yield return new WaitForSeconds(3);
-
-        SpawnBall();
     }
     private void Update()
     {

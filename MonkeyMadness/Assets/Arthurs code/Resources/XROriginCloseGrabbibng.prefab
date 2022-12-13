@@ -339,6 +339,7 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
+  _controllerName: 
   grip:
     m_UseReference: 0
     m_Action:
@@ -354,8 +355,9 @@ MonoBehaviour:
   gripInput: 0
   canClimb: 0
   canSwing: 0
-  canMove: 0
-  swingableVelocity: {fileID: 0}
+  cantMove: 0
+  cantTurn: 0
+  heldItem: {fileID: 0}
 --- !u!1 &4091232218363148625
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,6 +912,7 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
+  _controllerName: 
   grip:
     m_UseReference: 0
     m_Action:
@@ -925,8 +928,9 @@ MonoBehaviour:
   gripInput: 0
   canClimb: 0
   canSwing: 0
-  canMove: 0
-  swingableVelocity: {fileID: 0}
+  cantMove: 0
+  cantTurn: 0
+  heldItem: {fileID: 0}
 --- !u!1 &4091232219232971796
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,7 +954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4091232219232971805
 Transform:
   m_ObjectHideFlags: 0
