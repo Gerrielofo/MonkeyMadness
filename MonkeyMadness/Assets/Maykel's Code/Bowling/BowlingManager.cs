@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using Photon.Pun;
 using Photon.Realtime;
-public class BallsManager : MonoBehaviour
+public class BowlingManager : MonoBehaviour
 {
     [Header("Pins")]
     #region
@@ -44,9 +44,7 @@ public class BallsManager : MonoBehaviour
     {
         if (other.CompareTag("Balling"))
         {
-            Destroy(other.gameObject);
-
-            StartCoroutine(RespawnBall());
+            other.GetComponent<BallManager>().RespawnBall();
             for (int i = 0; i < pinIndex; i++)
             {
                 pins[i].GetComponent<PinManager>().CheckPins();
@@ -63,7 +61,6 @@ public class BallsManager : MonoBehaviour
     {
         roundNumber = 1;
         RoundStartPins();
-        SpawnBall();
     }
     public void RoundStartPins()
     {
@@ -82,10 +79,6 @@ public class BallsManager : MonoBehaviour
             pinIndex++;
             pins.Add(clonePin);
         }
-    }
-    public void SpawnBall()
-    {
-        cloneBall = PhotonNetwork.Instantiate("Bowlingbal", ballSpawnpoint.position, Quaternion.identity);
     }
     public IEnumerator RespawnPins()
     {
@@ -117,12 +110,6 @@ public class BallsManager : MonoBehaviour
                 }
             }
         }
-    }
-    public IEnumerator RespawnBall()
-    {
-        yield return new WaitForSeconds(3);
-
-        SpawnBall();
     }
     private void Update()
     {
