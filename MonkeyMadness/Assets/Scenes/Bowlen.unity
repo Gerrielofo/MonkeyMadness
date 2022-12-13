@@ -21222,6 +21222,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: BowlingManager 1
       objectReference: {fileID: 0}
+    - target: {fileID: 828068185505095242, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
+      propertyPath: sceneViewId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562899562237499703, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
+      propertyPath: sceneViewId
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573460914528116383, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
+      propertyPath: sceneViewId
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569087743514324393, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
+      propertyPath: sceneViewId
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174819050819174700, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
+      propertyPath: sceneViewId
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925382937020202211, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
+      propertyPath: sceneViewId
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614698114048719378, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
+      propertyPath: sceneViewId
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7834175093502216085, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
+      propertyPath: sceneViewId
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631530987361121456, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988659128350398214, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
+      propertyPath: sceneViewId
+      value: 22
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
 --- !u!1 &1085874688242438112 stripped
