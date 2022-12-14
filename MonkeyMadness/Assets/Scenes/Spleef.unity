@@ -5272,6 +5272,10 @@ PrefabInstance:
       value: XROrigin CloseGrabbibng
       objectReference: {fileID: 0}
     - target: {fileID: 4091232219232971796, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091232219232971796, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
       propertyPath: m_TagString
       value: IsPlayer
       objectReference: {fileID: 0}
