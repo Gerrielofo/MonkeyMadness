@@ -62,6 +62,6 @@ Material:
     - _QueueOffset: 0
     - _Scale: 5.3
     m_Colors:
-    - _Color: {r: 32.488647, g: 4.082343, b: 0, a: 0}
+    - _Color: {r: 51.377876, g: 6.4558587, b: 0, a: 0}
     - _Emission_Color: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
