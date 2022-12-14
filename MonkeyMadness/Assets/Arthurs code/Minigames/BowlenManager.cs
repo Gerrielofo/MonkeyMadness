@@ -7,8 +7,8 @@ using Photon.Realtime;
 
 public class BowlenManager : MonoBehaviourPunCallbacks
 {
+    [SerializeField]
     public Player[] players;
-    public Transform[] baanLocatiesl;
     private int i;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,7 @@ public class BowlenManager : MonoBehaviourPunCallbacks
     public IEnumerator UpdatePlayersListDelay() {
         yield return new WaitForSeconds(5);
         UpdatePlayersList();
+        Debug.Log("player list: " + players);
     }
     public override void OnPlayerEnteredRoom(Player newPlayer) {
         base.OnPlayerEnteredRoom(newPlayer);
