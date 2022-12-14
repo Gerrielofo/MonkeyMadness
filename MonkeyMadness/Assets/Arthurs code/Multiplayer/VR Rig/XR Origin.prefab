@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5142676366801722466}
   - component: {fileID: 5142676366801722465}
   - component: {fileID: 5142676366801722464}
+  - component: {fileID: 688218480814181153}
   - component: {fileID: 5142676366801722469}
   - component: {fileID: 5142676366801722470}
   m_Layer: 0
@@ -181,13 +182,28 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 1
   m_Radius: 0.1
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &688218480814181153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5142676366801722477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6bf904e410ee8479f9093d8830d1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LocomotionProvider: {fileID: 5142676366801722466}
+  m_MinHeight: 0
+  m_MaxHeight: Infinity
 --- !u!114 &5142676366801722469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,8 +217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charachter: {fileID: 5142676366801722464}
-  movementProvider: {fileID: 0}
-  turnProvider: {fileID: 0}
+  movementProvider: {fileID: 5142676366801722466}
+  turnProvider: {fileID: 5142676366801722465}
   velocityRight:
     m_UseReference: 1
     m_Action:
@@ -268,7 +284,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5142676366801722477}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d773eb7b8a11dde46b8737be3fbe7307, type: 3}
   m_Name: 
@@ -300,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5142676366994811999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1176, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -487,6 +503,7 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
+  player: {fileID: 5142676366801722479}
   _controllerName: 
   grip:
     m_UseReference: 1
@@ -699,6 +716,7 @@ MonoBehaviour:
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
   m_AllowHoverHapticsWhileSelecting: 1
+  player: {fileID: 5142676366801722479}
   _controllerName: 
   grip:
     m_UseReference: 1
