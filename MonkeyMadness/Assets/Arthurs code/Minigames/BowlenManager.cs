@@ -1,26 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class BowlenManager : MonoBehaviourPunCallbacks {
-    public GameObject pinBundel;
-    public Transform[] pinLocations;
-    public Player[] playerList;
+public class BowlenManager : MonoBehaviourPunCallbacks
+{
+    public Player[] players;
+    public Transform[] baanLocatiesl;
+    private int i;
     // Start is called before the first frame update
     void Start()
     {
-        playerList = PhotonNetwork.PlayerList;
+        StartCoroutine(UpdatePlayersListDelay());
+    }
+    public IEnumerator UpdatePlayersListDelay() {
+        yield return new WaitForSeconds(5);
+        UpdatePlayersList();
+    }
+    public override void OnPlayerEnteredRoom(Player newPlayer) {
+        base.OnPlayerEnteredRoom(newPlayer);
+        UpdatePlayersList();
+    }
+    public override void OnPlayerLeftRoom(Player otherPlayer) {
+        base.OnPlayerLeftRoom(otherPlayer);
+        UpdatePlayersList();
+    }
+    public void UpdatePlayersList() {
         foreach (Player player in PhotonNetwork.PlayerList) {
-            Debug.Log(player.NickName + ", User ID =" + player.UserId);
+            players[i] = player;
+            i++;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 }
