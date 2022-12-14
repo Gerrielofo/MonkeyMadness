@@ -14,7 +14,7 @@ public class Bowlen : MonoBehaviour
     private bool strikeLastRound;
 
     public void StartBowlen() {
-        pinBundel = PhotonNetwork.Instantiate("pinBundel", pinsBundelPos.position, Quaternion.identity);
+        pinBundel = PhotonNetwork.Instantiate("pinBundelBowlingManager", pinsBundelPos.position, Quaternion.identity);
     }
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "BowlingBal") {
