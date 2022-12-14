@@ -2930,6 +2930,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 292454086}
+  - component: {fileID: 292454088}
+  - component: {fileID: 292454087}
   m_Layer: 0
   m_Name: Baan (1)
   m_TagString: Untagged
@@ -2945,13 +2947,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292454085}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.075, y: 0.0070813186, z: -2}
+  m_LocalPosition: {x: -5.075, y: 0.252, z: -15.857}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &292454087
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292454085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1709318, y: 1, z: 0.20882988}
+  m_Center: {x: -0.010549068, y: 0, z: -0.052744865}
+--- !u!114 &292454088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292454085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c75c5b51c42794788a9abaeae1c8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinsBundelPos: {fileID: 598099656}
+  pinBundel: {fileID: 0}
+  scoreThisRound: 0
+  score: 0
+  frame2: 0
 --- !u!1 &294254887
 GameObject:
   m_ObjectHideFlags: 0
@@ -6589,7 +6621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651014, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651014, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7778,6 +7810,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 738130807}
+  - component: {fileID: 738130809}
+  - component: {fileID: 738130808}
   m_Layer: 0
   m_Name: Baan
   m_TagString: Untagged
@@ -7793,13 +7827,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738130806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8964105, y: 0, z: -2}
+  m_LocalPosition: {x: -2.8964105, y: 0.252, z: -15.857}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &738130808
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738130806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.176331, y: 1, z: 0.22765446}
+  m_Center: {x: 0.0076956153, y: 0, z: -0.054137707}
+--- !u!114 &738130809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738130806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c75c5b51c42794788a9abaeae1c8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinsBundelPos: {fileID: 1085874688242438115}
+  pinBundel: {fileID: 0}
+  scoreThisRound: 0
+  score: 0
+  frame2: 0
 --- !u!1 &742518743
 GameObject:
   m_ObjectHideFlags: 0
@@ -10841,7 +10905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651014, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651014, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14026,7 +14090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651014, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651014, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18223,6 +18287,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1843075052}
+  - component: {fileID: 1843075054}
+  - component: {fileID: 1843075053}
   m_Layer: 0
   m_Name: Baan (3)
   m_TagString: Untagged
@@ -18238,13 +18304,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843075051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.433, y: 0.0070813186, z: -2}
+  m_LocalPosition: {x: -9.433, y: 0.252, z: -15.857}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1843075053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843075051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.174098, y: 1, z: 0.18189812}
+  m_Center: {x: -0.0017113686, y: 0, z: -0.039364815}
+--- !u!114 &1843075054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843075051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c75c5b51c42794788a9abaeae1c8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinsBundelPos: {fileID: 1019273324}
+  pinBundel: {fileID: 0}
+  scoreThisRound: 0
+  score: 0
+  frame2: 0
 --- !u!1 &1844829688
 GameObject:
   m_ObjectHideFlags: 0
@@ -20049,6 +20145,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2026030495}
+  - component: {fileID: 2026030497}
+  - component: {fileID: 2026030496}
   m_Layer: 0
   m_Name: Baan (2)
   m_TagString: Untagged
@@ -20064,13 +20162,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026030494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.254, y: 0.0070813186, z: -2}
+  m_LocalPosition: {x: -7.254, y: 0.252, z: -15.857}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2026030496
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026030494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.126175, y: 1, z: 0.18874359}
+  m_Center: {x: -0.025672436, y: 0, z: -0.046211243}
+--- !u!114 &2026030497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026030494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c75c5b51c42794788a9abaeae1c8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pinsBundelPos: {fileID: 1375430348}
+  pinBundel: {fileID: 0}
+  scoreThisRound: 0
+  score: 0
+  frame2: 0
 --- !u!1 &2044126249
 GameObject:
   m_ObjectHideFlags: 0
@@ -21381,7 +21509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 774707176719555416, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 774707176719555416, guid: 41889328418044948bdeb3c71f44f9eb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21483,8 +21611,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd62a1019bc34040af1bf400ad7bbd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pvCache: {fileID: 0}
   bowlingBanen: []
   baanSpeler: []
   button: {fileID: 0}
-  i: 0
