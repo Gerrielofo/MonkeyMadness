@@ -14,6 +14,7 @@ public class BananaTagScript : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("IsPlayer"))
         {
+            photonView.RequestOwnership();
             Transform bananholder = other.transform.parent.GetChild(2).GetChild(1);
             print("multiplayerRig");
             transform.position = bananholder.position;
@@ -23,7 +24,7 @@ public class BananaTagScript : MonoBehaviour
             transform.GetComponent<Rigidbody>().useGravity = false;
             transform.GetComponent<BoxCollider>().isTrigger = true;
             transform.position = bananholder.position;
-            photonView.RequestOwnership();
+            
             
         }
     }
