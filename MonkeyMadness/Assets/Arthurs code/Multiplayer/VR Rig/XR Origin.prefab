@@ -267,6 +267,19 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _Jump:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 229a790d-dd6a-48fb-ab31-7a269fffb186
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  jumpInput: 0
   gripLeftInput: 0
   gripRightInput: 0
   _rightActive: 0
@@ -276,6 +289,9 @@ MonoBehaviour:
   isStunned: 0
   stunTime: 0
   stunDelay: 0
+  canJump: 0
+  hasJumped: 0
+  jumpStrenght: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
 --- !u!114 &5142676366801722470
 MonoBehaviour:
