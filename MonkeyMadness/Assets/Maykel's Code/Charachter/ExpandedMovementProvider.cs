@@ -90,7 +90,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         #endregion
 
         //ENABLE, DISABLE MOVEMENT, TURNING
-        if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb && !isStunned)
+        if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb && !isStunned && !extrainteractorLeft.cant || !extrainteractorRight.cant)
         {
             EnableMovement();
         }
