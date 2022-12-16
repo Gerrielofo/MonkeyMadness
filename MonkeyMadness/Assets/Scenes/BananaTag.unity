@@ -7150,7 +7150,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764102079}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.54431605, y: 1, z: 0.26570114}
@@ -11509,15 +11509,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 757a3baeb100ccd4386e95d0fda6f58c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.74
+      value: -0.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 757a3baeb100ccd4386e95d0fda6f58c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.29
+      value: 2.201
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 757a3baeb100ccd4386e95d0fda6f58c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.05
+      value: 1.403
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 757a3baeb100ccd4386e95d0fda6f58c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11617,20 +11617,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &2115779812
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115779808}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1066763969621704888, guid: 757a3baeb100ccd4386e95d0fda6f58c, type: 3}
 --- !u!114 &2115779813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11643,6 +11629,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1344f92bb61ca24ea97f88fcb2190ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &2115779814
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115779808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.20366731, y: 0.14529811, z: 0.051357333}
+  m_Center: {x: -0.0065230937, y: 0.04808887, z: 0.00044851762}
 --- !u!64 &2118279904
 MeshCollider:
   m_ObjectHideFlags: 0
