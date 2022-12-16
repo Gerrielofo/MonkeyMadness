@@ -23,5 +23,10 @@ public class BananaTagScript : MonoBehaviour
             transform.position = bananholder.position;
             transform.parent = bananholder;
         }
+        if (other.CompareTag("isPlayer"))
+        {
+            print("isplayer");
+            transform.parent = null;
+        }
     }
 }
