@@ -2014,6 +2014,14 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8461082120628304041, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
+      propertyPath: _Jump.m_Action.m_Id
+      value: f55a43e5-7096-4059-95b2-bf4eb51e3d55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461082120628304041, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
+      propertyPath: _Jump.m_Action.m_Name
+      value: Jump
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
 --- !u!20 &1238371960 stripped

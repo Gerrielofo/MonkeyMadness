@@ -1697,8 +1697,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8074167472107732782, guid: 3ce4020c747164f4b942fef477a31b91, type: 3}
+      propertyPath: sceneToLoad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8074167472107732782, guid: 3ce4020c747164f4b942fef477a31b91, type: 3}
       propertyPath: autmaticSwitch
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8074167472107732782, guid: 3ce4020c747164f4b942fef477a31b91, type: 3}
+      propertyPath: miniGameToLoad.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8074167472107732782, guid: 3ce4020c747164f4b942fef477a31b91, type: 3}
+      propertyPath: miniGameToLoad.Array.data[1]
+      value: BananaTag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ce4020c747164f4b942fef477a31b91, type: 3}
