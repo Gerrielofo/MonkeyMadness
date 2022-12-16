@@ -21,6 +21,10 @@ public class ExpandedMovementProvider : MonoBehaviour
     [SerializeField] private InputActionProperty gripLeft;
     [SerializeField] private InputActionProperty gripRight;
 
+    [SerializeField] private InputActionProperty _Jump;
+
+    [SerializeField] private bool jumpInput;
+
     [SerializeField] private bool gripLeftInput;
     [SerializeField] private bool gripRightInput;
 
@@ -38,6 +42,13 @@ public class ExpandedMovementProvider : MonoBehaviour
     public float stunTime;
     [SerializeField] public float stunDelay;
     #endregion
+    [Header("Jump")]
+    #region
+    public bool canJump;
+    public bool hasJumped;
+    [SerializeField] private Vector3 jumpStrenght;
+
+    #endregion
     [Header("Swing")]
     #region
     public Vector3 velocity;
@@ -47,6 +58,8 @@ public class ExpandedMovementProvider : MonoBehaviour
     {
         XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
         XRDirectExtraInteractor.ClimbHandDeactivated += HandDeactivated;
+
+        jumpStrenght.y = 1;
     }
     private void OnDestroy()
     {
@@ -62,6 +75,9 @@ public class ExpandedMovementProvider : MonoBehaviour
 
         gripRight.action.performed += hfhi => gripRightInput = true;
         gripRight.action.canceled += hfhi => gripRightInput = false;
+
+        _Jump.action.performed += haih => jumpInput = true;
+        _Jump.action.canceled += haih => jumpInput = false;
 
         if (!gripRightInput)
         {
@@ -107,34 +123,6 @@ public class ExpandedMovementProvider : MonoBehaviour
             Swing();
         }
     }
-    private void HandActivated(string _controllerName)
-    {
-        if (_controllerName == "LeftHand Controller")
-        {
-            _leftActive = true;
-            _rightActive = false;
-        }
-        else
-        {
-            _leftActive = false;
-            _rightActive = true;
-        }
-
-        ClimbActive?.Invoke();
-    }
-    private void HandDeactivated(string _controllerName)
-    {
-        if (_rightActive && _controllerName == "RightHand Controller")
-        {
-            _rightActive = false;
-            ClimbActive?.Invoke();
-        }
-        else if (_leftActive && _controllerName == "LeftHand Controller")
-        {
-            _leftActive = false;
-            ClimbActive?.Invoke();
-        }
-    }
     private void FixedUpdate()
     {
         if (_rightActive || _leftActive)
@@ -164,6 +152,44 @@ public class ExpandedMovementProvider : MonoBehaviour
             
             movementProvider.useGravity = true;
         }
+
+        if (charachter.isGrounded)
+        {
+            canJump = true;
+
+            hasJumped = false;
+
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+        }
+        Jump();
+    }
+    private void HandActivated(string _controllerName)
+    {
+        if (_controllerName == "LeftHand Controller")
+        {
+            _leftActive = true;
+            _rightActive = false;
+        }
+        else
+        {
+            _leftActive = false;
+            _rightActive = true;
+        }
+
+        ClimbActive?.Invoke();
+    }
+    private void HandDeactivated(string _controllerName)
+    {
+        if (_rightActive && _controllerName == "RightHand Controller")
+        {
+            _rightActive = false;
+            ClimbActive?.Invoke();
+        }
+        else if (_leftActive && _controllerName == "LeftHand Controller")
+        {
+            _leftActive = false;
+            ClimbActive?.Invoke();
+        }
     }
     private void EnableMovement()
     {
@@ -180,6 +206,19 @@ public class ExpandedMovementProvider : MonoBehaviour
     private void DisableTurning()
     {
         turnProvider.enabled = false;
+    }
+    private void Jump()
+    {
+        if (jumpInput && canJump)
+        {
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+
+            this.gameObject.GetComponent<Rigidbody>().AddForce(jumpStrenght, ForceMode.Impulse);
+
+            hasJumped = true;
+
+            canJump = false;
+        }
     }
     private void Climb()
     {

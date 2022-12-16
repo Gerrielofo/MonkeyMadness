@@ -9,6 +9,8 @@ public class XRDirectExtraInteractor : XRDirectInteractor
     public static event Action<string> ClimbHandActivated;
     public static event Action<string> ClimbHandDeactivated;
 
+    public Transform player;
+
     [SerializeField] private string _controllerName;
 
     [SerializeField] private InputActionProperty grip;
@@ -49,6 +51,10 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         if (args.interactableObject.transform.tag == "CrossBox")
         {
             cantMove = true;
+        }
+        if (args.interactableObject.transform.tag == "Teleporter")
+        {
+            player.transform.position = args.interactableObject.transform.position;
         }
     }
     protected override void OnSelectExited(SelectExitEventArgs args)
