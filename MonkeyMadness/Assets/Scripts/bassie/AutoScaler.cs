@@ -9,7 +9,6 @@ public class AutoScaler : MonoBehaviour
     public GameObject cameraHeight;
     public GameObject player;
 
-
     private void Start()
     {
         StartCoroutine(WaitAndResize());
