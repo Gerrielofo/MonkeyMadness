@@ -14,7 +14,7 @@ public class BananaTagScript : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("IsPlayer"))
         {
-            Transform bananholder = other.gameObject.transform.GetChild(2).GetChild(1);
+            Transform bananholder = other.transform.parent.GetChild(2).GetChild(1);
             print("multiplayerRig");
             transform.position = bananholder.position;
             transform.parent = null;
