@@ -13,6 +13,7 @@ public class BananaTagScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Player") {
+            other.GetComponent<BoxCollider>().enabled = false;
             photonView.RequestOwnership();
             Transform bananholder = other.gameObject.transform.GetChild(0).GetChild(2).GetChild(1);
             transform.GetComponent<Rigidbody>().useGravity = false;
