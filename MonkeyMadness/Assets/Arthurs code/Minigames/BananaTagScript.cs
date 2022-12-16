@@ -8,6 +8,7 @@ public class BananaTagScript : MonoBehaviour
         if(other.gameObject.tag == "Player") {
             Transform bananholder = other.gameObject.transform.GetChild(0).GetChild(2).GetChild(1);
             transform.GetComponent<Rigidbody>().useGravity = false;
+            transform.GetComponent<BoxCollider>().isTrigger = true;
             transform.position = bananholder.position;
             transform.parent = bananholder;
         }
