@@ -23,7 +23,7 @@ public class SwitchScenesTest : MonoBehaviour
     void Update()
     {
         if (autmaticSwitch) {
-            SwitchScene(0);
+            SwitchScene(sceneToLoad);
         }
     }
     public void SwitchScene(int RoomSwitch) {
