@@ -23,6 +23,7 @@ public class BananaTagScript : MonoBehaviour {
             transform.parent = null;
             transform.position = bananholder.position;
             transform.parent = bananholder;
+            transform.GetComponent<Rigidbody>().isKinematic = true;
             transform.GetComponent<Rigidbody>().useGravity = false;
             transform.GetComponent<BoxCollider>().isTrigger = true;
             transform.position = bananholder.position;
