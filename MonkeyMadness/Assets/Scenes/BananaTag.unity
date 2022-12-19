@@ -7074,6 +7074,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5142676366801722466, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
+      propertyPath: m_MoveSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5142676366801722469, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
       propertyPath: _Jump.m_Reference
       value: 
@@ -11664,6 +11668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1344f92bb61ca24ea97f88fcb2190ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previouseHolder: {fileID: 0}
 --- !u!65 &2115779814
 BoxCollider:
   m_ObjectHideFlags: 0
