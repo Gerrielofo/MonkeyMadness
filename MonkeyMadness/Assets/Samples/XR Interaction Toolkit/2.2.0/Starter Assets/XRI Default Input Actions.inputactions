@@ -213,7 +213,7 @@
                 {
                     "name": "",
                     "id": "39123d1f-566c-4da5-9bd1-81fbc4a8cbf4",
-                    "path": "<OculusTouchController>{LeftHand}/pointer/velocity",
+                    "path": "<XRController>{LeftHand}/deviceVelocity",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
