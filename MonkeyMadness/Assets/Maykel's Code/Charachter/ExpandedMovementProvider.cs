@@ -59,7 +59,7 @@ public class ExpandedMovementProvider : MonoBehaviour
         XRDirectExtraInteractor.ClimbHandActivated += HandActivated;
         XRDirectExtraInteractor.ClimbHandDeactivated += HandDeactivated;
 
-        jumpStrenght.y = 1;
+        jumpStrenght.y = 3;
     }
     private void OnDestroy()
     {
@@ -92,7 +92,10 @@ public class ExpandedMovementProvider : MonoBehaviour
         //ENABLE, DISABLE MOVEMENT, TURNING
         if (!extrainteractorLeft.cantMove && !extrainteractorRight.cantMove && !extrainteractorLeft.canClimb && !extrainteractorRight.canClimb && !isStunned)
         {
-            EnableMovement();
+            if (!extrainteractorLeft.cant || !extrainteractorRight.cant)
+            {
+                EnableMovement();
+            }
         }
         else
         {
@@ -122,6 +125,16 @@ public class ExpandedMovementProvider : MonoBehaviour
         {
             Swing();
         }
+
+        if (charachter.isGrounded)
+        {
+            canJump = true;
+
+            hasJumped = false;
+
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+        }
+        Jump();
     }
     private void FixedUpdate()
     {
@@ -153,15 +166,8 @@ public class ExpandedMovementProvider : MonoBehaviour
             movementProvider.useGravity = true;
         }
 
-        if (charachter.isGrounded)
-        {
-            canJump = true;
-
-            hasJumped = false;
-
-            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
-        }
-        Jump();
+        
+        
     }
     private void HandActivated(string _controllerName)
     {

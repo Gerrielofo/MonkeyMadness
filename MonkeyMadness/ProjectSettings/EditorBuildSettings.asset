@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Loading Scene.unity
     guid: 001e401a97903af43830375c0b308459
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: 58981729f72e48d4d8bfb1e362c80e09
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 05429fb3830d8034ba786c2936bd88ae
   - enabled: 0
@@ -66,19 +66,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainLobbyArt.unity
     guid: 7ad9670c7debdb841a00ce815fdbe0c0
-  - enabled: 0
-    path: Assets/Scenes/Banana tag.unity
+  - enabled: 1
+    path: Assets/Scenes/BananaTag.unity
     guid: ad37fde29786be746ae3660b5415ae91
   - enabled: 0
     path: Assets/Scenes/maykel.unity
     guid: 1a59a9aafbbadf84583f121a94f4dee6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Bowlen.unity
     guid: 61374c11c2d629c4db07e448b9126329
   - enabled: 0
     path: Assets/Scenes/Bowling map.unity
     guid: 52c83e4d38a031d4f9db484b16816a73
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Melken.unity
     guid: 516371e98a203d04eb30295b9d088fee
   - enabled: 1

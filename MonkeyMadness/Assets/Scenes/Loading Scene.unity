@@ -474,5 +474,13 @@ PrefabInstance:
       propertyPath: movementProvider
       value: 
       objectReference: {fileID: 320434661}
+    - target: {fileID: 8461082120628304041, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
+      propertyPath: _Jump.m_Action.m_Id
+      value: ef7fce2a-ead3-4ac6-aab9-4725e084e1f3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461082120628304041, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
+      propertyPath: _Jump.m_Action.m_Name
+      value: Jump
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}

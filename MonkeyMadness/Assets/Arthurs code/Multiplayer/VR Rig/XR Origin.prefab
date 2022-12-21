@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 688218480814181153}
   - component: {fileID: 5142676366801722469}
   - component: {fileID: 5142676366801722470}
-  - component: {fileID: 1930128319452152707}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -271,10 +270,10 @@ MonoBehaviour:
   _Jump:
     m_UseReference: 0
     m_Action:
-      m_Name: Jump
+      m_Name: 
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: c0a37b94-aa59-41a4-a8a4-d4a87078f2c0
+      m_Id: 229a790d-dd6a-48fb-ab31-7a269fffb186
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -309,22 +308,6 @@ MonoBehaviour:
   MonkeyHeight: 0.75
   cameraHeight: {fileID: 5142676368539602271}
   player: {fileID: 5142676366801722477}
---- !u!54 &1930128319452152707
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5142676366801722477}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &5142676366994811999
 GameObject:
   m_ObjectHideFlags: 0

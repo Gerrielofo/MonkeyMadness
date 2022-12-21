@@ -16,6 +16,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
     [SerializeField] private InputActionProperty grip;
     [SerializeField] private bool gripInput;
 
+    public bool cant;
     public bool canClimb;
     public bool canSwing;
     public bool cantMove;
@@ -54,6 +55,7 @@ public class XRDirectExtraInteractor : XRDirectInteractor
         }
         if (args.interactableObject.transform.tag == "Teleporter")
         {
+            cant = true;
             player.transform.position = args.interactableObject.transform.position;
         }
     }
