@@ -5484,6 +5484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Interaction Manager (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 465623535190393500, guid: 27c1fdaed77478e4c9ac95f82e83b1f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27c1fdaed77478e4c9ac95f82e83b1f1, type: 3}
 --- !u!114 &1288187707 stripped
@@ -5819,6 +5823,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091232218363148624, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091232218363148625, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4091232218423508628, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
