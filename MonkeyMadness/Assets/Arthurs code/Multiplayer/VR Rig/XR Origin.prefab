@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1192265802358199241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7757406321990605650}
+  m_Layer: 0
+  m_Name: Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7757406321990605650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192265802358199241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5142676366994811984}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5142676366801722477
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +301,7 @@ MonoBehaviour:
   _Jump:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Jump
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 229a790d-dd6a-48fb-ab31-7a269fffb186
@@ -300,12 +331,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5142676366801722477}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d773eb7b8a11dde46b8737be3fbe7307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonkeyHeight: 0.75
+  MonkeyHeight: 1
   cameraHeight: {fileID: 5142676368539602271}
   player: {fileID: 5142676366801722477}
 --- !u!1 &5142676366994811999
@@ -339,6 +370,7 @@ Transform:
   - {fileID: 5142676368539602256}
   - {fileID: 5142676368439100065}
   - {fileID: 5142676367807374196}
+  - {fileID: 7757406321990605650}
   m_Father: {fileID: 5142676366801722479}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -534,6 +566,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripInput: 0
+  cant: 0
   canClimb: 0
   canSwing: 0
   cantMove: 0
@@ -747,6 +780,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   gripInput: 0
+  cant: 0
   canClimb: 0
   canSwing: 0
   cantMove: 0
