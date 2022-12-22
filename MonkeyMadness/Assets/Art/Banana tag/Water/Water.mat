@@ -57,6 +57,7 @@ Material:
     m_Floats:
     - _Emission_Strength: 0
     - _Float: 0.03
+    - _Float_1: 12.52
     - _Float_2: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
