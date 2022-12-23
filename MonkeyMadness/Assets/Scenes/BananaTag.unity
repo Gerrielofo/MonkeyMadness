@@ -10549,12 +10549,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 6608247728412109890}
     m_Modifications:
     - target: {fileID: 3229853790985569086, guid: 63794e3bfc9fd7147bd56bc6fc41f4f9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e2dfaf6843792db41810a6366f714181, type: 2}
+    - target: {fileID: 4108190266058477607, guid: 63794e3bfc9fd7147bd56bc6fc41f4f9, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4108190266058477607, guid: 63794e3bfc9fd7147bd56bc6fc41f4f9, type: 3}
       propertyPath: ShapeModule.m_Scale.x
       value: 700
@@ -10585,7 +10589,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5881299539091485688, guid: 63794e3bfc9fd7147bd56bc6fc41f4f9, type: 3}
       propertyPath: m_Name
-      value: Fog
+      value: Clouds
       objectReference: {fileID: 0}
     - target: {fileID: 5881299539091485688, guid: 63794e3bfc9fd7147bd56bc6fc41f4f9, type: 3}
       propertyPath: m_IsActive
@@ -10593,7 +10597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7480474257920915719, guid: 63794e3bfc9fd7147bd56bc6fc41f4f9, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7480474257920915719, guid: 63794e3bfc9fd7147bd56bc6fc41f4f9, type: 3}
       propertyPath: m_LocalScale.x
@@ -10649,6 +10653,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63794e3bfc9fd7147bd56bc6fc41f4f9, type: 3}
+--- !u!4 &1552269816 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7480474257920915719, guid: 63794e3bfc9fd7147bd56bc6fc41f4f9, type: 3}
+  m_PrefabInstance: {fileID: 1552269815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1559173413
 GameObject:
   m_ObjectHideFlags: 0
@@ -16125,6 +16134,7 @@ Transform:
   - {fileID: 866280584}
   - {fileID: 7002973201315129116}
   - {fileID: 469861986}
+  - {fileID: 1552269816}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
