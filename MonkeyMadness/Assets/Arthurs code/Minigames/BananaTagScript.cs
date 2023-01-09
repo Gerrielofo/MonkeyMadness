@@ -18,25 +18,32 @@ public class BananaTagScript : MonoBehaviour {
         GiveBanan(other);
     }
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("IsPlayer") && !cooldown && other != previouseHolder) {
-
-            StartCoroutine(GiveBanan(other));
+        if (other.GetComponentInParent<PhotonView>().IsMine) {
+            if (other.CompareTag("IsPlayer") && !cooldown && other != previouseHolder) {
+                StartCoroutine(GiveBanan(other));
+            }
         }
     }
     IEnumerator GiveBanan(Collider other) {
-        previouseHolder = other;
-        cooldown = true;
         photonView.RequestOwnership();
-        Transform bananholder = other.transform.parent.GetChild(2).GetChild(1);
-        transform.position = bananholder.position;
+        Transform bananaholder = other.transform.parent.GetChild(2).GetChild(1);
+        photonView.RPC("BananaTransfer", RpcTarget.All, other, bananaholder);
+        yield return new WaitForSeconds(5);
+        photonView.RPC("CooldownEnd", RpcTarget.All);
+    }
+    [PunRPC]
+    void BananaTransfer(Collider other, Transform bananaholder) {
+        cooldown = true;
+        previouseHolder = other;
         transform.parent = null;
-        transform.position = bananholder.position;
-        transform.parent = bananholder;
         transform.GetComponent<Rigidbody>().isKinematic = true;
         transform.GetComponent<Rigidbody>().useGravity = false;
         transform.GetComponent<BoxCollider>().isTrigger = true;
-        transform.position = bananholder.position;
-        yield return new WaitForSeconds(5);
+        transform.parent = bananaholder;
+        transform.position = bananaholder.position;
+    }
+    [PunRPC]
+    void CooldownEnd() {
         cooldown = false;
     }
 }

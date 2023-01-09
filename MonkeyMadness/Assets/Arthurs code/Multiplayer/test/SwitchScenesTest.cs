@@ -22,9 +22,13 @@ public class SwitchScenesTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(roomToSwitchTo != null)
+        {
 
+        }
     }
     public void SwitchScene(int RoomSwitch) {
+
         print(RoomSwitch);
         if (maykel == false) {
             sceneToLoad = RoomSwitch;

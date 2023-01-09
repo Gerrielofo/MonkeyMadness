@@ -159,6 +159,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 1e643b60bf32a5049901e04a977ca4c0, type: 2}
+  - {fileID: 0}
   - {fileID: -8280651157456040211, guid: 8568763877eabdb4fb55e992ef9eecc7, type: 2}
   - {fileID: -518206955258885660, guid: 5bb5ee23dbce7ea4996160ea5e773f1d, type: 2}
   metroInputSource: 0
@@ -269,7 +270,7 @@ PlayerSettings:
   useCustomBaseGradleTemplate: 0
   useCustomGradlePropertiesTemplate: 0
   useCustomProguardFile: 0
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 2
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
@@ -752,7 +753,8 @@ PlayerSettings:
     tvOS: PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Android: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
