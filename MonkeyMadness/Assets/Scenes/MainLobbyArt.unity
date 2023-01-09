@@ -443,7 +443,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569021022}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
   m_Name: 
@@ -521,6 +521,8 @@ MonoBehaviour:
   - {fileID: 498185443}
   - {fileID: 1665330975}
   - {fileID: 1550760056}
+  - {fileID: 884304336}
+  - {fileID: 884304338}
 --- !u!114 &569021024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,6 +575,26 @@ MonoBehaviour:
   headConstraint: {fileID: 518732743}
   headBodyOffest: {x: 0, y: -0.9630207, z: -0.012527943}
   mainC: {fileID: 2700596109225733653}
+--- !u!95 &569021028
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569021022}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &569094008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4634211790319840868, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
@@ -586,6 +608,11 @@ Transform:
 --- !u!4 &611247912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 49483896840707296, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
+  m_PrefabInstance: {fileID: 884304335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &654311013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6158124962052383411, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
   m_PrefabInstance: {fileID: 884304335}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &721523845
@@ -725,6 +752,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
+--- !u!4 &884304336 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9054117672028619340, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
+  m_PrefabInstance: {fileID: 884304335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &884304337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7993502347377176915, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
+  m_PrefabInstance: {fileID: 884304335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &884304338 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1872982272454114402, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
+  m_PrefabInstance: {fileID: 884304335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1818360609 &884304339
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884304337}
+  m_Enabled: 1
+  m_Weight: 1
+  m_RotationAtRest: {x: 1.723, y: -0.068, z: -3.833}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 0
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 0
+  m_IsContraintActive: 0
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 1664156996}
+    weight: 1
 --- !u!4 &892635394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7119836013534458613, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
@@ -735,6 +796,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3335691448979399916, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
   m_PrefabInstance: {fileID: 884304335}
   m_PrefabAsset: {fileID: 0}
+--- !u!1818360609 &899750514
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654311013}
+  m_Enabled: 1
+  m_Weight: 1
+  m_RotationAtRest: {x: 12.016, y: 6.744, z: 6.291}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_IsContraintActive: 0
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!4 &910515605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2684248783571851682, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
