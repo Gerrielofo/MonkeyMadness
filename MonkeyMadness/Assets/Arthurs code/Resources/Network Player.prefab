@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2555247952678988890}
   - component: {fileID: 352519331094277011}
+  - component: {fileID: 7941706901213474970}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -94,6 +95,19 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!135 &7941706901213474970
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885421749310269750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.03
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3372669549556687881
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +237,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4116329271848805446}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -330,6 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6769838496221550657}
   - component: {fileID: 690005511778290947}
+  - component: {fileID: 6212042641017060389}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -370,6 +385,19 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!135 &6212042641017060389
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6715775359067326808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.03
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8452797227177698628
 GameObject:
   m_ObjectHideFlags: 0
