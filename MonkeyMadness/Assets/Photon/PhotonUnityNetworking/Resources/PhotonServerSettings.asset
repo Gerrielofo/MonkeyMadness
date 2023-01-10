@@ -42,6 +42,7 @@ MonoBehaviour:
   - YouMomFam
   - CooldownEnd
   - BananaTransfer
+  - Start
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
