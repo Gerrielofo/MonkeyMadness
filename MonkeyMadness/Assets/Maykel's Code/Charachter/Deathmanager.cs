@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Deathmanager : MonoBehaviour
 {
-    public bool dead;
+    public bool Spleef;
+    private bool dead;
 
 
     private void Update()
     {
-        if (dead)
-        {
+        
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("IsPlayer") && Spleef)
+        {
+            SpleefManager.alive --;
         }
     }
 }
