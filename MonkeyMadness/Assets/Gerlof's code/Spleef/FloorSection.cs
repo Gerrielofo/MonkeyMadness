@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FloorSection : MonoBehaviour
 {
     private Rigidbody Rigidbody;
@@ -15,7 +16,7 @@ public class FloorSection : MonoBehaviour
     {
         if (SpleefManager.gameEnded)
             return;
-        if(collision.transform.tag == "IsPlayer")
+        else if(collision.transform.tag == "IsPlayer")
         {
             StartCoroutine(DropBlock());
         }
