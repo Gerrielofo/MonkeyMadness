@@ -16,27 +16,23 @@ public class DartbordSection : MonoBehaviour
             {
                 case 1:
                     //print("Playing " + MinigameName);
-                    MinigameLoader.GetComponent<SwitchScenesTest>().SwitchScene(MinigameID -1);
+                    MinigameLoader.GetComponent<SwitchScenesTest>().sceneToLoad = (MinigameID - 1);
+                    MinigameLoader.GetComponent<SwitchScenesTest>().canChange = true;
                     break;
                 case 2:
                     //print("Playing " + MinigameName);
-                    MinigameLoader.GetComponent<SwitchScenesTest>().SwitchScene(MinigameID - 1);
+                    MinigameLoader.GetComponent<SwitchScenesTest>().sceneToLoad = (MinigameID - 1);
+                    MinigameLoader.GetComponent<SwitchScenesTest>().canChange = true;
                     break;
                 case 3:
                     //print("Playing " + MinigameName);
-                    MinigameLoader.GetComponent<SwitchScenesTest>().SwitchScene(MinigameID - 1);
+                    MinigameLoader.GetComponent<SwitchScenesTest>().sceneToLoad = (MinigameID - 1);
+                    MinigameLoader.GetComponent<SwitchScenesTest>().canChange = true;
                     break;
                 case 4:
                     //print("Playing " + MinigameName);
-                    MinigameLoader.GetComponent<SwitchScenesTest>().SwitchScene(MinigameID - 1);
-                    break;
-                case 5:
-                    //print("Playing " + MinigameName);
-                    MinigameLoader.GetComponent<SwitchScenesTest>().SwitchScene(MinigameID);
-                    break;
-                case 6:
-                    //print("Playing " + MinigameName);
-                    MinigameLoader.GetComponent<SwitchScenesTest>().SwitchScene(MinigameID);
+                    MinigameLoader.GetComponent<SwitchScenesTest>().sceneToLoad = (MinigameID - 1);
+                    MinigameLoader.GetComponent<SwitchScenesTest>().canChange = true;
                     break;
             }
         }
