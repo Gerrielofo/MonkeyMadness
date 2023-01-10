@@ -12,14 +12,17 @@ public class XRGrabNetworkInteractable : XRGrabInteractable
     {
         photonView = GetComponent<PhotonView>();
     }
-
-    // Update is called once per frame
-    void Update()
+    protected override void OnSelectEntered(XRBaseInteractor interactor)
     {
-        
-    }
-    protected override void OnSelectEntered(XRBaseInteractor interactor) {
         photonView.RequestOwnership();
+        this.gameObject.GetComponent<Collider>().isTrigger = true;
         base.OnSelectEntered(interactor);
+    }
+    protected override void Detach()
+    {
+        this.gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+        this.gameObject.GetComponent<Collider>().isTrigger = false;
+        base.Detach();
+
     }
 }

@@ -17,12 +17,13 @@ public class Vibration : MonoBehaviour
 
         if (MyObject.isSelected && MyObject.IsSelectableBy(LeftController))
         {
-
             xr.SendHapticImpulse(Amplitude, duration);
+            print("Virbrate Left Controller");
         }
         else if (MyObject.isSelected && MyObject.IsSelectableBy(RightController))
         {
             xr.SendHapticImpulse(Amplitude, duration);
+            print("Virbrate Right Controller");
         }
     }  
 }
