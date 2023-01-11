@@ -2786,6 +2786,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charachter: {fileID: 1687780095}
+  movementProvider: {fileID: 0}
+  turnProvider: {fileID: 0}
   velocityRight:
     m_UseReference: 1
     m_Action:
@@ -2834,25 +2836,37 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _Jump:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  jumpInput: 0
   gripLeftInput: 0
   gripRightInput: 0
-  movementprovider: {fileID: 1687780097}
+  _rightActive: 0
+  _leftActive: 0
+  extrainteractorLeft: {fileID: 0}
+  extrainteractorRight: {fileID: 0}
+  isStunned: 0
+  stunTime: 0
+  stunDelay: 0
+  canJump: 0
+  hasJumped: 0
+  jumpStrenght: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!143 &1687780095 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 4091232219232971799, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
   m_PrefabInstance: {fileID: 2127292729}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1687780097 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4091232219232971801, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
-  m_PrefabInstance: {fileID: 2127292729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687780092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf296fc962d7184ab14ad1841598d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1726582540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3622940987878078735, guid: 66ae03ef64dd2cb41a6b506763986ae3, type: 3}
@@ -3138,6 +3152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966542923}
   - component: {fileID: 1966542922}
+  - component: {fileID: 1966542924}
   m_Layer: 0
   m_Name: Directional Light (1)
   m_TagString: Untagged
@@ -3222,6 +3237,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1966542924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966542921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!4 &2004624701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4091232217465188986, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
@@ -3354,6 +3389,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 791998583}
+    - target: {fileID: 8321518999131821850, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8674937494977113854, guid: a78740e1a5702bb44a7f071ed8ef350e, type: 3}
       propertyPath: sceneViewId
       value: 2
