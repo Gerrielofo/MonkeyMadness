@@ -30228,6 +30228,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4538292045502982705, guid: 804fcde5cbcfa3f4191787e808bafa5e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973755636264020488, guid: 804fcde5cbcfa3f4191787e808bafa5e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4973755636264020488, guid: 804fcde5cbcfa3f4191787e808bafa5e, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -30279,6 +30287,10 @@ PrefabInstance:
     - target: {fileID: 5525523617855440910, guid: 804fcde5cbcfa3f4191787e808bafa5e, type: 3}
       propertyPath: m_Name
       value: Beerbottlegreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525523617855440910, guid: 804fcde5cbcfa3f4191787e808bafa5e, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 804fcde5cbcfa3f4191787e808bafa5e, type: 3}

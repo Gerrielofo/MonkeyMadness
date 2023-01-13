@@ -23,7 +23,7 @@ public class VRFootIk : MonoBehaviour
         Vector3 rightFootPos = animator.GetIKPosition(AvatarIKGoal.RightFoot);
         RaycastHit hit;
         bool hasHit = Physics.Raycast(rightFootPos + Vector3.up, Vector3.down, out hit);
-        if (hasHit)
+        if (hasHit && hit.transform.gameObject.tag != "IsPlayer")
         {
             animator.SetIKPositionWeight(AvatarIKGoal.RightFoot, rightFootPoseWeight);
             animator.SetIKPosition(AvatarIKGoal.RightFoot, hit.point + footOfset);
@@ -35,7 +35,7 @@ public class VRFootIk : MonoBehaviour
         Vector3 leftFootPos = animator.GetIKPosition(AvatarIKGoal.LeftFoot);
         
         hasHit = Physics.Raycast(leftFootPos + Vector3.up, Vector3.down, out hit);
-        if (hasHit)
+        if (hasHit && hit.transform.gameObject.tag != "IsPlayer")
         {
             animator.SetIKPositionWeight(AvatarIKGoal.LeftFoot, leftFootPoseWeight);
             animator.SetIKPosition(AvatarIKGoal.LeftFoot, hit.point + footOfset);
