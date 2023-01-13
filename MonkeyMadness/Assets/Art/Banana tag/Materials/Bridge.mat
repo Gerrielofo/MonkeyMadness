@@ -80,8 +80,9 @@ Material:
     - _Detail: 0.3
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Float: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: -3.2
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
