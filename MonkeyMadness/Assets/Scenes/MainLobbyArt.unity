@@ -629,6 +629,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6536012832420766419, guid: 29e488645ebc5b2478a700280341b2bd, type: 3}
   m_PrefabInstance: {fileID: 1290797206}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &424538151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594109761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5bbb9f3f01c0b41b7b91087346fd52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  rightFootPoseWeight: 1
+  leftFootPoseWeight: 1
+  footOfset: {x: 0, y: 0, z: 0}
 --- !u!4 &429973531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3572914911564778779, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
@@ -1306,6 +1322,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4592290648735268822, guid: 29e488645ebc5b2478a700280341b2bd, type: 3}
   m_PrefabInstance: {fileID: 1290797206}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &682823295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860334666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5bbb9f3f01c0b41b7b91087346fd52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1860334669}
+  rightFootPoseWeight: 1
+  leftFootPoseWeight: 1
+  footOfset: {x: 0, y: 0, z: 0}
 --- !u!1 &688994391 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6401601103919669188, guid: 29e488645ebc5b2478a700280341b2bd, type: 3}
@@ -3071,6 +3103,22 @@ MonoBehaviour:
   headConstraint: {fileID: 1450729942}
   headBodyOffest: {x: 0, y: -0.9630207, z: -0.01252794}
   mainC: {fileID: 0}
+--- !u!114 &1491848496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491848490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5bbb9f3f01c0b41b7b91087346fd52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  rightFootPoseWeight: 1
+  leftFootPoseWeight: 1
+  footOfset: {x: 0, y: 0, z: 0}
 --- !u!4 &1550760056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8607991845457502108, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
