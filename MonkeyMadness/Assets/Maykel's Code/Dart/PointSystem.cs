@@ -50,7 +50,6 @@ public class PointSystem : MonoBehaviour
     }
     public void Placement()
     {
-
         var ordered = playerPoints.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
         foreach (KeyValuePair<int, int> kvp in ordered.Reverse()) 
         {
@@ -58,30 +57,5 @@ public class PointSystem : MonoBehaviour
         }
 
     }
-    public void Update()
-    {
-        // vergelijk player id met player die eerste die geworden
 
-        //uncomment na testen
-        //var tList = new List<int>();
-        //tList = minigamePoints.ToList();
-
-
-
-        //for (int i = 0; i < tList.ToArray().Length; i++)
-        //{
-        //    if(tList.ToArray()[i] == tList.ToArray().Max())
-        //    {
-        //        placement[pm] = tList.ToArray()[i];
-        //        pm++;
-        //        tList.Remove(i);
-        //        i = 0;
-        //    }
-        //}
-        //if (!kaas)
-        //{
-        //    Debug.Log(placement.ToString());
-        //    kaas = true;
-        //}
-    }
 }

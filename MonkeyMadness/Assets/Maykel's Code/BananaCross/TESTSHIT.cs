@@ -9,11 +9,12 @@ public class TESTSHIT : MonoBehaviour
     public bool bababasndfba;
     private void Update()
     {
+        
         if (bababasndfba)
         {
             if (PlayerNumberingExtensions.GetPlayerNumber(PhotonNetwork.LocalPlayer) == 1)
             {
-                print("ashdfui");
+                print("PLAYER 2");
             }
         }
     }

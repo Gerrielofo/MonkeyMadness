@@ -15,8 +15,8 @@ public class BananaTagScript : MonoBehaviour
     public float bombTime;
     public int explodeTime;
     public bool timerstart;
-
-
+    public PointSystem pointsustem;
+    public int points;
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
@@ -24,6 +24,7 @@ public class BananaTagScript : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
         Collider other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
         GiveBanan(other);
+
     }
     private void Update()
     {
@@ -44,6 +45,7 @@ public class BananaTagScript : MonoBehaviour
         if (other.GetComponentInParent<PhotonView>().IsMine) {
             if (other.CompareTag("IsPlayer") && !cooldown && other != previouseHolder) {
                 StartCoroutine(GiveBanan(other));
+                
             }
         }
     }
@@ -75,14 +77,12 @@ public class BananaTagScript : MonoBehaviour
     }
     public void Explode()
     {
-        
-
-
-
-        GiveBanana();
-    }
-    public void GiveBanana()
-    {
-
+        //transform = cage
+        GetComponentInParent<Transform>().GetComponentInParent<Transform>().tag = "IsDead";
+        pointsustem.AddPoints(points, PlayerNumberingExtensions.GetPlayerNumber(PhotonNetwork.LocalPlayer));
+        points++;
+        players = GameObject.FindGameObjectsWithTag("IsPlayer");
+        Collider other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
+        GiveBanan(other);
     }
 }

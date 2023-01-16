@@ -1316,53 +1316,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
   m_PrefabInstance: {fileID: 6925165570706808672}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5639392558352944542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7843661642586104369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b2c5041b1fc754c9b4c029c55c1403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnSmoothness: 60.09
-  head:
-    vrTarget: {fileID: 2228910245365195265}
-    rigTarget: {fileID: 7494177655645389961}
-    trackingPosOffset: {x: 0, y: -0.17, z: -0.19}
-    trackingRotOffset: {x: 0, y: 0, z: 0}
-  lHand:
-    vrTarget: {fileID: 2172804991447736122}
-    rigTarget: {fileID: 6320245534271744004}
-    trackingPosOffset: {x: -0.04, y: 0, z: -0.2}
-    trackingRotOffset: {x: 0, y: 90, z: 102}
-  rHand:
-    vrTarget: {fileID: 2445597157826748981}
-    rigTarget: {fileID: 4288131961111743594}
-    trackingPosOffset: {x: 0.04, y: 0, z: -0.2}
-    trackingRotOffset: {x: 0, y: -99.66, z: -102.14}
-  headConstraint: {fileID: 7494177655645389961}
-  headBodyOffest: {x: 0, y: -0.9630207, z: -0.012527943}
-  mainC: {fileID: 2228910245365195265}
---- !u!114 &1455455708253198648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7843661642586104369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RigLayers:
-  - m_Rig: {fileID: 4018132227119626956}
-    m_Active: 1
-  m_Effectors: []
 --- !u!114 &830457928287955654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,6 +1401,53 @@ MonoBehaviour:
   - {fileID: 8103967367295285352}
   - {fileID: 7560730921015419173}
   - {fileID: 7534914028782845700}
+--- !u!114 &1455455708253198648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843661642586104369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff0960ef4ea6e04eac66b4a7fd2189d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RigLayers:
+  - m_Rig: {fileID: 4018132227119626956}
+    m_Active: 1
+  m_Effectors: []
+--- !u!114 &5639392558352944542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843661642586104369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b2c5041b1fc754c9b4c029c55c1403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnSmoothness: 60.09
+  head:
+    vrTarget: {fileID: 2228910245365195265}
+    rigTarget: {fileID: 7494177655645389961}
+    trackingPosOffset: {x: 0, y: -0.17, z: -0.19}
+    trackingRotOffset: {x: 0, y: 0, z: 0}
+  lHand:
+    vrTarget: {fileID: 2172804991447736122}
+    rigTarget: {fileID: 6320245534271744004}
+    trackingPosOffset: {x: -0.04, y: 0, z: -0.2}
+    trackingRotOffset: {x: 0, y: 90, z: 102}
+  rHand:
+    vrTarget: {fileID: 2445597157826748981}
+    rigTarget: {fileID: 4288131961111743594}
+    trackingPosOffset: {x: 0.04, y: 0, z: -0.2}
+    trackingRotOffset: {x: 0, y: -99.66, z: -102.14}
+  headConstraint: {fileID: 7494177655645389961}
+  headBodyOffest: {x: 0, y: -0.9630207, z: -0.012527943}
+  mainC: {fileID: 2228910245365195265}
 --- !u!4 &7850004101437692560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8292270102696229392, guid: 02fb7bdf5b919c84fafe318bcdd0069e, type: 3}
