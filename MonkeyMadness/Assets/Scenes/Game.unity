@@ -2040,6 +2040,7 @@ GameObject:
   - component: {fileID: 1832892606}
   - component: {fileID: 1832892609}
   - component: {fileID: 1832892610}
+  - component: {fileID: 1832892611}
   m_Layer: 0
   m_Name: PlayerChecker
   m_TagString: Untagged
@@ -2126,6 +2127,19 @@ MonoBehaviour:
   photonView: {fileID: 0}
   tList: 
   kaas: 0
+--- !u!114 &1832892611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832892605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a16f2e5fc3a1754489b3d8f76000396e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bababasndfba: 0
 --- !u!1001 &1883412610
 PrefabInstance:
   m_ObjectHideFlags: 0

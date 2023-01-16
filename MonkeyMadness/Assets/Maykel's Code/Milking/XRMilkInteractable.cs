@@ -14,11 +14,11 @@ public class XRMilkInteractable : XRGrabInteractable
     }
     protected override void OnSelectEntered(XRBaseInteractor interactor)
     {
-        // player specific uier
-        if (interactor.TryGetComponent<PhotonNetwork>().)
-        {
+        //// player specific uier
+        //if (interactor.TryGetComponent<PhotonNetwork>().)
+        //{
 
-        }
+        //}
         photonView.RequestOwnership();
         this.gameObject.GetComponent<Collider>().isTrigger = true;
         base.OnSelectEntered(interactor);

@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using Photon.Pun;
+using Unity.VisualScripting;
+using Photon.Pun.UtilityScripts;
 
-public class BananaTagScript : MonoBehaviour {
+public class BananaTagScript : MonoBehaviour 
+{
     private PhotonView photonView;
     private bool cooldown;
     public Collider previouseHolder;
     public GameObject[] players;
+    public float bombTime;
+    public int explodeTime;
+    public bool timerstart;
+
+
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
@@ -17,14 +25,30 @@ public class BananaTagScript : MonoBehaviour {
         Collider other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
         GiveBanan(other);
     }
-    private void OnTriggerEnter(Collider other) {
+    private void Update()
+    {
+        if (timerstart)
+        {
+            bombTime += Time.deltaTime;
+        }
+
+        if (bombTime >= explodeTime)
+        {
+            Explode();
+
+        }
+
+    }
+    private void OnTriggerEnter(Collider other) 
+    {
         if (other.GetComponentInParent<PhotonView>().IsMine) {
             if (other.CompareTag("IsPlayer") && !cooldown && other != previouseHolder) {
                 StartCoroutine(GiveBanan(other));
             }
         }
     }
-    IEnumerator GiveBanan(Collider other) {
+    IEnumerator GiveBanan(Collider other) 
+    {
         photonView.RequestOwnership();
         Transform bananaholder = other.transform.parent.GetChild(2).GetChild(1);
         photonView.RPC("BananaTransfer", RpcTarget.All, other, bananaholder);
@@ -32,8 +56,10 @@ public class BananaTagScript : MonoBehaviour {
         photonView.RPC("CooldownEnd", RpcTarget.All);
     }
     [PunRPC]
-    void BananaTransfer(Collider other, Transform bananaholder) {
+    void BananaTransfer(Collider other, Transform bananaholder) 
+    {
         cooldown = true;
+        timerstart = true;
         previouseHolder = other;
         transform.parent = null;
         transform.GetComponent<Rigidbody>().isKinematic = true;
@@ -43,7 +69,20 @@ public class BananaTagScript : MonoBehaviour {
         transform.position = bananaholder.position;
     }
     [PunRPC]
-    void CooldownEnd() {
+    void CooldownEnd() 
+    {
         cooldown = false;
+    }
+    public void Explode()
+    {
+        
+
+
+
+        GiveBanana();
+    }
+    public void GiveBanana()
+    {
+
     }
 }
