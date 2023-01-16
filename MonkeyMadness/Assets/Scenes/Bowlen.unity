@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 51585799}
   m_Layer: 0
   m_Name: Plane.024
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1828,7 +1828,7 @@ GameObject:
   - component: {fileID: 114342190}
   m_Layer: 0
   m_Name: GUTTER
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3528,7 +3528,7 @@ GameObject:
   - component: {fileID: 314308915}
   m_Layer: 0
   m_Name: Plane.011 (2)
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6241,7 +6241,7 @@ GameObject:
   - component: {fileID: 559070109}
   m_Layer: 0
   m_Name: Plane.024 (3)
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6981,7 +6981,7 @@ GameObject:
   - component: {fileID: 645992473}
   m_Layer: 0
   m_Name: Plane.024 (2)
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9361,7 +9361,7 @@ GameObject:
   - component: {fileID: 884305705}
   m_Layer: 0
   m_Name: Plane.011
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10170,7 +10170,7 @@ GameObject:
   - component: {fileID: 950917731}
   m_Layer: 0
   m_Name: Plane.009 (1)
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14011,7 +14011,7 @@ GameObject:
   - component: {fileID: 1350168163}
   m_Layer: 0
   m_Name: Plane.009
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15297,7 +15297,7 @@ GameObject:
   - component: {fileID: 1482455846}
   m_Layer: 0
   m_Name: Plane.009 (2)
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15640,7 +15640,7 @@ GameObject:
   - component: {fileID: 1518474747}
   m_Layer: 0
   m_Name: Plane.011 (3)
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15911,7 +15911,7 @@ GameObject:
   - component: {fileID: 1539147149}
   m_Layer: 0
   m_Name: Plane.024 (1)
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19877,7 +19877,7 @@ GameObject:
   - component: {fileID: 1964123991}
   m_Layer: 0
   m_Name: Plane.011 (1)
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20625,7 +20625,7 @@ GameObject:
   - component: {fileID: 2048868267}
   m_Layer: 0
   m_Name: Plane.009 (3)
-  m_TagString: Untagged
+  m_TagString: BowlingLane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

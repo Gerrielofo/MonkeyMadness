@@ -24,7 +24,6 @@ public class Milking : MonoBehaviour
             up = true;
             down = false;
         }
-
         if (up)
         {
             if (distance > 0.3f)
