@@ -5,14 +5,8 @@ using UnityEngine;
 public class PlayerModelSwitcher : MonoBehaviour
 {
     public GameObject[] playerModels;
-    int currentModel = 0;
+    int currentModel;
     public void SwitchModel() {
-        if(currentModel < playerModels.Length) {
-            playerModels[currentModel].SetActive(false);
-            currentModel++;
-            playerModels[currentModel].SetActive(true);
-        } else {
-            currentModel = 0;
-        }
+
     }
 }
