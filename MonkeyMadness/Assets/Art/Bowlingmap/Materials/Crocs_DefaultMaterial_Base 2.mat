@@ -44,6 +44,7 @@ Material:
     m_Floats:
     - _Brightness: 0.3
     - _Detail: 0.3
+    - _Float: 0
     - _Glossiness: 32
     - _OutlineAmount: 0.7
     - _OutlineTreshhold: 0.1
