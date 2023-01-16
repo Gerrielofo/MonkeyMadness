@@ -48,7 +48,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8464866734503141910
 Transform:
@@ -191,6 +191,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 10f9fc00967dead44855dfb42bb8733c, type: 2}
@@ -267,6 +271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoundChair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
 --- !u!4 &900158880825518078 stripped
@@ -327,6 +335,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
@@ -396,6 +408,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
@@ -475,6 +491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoundChair (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
 --- !u!4 &4191278086429686618 stripped
@@ -535,6 +555,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7faa8a5478ab8f24a98a865c8b872369, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7faa8a5478ab8f24a98a865c8b872369, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 7faa8a5478ab8f24a98a865c8b872369, type: 3}
@@ -605,6 +629,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
@@ -684,6 +712,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoundChair (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
 --- !u!4 &6925782868395051410 stripped
@@ -753,6 +785,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
       propertyPath: m_Name
       value: RoundChair
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60a333dbb8bd364438ccd907d301d378, type: 3}
