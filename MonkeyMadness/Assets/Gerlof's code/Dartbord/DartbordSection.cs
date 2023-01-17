@@ -11,7 +11,7 @@ public class DartbordSection : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.CompareTag("Dart")){
-            ReadyRoomSystem.minigameToLoad = MinigameName;
+            ReadyRoomSystem.sceneToLoad = MinigameName;
         }
     }
 }

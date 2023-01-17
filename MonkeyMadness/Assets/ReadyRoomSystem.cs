@@ -8,7 +8,7 @@ public class ReadyRoomSystem : MonoBehaviour
     public int playersIN;
     public bool canSwitch;
     public PhotonView photonView;
-    public static string minigameToLoad;
+    [HideInInspector] static public string sceneToLoad;
     private void Start()
     {
         
@@ -21,6 +21,13 @@ public class ReadyRoomSystem : MonoBehaviour
             Debug.Log("Player entered ready room \n" + "Players in ready room is now: " + playersIN);
             Debug.Log("Players in room:" + PhotonNetwork.PlayerList.Length);
         }
+        if (playersIN == PhotonNetwork.PlayerList.Length)
+        {
+            Debug.Log("PLayers in ready room is now: " + playersIN);
+            Debug.Log(PhotonNetwork.PlayerList.Length);
+            Debug.Log("Can Switch = true");
+            StartCoroutine(SwitchScenesTest.SceneSwitch(sceneToLoad));
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -29,17 +36,6 @@ public class ReadyRoomSystem : MonoBehaviour
             playersIN--;
             Debug.Log("Player left ready room \n" + "Players in ready room is now: " + playersIN);
             Debug.Log("Players in room:" + PhotonNetwork.PlayerList.Length);
-        }
-    }
-    private void Update()
-    {
-        if (playersIN == PhotonNetwork.PlayerList.Length)
-        {
-            Debug.Log("PLayers in ready room is now: " + playersIN);
-            Debug.Log(PhotonNetwork.PlayerList.Length);
-            Debug.Log("Can Switch = true");
-            StartCoroutine(SwitchScenesTest.SceneSwitch(minigameToLoad, 0));
-            canSwitch = true;
         }
     }
 }

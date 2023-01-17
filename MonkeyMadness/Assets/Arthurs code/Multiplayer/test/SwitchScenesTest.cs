@@ -13,25 +13,13 @@ public class SwitchScenesTest : MonoBehaviour
     public bool autmaticSwitch;
     [Header("Choose Room")]
     public static string[] miniGameToLoad;
-    public int sceneToLoad;
-    public bool canChange;
-    public ReadyRoomSystem ready;
-    // Update is called once per frame
-    void Update()
-    {
-        if (ready.canSwitch && canChange)
-        {
-            ready.canSwitch = false;
-            StartCoroutine(SceneSwitch(null, sceneToLoad));
-            canChange = false;
-        }
-    }
-    public static IEnumerator SceneSwitch(string roomToSwitchTo, int sceneToLoad) {
+    public static int sceneNumberToLoad;
+    public static IEnumerator SceneSwitch(string sceneToLoad) {
         yield return new WaitForSeconds(5);
-        if (roomToSwitchTo == null) {
-            PhotonNetwork.LoadLevel(roomToSwitchTo);
+        if (sceneToLoad != null) {
+            PhotonNetwork.LoadLevel(sceneToLoad);
         }else{
-            PhotonNetwork.LoadLevel(miniGameToLoad[sceneToLoad]);
+            PhotonNetwork.LoadLevel(miniGameToLoad[sceneNumberToLoad]);
         }
     }
 }
