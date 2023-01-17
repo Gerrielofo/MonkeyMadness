@@ -14,7 +14,6 @@ public class ReadyRoomSystem : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if ()
         if (other.CompareTag("IsPlayer"))
         {
             playersIN++;
