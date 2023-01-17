@@ -77,12 +77,17 @@ public class BananaTagScript : MonoBehaviour
     }
     public void Explode()
     {
-        //transform = cage
-        GetComponentInParent<Transform>().GetComponentInParent<Transform>().tag = "IsDead";
-        pointsustem.AddPoints(points, PlayerNumberingExtensions.GetPlayerNumber(PhotonNetwork.LocalPlayer));
-        points++;
+        
+        if (photonView.IsMine)
+        {
+            
+            GetComponentInParent<Transform>().GetComponentInParent<Transform>().tag = "IsDead";
+            pointsustem.AddPoints(points, PlayerNumberingExtensions.GetPlayerNumber(PhotonNetwork.LocalPlayer));
+            points++;
+        }
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
         Collider other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
         GiveBanan(other);
+        bombTime = 0;
     }
 }
