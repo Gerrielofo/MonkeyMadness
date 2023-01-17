@@ -1697,6 +1697,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8231034266218390048, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: MinigameName
+      value: BananaTag
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231034266218390048, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: MinigameLoader
       value: 
       objectReference: {fileID: 2053811991}

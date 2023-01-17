@@ -23,11 +23,16 @@ public class ReadyRoomSystem : MonoBehaviour
         }
         if (playersIN == PhotonNetwork.PlayerList.Length)
         {
-            Debug.Log("PLayers in ready room is now: " + playersIN);
-            Debug.Log(PhotonNetwork.PlayerList.Length);
-            Debug.Log("Can Switch = true");
-            StartCoroutine(SwitchScenesTest.SceneSwitch(sceneToLoad));
+            photonView.RPC("sceneSwitch", RpcTarget.AllBuffered);
         }
+    }
+    [PunRPC]
+    public void sceneSwitch()
+    {
+        Debug.Log("PLayers in ready room is now: " + playersIN);
+        Debug.Log(PhotonNetwork.PlayerList.Length);
+        Debug.Log("Can Switch = true");
+        StartCoroutine(SwitchScenesTest.SceneSwitch(sceneToLoad));
     }
     private void OnTriggerExit(Collider other)
     {

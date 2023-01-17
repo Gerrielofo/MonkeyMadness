@@ -46,11 +46,12 @@ public class NetworkPlayer : MonoBehaviour {
             MapPosition(leftHand, leftHandRig);
             MapPosition(rightHand, rightHandRig);
             MapPosition(center, centerRig);
-
+            /*
             if(leftHandAnimator != null && rightHandAnimator != null) {
                 UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.LeftHand), leftHandAnimator);
                 UpdateHandAnimation(InputDevices.GetDeviceAtXRNode(XRNode.RightHand), rightHandAnimator);
             }
+            */
         }
     }
 
