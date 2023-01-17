@@ -12,7 +12,6 @@ public class DartbordSection : MonoBehaviour
     {
         if (collision.transform.CompareTag("Dart")){
             ReadyRoomSystem.minigameToLoad = MinigameName;
-
         }
     }
 }
