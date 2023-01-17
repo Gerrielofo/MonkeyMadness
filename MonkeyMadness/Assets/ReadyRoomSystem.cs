@@ -7,7 +7,6 @@ public class ReadyRoomSystem : MonoBehaviour
 {
     public int playersIN;
     public bool canSwitch;
-    public PhotonView photonView;
     [HideInInspector] static public string sceneToLoad;
     private void Start()
     {
@@ -23,7 +22,7 @@ public class ReadyRoomSystem : MonoBehaviour
         }
         if (playersIN == PhotonNetwork.PlayerList.Length)
         {
-            photonView.RPC("sceneSwitch", RpcTarget.AllBuffered);
+            PhotonView.Get(this).RPC("sceneSwitch", RpcTarget.AllBuffered);
         }
     }
     [PunRPC]
