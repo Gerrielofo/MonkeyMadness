@@ -16,11 +16,6 @@ public class SwitchScenesTest : MonoBehaviour
     public int sceneToLoad;
     public bool canChange;
     public ReadyRoomSystem ready;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -31,15 +26,6 @@ public class SwitchScenesTest : MonoBehaviour
             canChange = false;
         }
     }
-    //public void SwitchScene(int RoomSwitch) {
-
-    //    print(RoomSwitch);
-    //    if (maykel == false) {
-    //        sceneToLoad = RoomSwitch;
-    //        StartCoroutine(SceneSwitch());
-    //        maykel = true;
-    //    }
-    //}
     IEnumerator SceneSwitch() {
         yield return new WaitForSeconds(5);
         if (roomToSwitchTo == null) {
