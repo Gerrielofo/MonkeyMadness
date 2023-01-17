@@ -8,6 +8,7 @@ public class ReadyRoomSystem : MonoBehaviour
     public int playersIN;
     public bool canSwitch;
     public PhotonView photonView;
+    public static string minigameToLoad;
     private void Start()
     {
         
@@ -37,6 +38,7 @@ public class ReadyRoomSystem : MonoBehaviour
             Debug.Log("PLayers in ready room is now: " + playersIN);
             Debug.Log(PhotonNetwork.PlayerList.Length);
             Debug.Log("Can Switch = true");
+            StartCoroutine(SwitchScenesTest.SceneSwitch(minigameToLoad, 0));
             canSwitch = true;
         }
     }

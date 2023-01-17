@@ -12,7 +12,7 @@ public class SwitchScenesTest : MonoBehaviour
     public InputField roomToSwitchTo;
     public bool autmaticSwitch;
     [Header("Choose Room")]
-    public string[] miniGameToLoad;
+    public static string[] miniGameToLoad;
     public int sceneToLoad;
     public bool canChange;
     public ReadyRoomSystem ready;
@@ -22,16 +22,16 @@ public class SwitchScenesTest : MonoBehaviour
         if (ready.canSwitch && canChange)
         {
             ready.canSwitch = false;
-            StartCoroutine(SceneSwitch());
+            StartCoroutine(SceneSwitch(null, sceneToLoad));
             canChange = false;
         }
     }
-    IEnumerator SceneSwitch() {
+    public static IEnumerator SceneSwitch(string roomToSwitchTo, int sceneToLoad) {
         yield return new WaitForSeconds(5);
         if (roomToSwitchTo == null) {
+            PhotonNetwork.LoadLevel(roomToSwitchTo);
+        }else{
             PhotonNetwork.LoadLevel(miniGameToLoad[sceneToLoad]);
-        } else {
-            PhotonNetwork.LoadLevel(roomToSwitchTo.ToString());
         }
     }
 }
