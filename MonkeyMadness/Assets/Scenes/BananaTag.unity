@@ -960,9 +960,49 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6224580218088440185, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224580218088440185, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224580218215722922, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224580218215722922, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6224580218860773209, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
       propertyPath: m_LocalPosition.z
       value: -9.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224580218972875906, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224580218972875906, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224580219133927199, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224580219133927199, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224580219429863039, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224580219429863039, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7369934437576963914, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
       propertyPath: m_InteractionManager

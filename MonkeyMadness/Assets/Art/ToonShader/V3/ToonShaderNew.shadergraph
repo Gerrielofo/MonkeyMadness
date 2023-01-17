@@ -230,20 +230,6 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "185c08bad60c40aea599a94babdd2c8f"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "206b287aacd14c38854a7afd3b881ed5"
-                },
-                "m_SlotId": 3
-            },
-            "m_InputSlot": {
-                "m_Node": {
                     "m_Id": "b94b8a69187a4719b7848decdd0d33a9"
                 },
                 "m_SlotId": 0
@@ -301,20 +287,6 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "674f4e3efd3844e183972ae579893966"
-                },
-                "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "2bdcf62f99dc4785aa32aeb38f53d2c4"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "185c08bad60c40aea599a94babdd2c8f"
                 },
                 "m_SlotId": 1
             }
@@ -504,20 +476,6 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
-                    "m_Id": "6e99594d017e4392bb5e03b3a8f9c42f"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "d691aca5042e4543ac5a603de91a4444"
-                },
-                "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
                     "m_Id": "75bf1b025784468da819729825f657ac"
                 },
                 "m_SlotId": 0
@@ -639,20 +597,6 @@
                     "m_Id": "5d81a718ec9d4e7db8c65bba9251498c"
                 },
                 "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "b53e989ed14e4bfcab94c6eeada7c21b"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "83d946579c3a481ca3646677cc281655"
-                },
-                "m_SlotId": 0
             }
         },
         {
