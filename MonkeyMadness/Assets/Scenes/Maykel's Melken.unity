@@ -714,6 +714,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charachter: {fileID: 393787633}
+  movementProvider: {fileID: 0}
+  turnProvider: {fileID: 0}
   velocityRight:
     m_UseReference: 1
     m_Action:
@@ -762,11 +764,32 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _Jump:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  jumpInput: 0
   gripLeftInput: 0
   gripRightInput: 0
+  _rightActive: 0
+  _leftActive: 0
   extrainteractorLeft: {fileID: 1590425609}
   extrainteractorRight: {fileID: 493159598}
-  movementprovider: {fileID: 393787634}
+  isStunned: 0
+  stunTime: 0
+  stunDelay: 0
+  canJump: 0
+  hasJumped: 0
+  jumpStrenght: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!1001 &476425834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2825,6 +2848,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1057359603148878740, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1085874689966651012, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: ball
       value: 
@@ -2880,6 +2907,42 @@ PrefabInstance:
     - target: {fileID: 1085874689966651014, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155053496730710849, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: sceneViewId
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180248265931338985, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: sceneViewId
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3771323993995542647, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: sceneViewId
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341033100252310770, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: sceneViewId
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723120401193357629, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: sceneViewId
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781785208087500748, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: sceneViewId
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7595613146681027147, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: sceneViewId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221539819066726766, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750419919465216728, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
+      propertyPath: sceneViewId
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5bcdc6c8e787f746b0cd6579ee776d9, type: 3}
