@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using Photon.Pun;
+using Photon.Realtime;
 using Unity.VisualScripting;
 using Photon.Pun.UtilityScripts;
 
@@ -22,9 +23,11 @@ public class BananaTagScript : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
-
-        players = GameObject.FindGameObjectsWithTag("IsPlayer");
-        other = players[Random.Range(0, PhotonNetwork.PlayerList.Length - 1)].GetComponent<Collider>();
+        foreach(Player player in PhotonNetwork.PlayerList)
+        {
+            players = GameObject.FindGameObjectsWithTag("IsPlayer");
+        }
+        other = players[Random.Range(0, players.Length)].GetComponent<Collider>();
         StartCoroutine(GiveBanan(other));
     }
     private void Update()
@@ -82,7 +85,6 @@ public class BananaTagScript : MonoBehaviour
         if (photonView.IsMine)
         {
             GetComponentInParent<Transform>().GetComponentInParent<Transform>().tag = "IsDead";
-            //pointsustem.AddPoints(points, PlayerNumberingExtensions.GetPlayerNumber(PhotonNetwork.LocalPlayer));
         }
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
         other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
