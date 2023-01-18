@@ -14,13 +14,23 @@ public class SwitchScenesTest : MonoBehaviour
     [Header("Choose Room")]
     public static string[] miniGameToLoad;
     public static int sceneNumberToLoad;
+    public static bool switchs = true;
     [PunRPC]
     public static IEnumerator SceneSwitch(string sceneToLoad) {
         yield return new WaitForSeconds(5);
-        if (sceneToLoad != null) {
-            PhotonNetwork.LoadLevel(sceneToLoad);
-        }else{
-            PhotonNetwork.LoadLevel(miniGameToLoad[sceneNumberToLoad]);
+        if (switchs)
+        {
+            switchs = false;
+            if (sceneToLoad != null)
+            {
+                PhotonNetwork.LoadLevel(sceneToLoad);
+                sceneToLoad = null;
+            }
+            else
+            {
+                PhotonNetwork.LoadLevel(miniGameToLoad[sceneNumberToLoad]);
+            }
         }
+        
     }
 }

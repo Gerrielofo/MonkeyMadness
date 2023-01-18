@@ -22,11 +22,11 @@ public class ReadyRoomSystem : MonoBehaviour
         }
         if (playersIN == PhotonNetwork.PlayerList.Length)
         {
-            PhotonView.Get(this).RPC("sceneSwitch", RpcTarget.AllBuffered, sceneToLoad);
+            PhotonView.Get(this).RPC("SceneSwitch", RpcTarget.AllBuffered, sceneToLoad);
         }
     }
     [PunRPC]
-    public void sceneSwitch(string sceneToLoad)
+    public void SceneSwitch(string sceneToLoad)
     {
         Debug.Log("PLayers in ready room is now: " + playersIN);
         Debug.Log(PhotonNetwork.PlayerList.Length);

@@ -13,7 +13,7 @@ public class BananaTagScript : MonoBehaviour
     public Collider previouseHolder;
     public GameObject[] players;
     public float bombTime;
-    public int explodeTime;
+    public int explodeTime = 50;
     public bool timerstart;
     //public PointSystem pointsustem;
     public int points;
@@ -24,7 +24,7 @@ public class BananaTagScript : MonoBehaviour
         photonView = GetComponent<PhotonView>();
 
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
-        other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
+        other = players[Random.Range(0, PhotonNetwork.PlayerList.Length - 1)].GetComponent<Collider>();
         StartCoroutine(GiveBanan(other));
     }
     private void Update()
@@ -37,7 +37,6 @@ public class BananaTagScript : MonoBehaviour
         if (bombTime >= explodeTime)
         {
             Explode();
-
         }
 
     }
@@ -49,7 +48,7 @@ public class BananaTagScript : MonoBehaviour
             }
         }
     }
-    IEnumerator GiveBanan(Collider other) 
+    IEnumerator GiveBanan(Collider other)
     {
         photonView.RequestOwnership();
         bananaholder = other.transform.parent.GetChild(2).GetChild(1);
@@ -60,7 +59,7 @@ public class BananaTagScript : MonoBehaviour
         photonView.RPC("CooldownEnd", RpcTarget.All);
     }
     [PunRPC]
-    void BananaTransfer() 
+    void BananaTransfer()
     {
         Debug.Log("bananaTransfer");
         cooldown = true;
@@ -84,10 +83,9 @@ public class BananaTagScript : MonoBehaviour
         {
             GetComponentInParent<Transform>().GetComponentInParent<Transform>().tag = "IsDead";
             //pointsustem.AddPoints(points, PlayerNumberingExtensions.GetPlayerNumber(PhotonNetwork.LocalPlayer));
-            points++;
         }
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
-        Collider other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
+        other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
         GiveBanan(other);
         bombTime = 0;
     }
