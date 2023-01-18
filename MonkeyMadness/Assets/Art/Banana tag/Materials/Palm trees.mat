@@ -81,13 +81,13 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: -20
+    - _Glossiness: 1000
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineAmount: 0.7
-    - _OutlineTreshhold: 0.1
+    - _OutlineAmount: 1
+    - _OutlineTreshhold: 1
     - _Parallax: 0.02
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -101,7 +101,7 @@ Material:
     - _AmbientColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainColor: {r: 0.745283, g: 0.745283, b: 0.745283, a: 0}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 0}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
