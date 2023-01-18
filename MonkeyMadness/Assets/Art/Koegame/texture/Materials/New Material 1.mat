@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: New Material 1
   m_Shader: {fileID: -6465566751694194690, guid: 89d88c3c19230524bb5be47111f46bee, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -132,7 +132,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.005072971, g: 0.3584906, b: 0.05312139, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainColor: {r: 0.27254647, g: 0.4528302, b: 0.20719118, a: 0}
+    - _MainColor: {r: 0.19263972, g: 0.3679245, b: 0.1971342, a: 0}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 0}
