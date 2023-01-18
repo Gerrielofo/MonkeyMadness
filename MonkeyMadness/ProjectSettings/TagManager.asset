@@ -23,6 +23,7 @@ TagManager:
   - Swingable
   - Teleporter
   - BowlingLane
+  - IsDead
   layers:
   - Default
   - TransparentFX

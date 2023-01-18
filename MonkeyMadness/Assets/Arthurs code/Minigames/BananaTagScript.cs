@@ -15,16 +15,17 @@ public class BananaTagScript : MonoBehaviour
     public float bombTime;
     public int explodeTime;
     public bool timerstart;
-    public PointSystem pointsustem;
+    //public PointSystem pointsustem;
     public int points;
+    public Collider other;
+    public Transform bananaholder;
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
-        
-        players = GameObject.FindGameObjectsWithTag("IsPlayer");
-        Collider other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
-        GiveBanan(other);
 
+        players = GameObject.FindGameObjectsWithTag("IsPlayer");
+        other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
+        StartCoroutine(GiveBanan(other));
     }
     private void Update()
     {
@@ -45,21 +46,23 @@ public class BananaTagScript : MonoBehaviour
         if (other.GetComponentInParent<PhotonView>().IsMine) {
             if (other.CompareTag("IsPlayer") && !cooldown && other != previouseHolder) {
                 StartCoroutine(GiveBanan(other));
-                
             }
         }
     }
     IEnumerator GiveBanan(Collider other) 
     {
         photonView.RequestOwnership();
-        Transform bananaholder = other.transform.parent.GetChild(2).GetChild(1);
-        photonView.RPC("BananaTransfer", RpcTarget.All, other, bananaholder);
+        bananaholder = other.transform.parent.GetChild(2).GetChild(1);
+        Debug.Log(bananaholder.name.ToString() + "XD gaste");
+        photonView.RPC("BananaTransfer", RpcTarget.All);
+        Debug.Log("hai");
         yield return new WaitForSeconds(5);
         photonView.RPC("CooldownEnd", RpcTarget.All);
     }
     [PunRPC]
-    void BananaTransfer(Collider other, Transform bananaholder) 
+    void BananaTransfer() 
     {
+        Debug.Log("bananaTransfer");
         cooldown = true;
         timerstart = true;
         previouseHolder = other;
@@ -77,12 +80,10 @@ public class BananaTagScript : MonoBehaviour
     }
     public void Explode()
     {
-        
         if (photonView.IsMine)
         {
-            
             GetComponentInParent<Transform>().GetComponentInParent<Transform>().tag = "IsDead";
-            pointsustem.AddPoints(points, PlayerNumberingExtensions.GetPlayerNumber(PhotonNetwork.LocalPlayer));
+            //pointsustem.AddPoints(points, PlayerNumberingExtensions.GetPlayerNumber(PhotonNetwork.LocalPlayer));
             points++;
         }
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
