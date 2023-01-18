@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
+    public Sprite[] audioSprites;
 
     void Start()
     {
