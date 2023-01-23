@@ -56,7 +56,7 @@ public class BananaTagScript : MonoBehaviour
     }
     IEnumerator GiveBanan(Collider other)
     {
-        if (other.GetComponentInParent<GameObject>().GetComponent<PhotonView>().IsMine) {
+        if (other.GetComponentInParent<PhotonView>()) {
             photonView.RequestOwnership();
         }
         photonView.RPC("BananaTransfer", RpcTarget.All);
