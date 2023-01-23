@@ -27,7 +27,11 @@ public class BananaTagScript : MonoBehaviour
         Debug.Log("array length is" + players.Length);
         other = players[Random.Range(0, players.Length - 1)].GetComponent<Collider>();
         //stop dit in een co routine
+        StartCoroutine(GiveBananaStart(other));
+    }
+    IEnumerator GiveBananaStart(Collider other) {
         StartCoroutine(GiveBanan(other));
+        yield return null;
     }
     private void Update()
     {
