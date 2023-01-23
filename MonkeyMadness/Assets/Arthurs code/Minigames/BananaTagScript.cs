@@ -31,7 +31,7 @@ public class BananaTagScript : MonoBehaviour
         yield return new WaitForSeconds(2);
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
         Debug.Log("array length is" + players.Length);
-        other = players[Random.Range(0, players.Length - 1)].GetComponent<Collider>();
+        other = players[Random.Range(0, players.Length)].GetComponent<Collider>();
         StartCoroutine(GiveBanan(other));
         yield return null;
     }
@@ -59,8 +59,6 @@ public class BananaTagScript : MonoBehaviour
         if (other.GetComponent<GameObject>().GetComponent<PhotonView>().IsMine) {
             photonView.RequestOwnership();
         }
-        bananaholder = other.transform.parent.GetChild(2).GetChild(1);
-        Debug.Log(bananaholder.name.ToString() + "XD gaste");
         photonView.RPC("BananaTransfer", RpcTarget.All, bananaholder);
         Debug.Log("hai");
         yield return new WaitForSeconds(5);
@@ -69,6 +67,8 @@ public class BananaTagScript : MonoBehaviour
     [PunRPC]
     void BananaTransfer(Transform bananaholder)
     {
+        Debug.Log(bananaholder.name.ToString() + "XD gaste");
+        bananaholder = other.transform.parent.GetChild(2).GetChild(1);
         Debug.Log("bananaTransfer");
         cooldown = true;
         timerstart = true;
