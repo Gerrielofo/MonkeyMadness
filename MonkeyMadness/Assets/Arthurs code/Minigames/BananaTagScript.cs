@@ -23,11 +23,10 @@ public class BananaTagScript : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
-        foreach(Player player in PhotonNetwork.PlayerList)
-        {
-            players = GameObject.FindGameObjectsWithTag("IsPlayer");
-        }
-        other = players[Random.Range(0, players.Length)].GetComponent<Collider>();
+        players = GameObject.FindGameObjectsWithTag("IsPlayer");
+        Debug.Log("array length is" + players.Length);
+        other = players[Random.Range(0, players.Length - 1)].GetComponent<Collider>();
+        //stop dit in een co routine
         StartCoroutine(GiveBanan(other));
     }
     private void Update()
