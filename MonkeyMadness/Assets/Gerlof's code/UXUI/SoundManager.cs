@@ -4,7 +4,10 @@ using UnityEngine.UI;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
-    public Sprite[] audioSprites;
+    [SerializeField] GameObject volume14;
+    [SerializeField] GameObject volume24;
+    [SerializeField] GameObject volume34;
+    [SerializeField] GameObject volume44;
 
     void Start()
     {
@@ -20,9 +23,42 @@ public class SoundManager : MonoBehaviour
 
 
     }
+
+    private void Update()
+    {
+        if (volumeSlider.value > 0.7f)
+        {
+            volume44.SetActive(true);
+            volume34.SetActive(false);
+            volume24.SetActive(false);
+            volume14.SetActive(false);
+        }
+        else if (volumeSlider.value < 0.7f && volumeSlider.value > 0.4f)
+        {
+            volume44.SetActive(false);
+            volume34.SetActive(true);
+            volume24.SetActive(false);
+            volume14.SetActive(false);
+        }
+        else if (volumeSlider.value < 0.4f && volumeSlider.value > 0.1f)
+        {
+            volume44.SetActive(false);
+            volume34.SetActive(false);
+            volume24.SetActive(true);
+            volume14.SetActive(false);
+        }
+        else
+        {
+            volume44.SetActive(false);
+            volume34.SetActive(false);
+            volume24.SetActive(false);
+            volume14.SetActive(true);
+        }
+    }
     public void ChangeVolume()
     {
         AudioListener.volume = volumeSlider.value;
+        
         save();
     }
 
