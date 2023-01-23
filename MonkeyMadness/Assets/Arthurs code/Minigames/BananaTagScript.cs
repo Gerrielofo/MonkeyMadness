@@ -18,7 +18,6 @@ public class BananaTagScript : MonoBehaviour
     public bool timerstart;
     //public PointSystem pointsustem;
     public int points;
-    public Collider other;
     public Transform bananaholder;
     // Start is called before the first frame update
     void Start() {
@@ -31,6 +30,7 @@ public class BananaTagScript : MonoBehaviour
         yield return new WaitForSeconds(2);
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
         Debug.Log("array length is" + players.Length);
+        Collider other;
         other = players[Random.Range(0, players.Length)].GetComponent<Collider>();
         StartCoroutine(GiveBanan(other));
         yield return null;
