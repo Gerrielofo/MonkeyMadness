@@ -56,7 +56,7 @@ public class BananaTagScript : MonoBehaviour
     }
     IEnumerator GiveBanan(Collider other)
     {
-        if (other.GetComponent<PhotonView>().IsMine) {
+        if (other.GetComponentInParent<PhotonView>().IsMine) {
             photonView.RequestOwnership();
         }
         bananaholder = other.transform.parent.GetChild(2).GetChild(1);
