@@ -51,9 +51,14 @@ public class BananaTagScript : MonoBehaviour
     private void OnTriggerEnter(Collider other) 
     {
         if (other.CompareTag("IsPlayer") && !cooldown && other != previouseHolder) {
-            StartCoroutine(GiveBanan(other));
+            photonView.RPC("SyncBanana", RpcTarget.AllBuffered, other);
         }
     }
+    [PunRPC]
+    public void SyncBanana(Collider other) {
+        StartCoroutine(GiveBanan(other));
+    }
+    [PunRPC]
     IEnumerator GiveBanan(Collider other)
     {
         if (other.GetComponentInParent<PhotonView>()) {
