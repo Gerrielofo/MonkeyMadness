@@ -64,7 +64,7 @@ public class BananaTagScript : MonoBehaviour
         if (other.GetComponentInParent<PhotonView>()) {
             photonView.RequestOwnership();
         }
-        photonView.RPC("BananaTransfer", RpcTarget.All, other);
+        BananaTransfer(other);
         Debug.Log("hai");
         yield return new WaitForSeconds(5);
         photonView.RPC("CooldownEnd", RpcTarget.All);
