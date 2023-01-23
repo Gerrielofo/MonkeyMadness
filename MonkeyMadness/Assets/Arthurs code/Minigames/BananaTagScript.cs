@@ -25,7 +25,6 @@ public class BananaTagScript : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         
 
-        //stop dit in een co routine
         StartCoroutine(GiveBananaStart());
     }
     IEnumerator GiveBananaStart() {
@@ -51,15 +50,15 @@ public class BananaTagScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) 
     {
-        if (other.GetComponentInParent<PhotonView>().IsMine) {
-            if (other.CompareTag("IsPlayer") && !cooldown && other != previouseHolder) {
-                StartCoroutine(GiveBanan(other));
-            }
+        if (other.CompareTag("IsPlayer") && !cooldown && other != previouseHolder) {
+            StartCoroutine(GiveBanan(other));
         }
     }
     IEnumerator GiveBanan(Collider other)
     {
-        photonView.RequestOwnership();
+        if (other.GetComponent<PhotonView>().IsMine) {
+            photonView.RequestOwnership();
+        }
         bananaholder = other.transform.parent.GetChild(2).GetChild(1);
         Debug.Log(bananaholder.name.ToString() + "XD gaste");
         photonView.RPC("BananaTransfer", RpcTarget.All);
