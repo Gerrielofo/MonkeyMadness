@@ -26,14 +26,13 @@ public class BananaTagScript : MonoBehaviour
         
 
         //stop dit in een co routine
-        StartCoroutine(GiveBananaStart(other));
+        StartCoroutine(GiveBananaStart());
     }
-    IEnumerator GiveBananaStart(Collider other) {
+    IEnumerator GiveBananaStart() {
+        yield return new WaitForSeconds(2);
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
         Debug.Log("array length is" + players.Length);
         other = players[Random.Range(0, players.Length - 1)].GetComponent<Collider>();
-
-        yield return new WaitForSeconds(5);
         StartCoroutine(GiveBanan(other));
         yield return null;
     }
