@@ -59,13 +59,13 @@ public class BananaTagScript : MonoBehaviour
         if (other.GetComponent<GameObject>().GetComponent<PhotonView>().IsMine) {
             photonView.RequestOwnership();
         }
-        photonView.RPC("BananaTransfer", RpcTarget.All, bananaholder);
+        photonView.RPC("BananaTransfer", RpcTarget.All);
         Debug.Log("hai");
         yield return new WaitForSeconds(5);
         photonView.RPC("CooldownEnd", RpcTarget.All);
     }
     [PunRPC]
-    void BananaTransfer(Transform bananaholder)
+    void BananaTransfer()
     {
         Debug.Log(bananaholder.name.ToString() + "XD gaste");
         bananaholder = other.transform.parent.GetChild(2).GetChild(1);
