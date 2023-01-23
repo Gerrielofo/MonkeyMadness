@@ -14,7 +14,7 @@ public class BananaTagScript : MonoBehaviour
     public Collider previouseHolder;
     public GameObject[] players;
     public float bombTime;
-    public int explodeTime;
+    public int explodeTime = 50;
     public bool timerstart;
     //public PointSystem pointsustem;
     public int points;
@@ -22,15 +22,16 @@ public class BananaTagScript : MonoBehaviour
     public Transform bananaholder;
     // Start is called before the first frame update
     void Start() {
-        explodeTime = 15;
         photonView = GetComponent<PhotonView>();
+        
+
         StartCoroutine(GiveBananaStart());
     }
     IEnumerator GiveBananaStart() {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
         Debug.Log("array length is" + players.Length);
-        other = players[Random.Range(0, players.Length)].GetComponent<Collider>();
+        other = players[Random.Range(0, players.Length - 1)].GetComponent<Collider>();
         StartCoroutine(GiveBanan(other));
         yield return null;
     }
@@ -55,19 +56,18 @@ public class BananaTagScript : MonoBehaviour
     }
     IEnumerator GiveBanan(Collider other)
     {
-        if (other.GetComponentInParent<PhotonView>().IsMine)
-        {
+        if (other.GetComponent<GameObject>().GetComponent<PhotonView>().IsMine) {
             photonView.RequestOwnership();
         }
         bananaholder = other.transform.parent.GetChild(2).GetChild(1);
         Debug.Log(bananaholder.name.ToString() + "XD gaste");
-        photonView.RPC("BananaTransfer", RpcTarget.All);
+        photonView.RPC("BananaTransfer", RpcTarget.All, bananaholder);
         Debug.Log("hai");
         yield return new WaitForSeconds(5);
         photonView.RPC("CooldownEnd", RpcTarget.All);
     }
     [PunRPC]
-    void BananaTransfer()
+    void BananaTransfer(Transform bananaholder)
     {
         Debug.Log("bananaTransfer");
         cooldown = true;
@@ -87,22 +87,13 @@ public class BananaTagScript : MonoBehaviour
     }
     public void Explode()
     {
-        /*
-        print("explode");
         if (photonView.IsMine)
         {
-            if (GetComponentInParent<Transform>().GetComponentInParent<Transform>().GetComponentInParent<tran>)
-            {
-                print("works");
-                GetComponentInParent<Transform>().GetComponentInParent<Transform>().tag = "IsDead";
-            }
-             
+            GetComponentInParent<Transform>().GetComponentInParent<Transform>().tag = "IsDead";
         }
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
         other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
-        print("giving other player cause exploded");
         GiveBanan(other);
         bombTime = 0;
-        */
     }
 }
