@@ -87,6 +87,7 @@ public class BananaTagScript : MonoBehaviour
     }
     public void Explode()
     {
+        /*
         if (photonView.IsMine)
         {
             GetComponentInParent<Transform>().GetComponentInParent<Transform>().tag = "IsDead";
@@ -95,5 +96,6 @@ public class BananaTagScript : MonoBehaviour
         other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
         GiveBanan(other);
         bombTime = 0;
+        */
     }
 }
