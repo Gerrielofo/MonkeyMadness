@@ -59,18 +59,16 @@ public class BananaTagScript : MonoBehaviour
         if (other.GetComponent<GameObject>().GetComponent<PhotonView>().IsMine) {
             photonView.RequestOwnership();
         }
-
-
-        photonView.RPC("BananaTransfer", RpcTarget.All);
+        bananaholder = other.transform.parent.GetChild(2).GetChild(1);
+        Debug.Log(bananaholder.name.ToString() + "XD gaste");
+        photonView.RPC("BananaTransfer", RpcTarget.All, bananaholder);
         Debug.Log("hai");
         yield return new WaitForSeconds(5);
         photonView.RPC("CooldownEnd", RpcTarget.All);
     }
     [PunRPC]
-    void BananaTransfer()
+    void BananaTransfer(Transform bananaholder)
     {
-        bananaholder = other.transform.parent.GetChild(2).GetChild(1);
-        Debug.Log(bananaholder.name.ToString() + "XD gaste");
         Debug.Log("bananaTransfer");
         cooldown = true;
         timerstart = true;
