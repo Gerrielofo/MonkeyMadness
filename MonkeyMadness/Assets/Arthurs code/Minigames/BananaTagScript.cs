@@ -67,8 +67,8 @@ public class BananaTagScript : MonoBehaviour
     [PunRPC]
     void BananaTransfer()
     {
-        Debug.Log(bananaholder.name.ToString() + "XD gaste");
         bananaholder = other.transform.parent.GetChild(2).GetChild(1);
+        Debug.Log(bananaholder.name.ToString() + "XD gaste");
         Debug.Log("bananaTransfer");
         cooldown = true;
         timerstart = true;
