@@ -64,6 +64,7 @@ public class BananaTagScript : MonoBehaviour
     }
     [PunRPC]
     public void SyncBanana() {
+        cooldown = true;
         StartCoroutine(GiveBanan());
     }
     [PunRPC]
@@ -74,24 +75,26 @@ public class BananaTagScript : MonoBehaviour
         }
         BananaTransfer(hit);
         Debug.Log("hai");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         photonView.RPC("CooldownEnd", RpcTarget.All);
     }
     [PunRPC]
     void BananaTransfer(Collider other)
     {
-        bananaholder = hit.transform.parent.GetChild(2).GetChild(1);
-        Debug.Log(bananaholder.name.ToString() + "XD gaste");
-        Debug.Log("bananaTransfer");
-        cooldown = true;
-        timerstart = true;
-        previouseHolder = other;
-        transform.parent = null;
-        transform.GetComponent<Rigidbody>().isKinematic = true;
-        transform.GetComponent<Rigidbody>().useGravity = false;
-        transform.GetComponent<BoxCollider>().isTrigger = true;
-        transform.parent = bananaholder;
-        transform.position = bananaholder.position;
+        if (cooldown) {
+            bananaholder = hit.transform.parent.GetChild(2).GetChild(1);
+            Debug.Log(bananaholder.name.ToString() + "XD gaste");
+            Debug.Log("bananaTransfer");
+            cooldown = true;
+            timerstart = true;
+            previouseHolder = other;
+            transform.parent = null;
+            transform.GetComponent<Rigidbody>().isKinematic = true;
+            transform.GetComponent<Rigidbody>().useGravity = false;
+            transform.GetComponent<BoxCollider>().isTrigger = true;
+            transform.parent = bananaholder;
+            transform.position = bananaholder.position;
+        }
     }
     [PunRPC]
     void CooldownEnd() 
