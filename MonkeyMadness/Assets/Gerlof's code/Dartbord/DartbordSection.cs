@@ -8,10 +8,11 @@ public class DartbordSection : MonoBehaviour
     public string MinigameName;
     public int radius;
     public GameObject MinigameLoader;
-    private void Update() {
+    public void Update() {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
         foreach (var hitCollider in hitColliders) {
             if (hitCollider.CompareTag("Dart")) {
+                Debug.Log("Dart Hit");
                 ReadyRoomSystem.sceneToLoad = MinigameName;
             }
         }
