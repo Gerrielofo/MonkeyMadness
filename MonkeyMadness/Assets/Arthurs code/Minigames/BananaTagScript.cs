@@ -12,6 +12,7 @@ public class BananaTagScript : MonoBehaviour
     private PhotonView photonView;
     private bool cooldown;
     public Collider previouseHolder;
+    public Collider hit;
     public GameObject[] players;
     public float bombTime;
     public int explodeTime = 50;
@@ -51,20 +52,21 @@ public class BananaTagScript : MonoBehaviour
     private void OnTriggerEnter(Collider other) 
     {
         if (other.CompareTag("IsPlayer") && !cooldown && other != previouseHolder) {
-            photonView.RPC("SyncBanana", RpcTarget.AllBuffered, other);
+            hit = other;
+            photonView.RPC("SyncBanana", RpcTarget.AllBuffered);
         }
     }
     [PunRPC]
-    public void SyncBanana(Collider other) {
-        StartCoroutine(GiveBanan(other));
+    public void SyncBanana() {
+        StartCoroutine(GiveBanan());
     }
     [PunRPC]
-    IEnumerator GiveBanan(Collider other)
+    IEnumerator GiveBanan()
     {
-        if (other.GetComponentInParent<PhotonView>()) {
+        if (hit.GetComponentInParent<PhotonView>()) {
             photonView.RequestOwnership();
         }
-        BananaTransfer(other);
+        BananaTransfer(hit);
         Debug.Log("hai");
         yield return new WaitForSeconds(5);
         photonView.RPC("CooldownEnd", RpcTarget.All);
@@ -72,7 +74,7 @@ public class BananaTagScript : MonoBehaviour
     [PunRPC]
     void BananaTransfer(Collider other)
     {
-        bananaholder = other.transform.parent.GetChild(2).GetChild(1);
+        bananaholder = hit.transform.parent.GetChild(2).GetChild(1);
         Debug.Log(bananaholder.name.ToString() + "XD gaste");
         Debug.Log("bananaTransfer");
         cooldown = true;
