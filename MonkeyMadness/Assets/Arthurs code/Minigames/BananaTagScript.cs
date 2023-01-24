@@ -6,6 +6,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using Unity.VisualScripting;
 using Photon.Pun.UtilityScripts;
+using Unity.XR.CoreUtils;
 
 public class BananaTagScript : MonoBehaviour 
 {
@@ -18,6 +19,7 @@ public class BananaTagScript : MonoBehaviour
     public int explodeTime = 50;
     public bool timerstart;
     private bool started;
+    public Transform cage;
     //public PointSystem pointsustem;
     public int points;
     public Transform bananaholder;
@@ -103,15 +105,12 @@ public class BananaTagScript : MonoBehaviour
     }
     public void Explode()
     {
-        /*
-        if (photonView.IsMine)
-        {
-            GetComponentInParent<Transform>().GetComponentInParent<Transform>().tag = "IsDead";
+        if (hit.GetComponentInParent<PhotonView>().IsMine) {
+            FindObjectOfType<XROrigin>().transform.position = cage.position;
         }
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
-        other = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
-        GiveBanan(other);
+        hit = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
+        SyncBanana();
         bombTime = 0;
-        */
     }
 }
