@@ -813,9 +813,7 @@ PrefabInstance:
       propertyPath: MinigameLoader
       value: 
       objectReference: {fileID: 2053811991}
-    m_RemovedComponents:
-    - {fileID: 8231034266218390048, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
-    - {fileID: 5806572710060708260, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
 --- !u!1001 &1668117608
 PrefabInstance:

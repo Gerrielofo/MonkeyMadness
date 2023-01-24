@@ -26,7 +26,7 @@ public class ReadyRoomSystem : MonoBehaviour
         }
     }
     [PunRPC]
-    public void SceneSwitch(string sceneToLoad)
+    public void SceneSwitch()
     {
         Debug.Log("PLayers in ready room is now: " + playersIN);
         Debug.Log(PhotonNetwork.PlayerList.Length);
