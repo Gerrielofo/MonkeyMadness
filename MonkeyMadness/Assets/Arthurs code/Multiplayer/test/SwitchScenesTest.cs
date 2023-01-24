@@ -20,9 +20,11 @@ public class SwitchScenesTest : MonoBehaviour
         yield return new WaitForSeconds(5);
         if (switchs)
         {
+            Debug.Log(sceneToLoad);
             switchs = false;
             if (sceneToLoad != null)
             {
+                
                 PhotonNetwork.LoadLevel(sceneToLoad);
                 sceneToLoad = null;
             }
