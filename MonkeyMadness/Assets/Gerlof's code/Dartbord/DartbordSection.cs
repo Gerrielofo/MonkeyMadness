@@ -8,15 +8,16 @@ public class DartbordSection : MonoBehaviour
     public string MinigameName;
     public int radius;
     public GameObject MinigameLoader;
+    private bool hit;
     public void Update() {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radius);
-
-        foreach (var hitCollider in hitColliders) {
-            if (hitCollider.CompareTag("Dart")) {
-                Debug.Log("Dart Hit");
-                ReadyRoomSystem.sceneToLoad = MinigameName;
+        if (!hit) {
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
+            foreach (var hitCollider in hitColliders) {
+                if (hitCollider.CompareTag("Dart")) {
+                    hit = true;
+                    Debug.Log("Dart Hit");
+                    ReadyRoomSystem.sceneToLoad = MinigameName;
+                }
             }
         }
     }
