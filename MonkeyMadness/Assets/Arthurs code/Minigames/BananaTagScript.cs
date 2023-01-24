@@ -17,6 +17,7 @@ public class BananaTagScript : MonoBehaviour
     public float bombTime;
     public int explodeTime = 50;
     public bool timerstart;
+    private bool started;
     //public PointSystem pointsustem;
     public int points;
     public Transform bananaholder;
@@ -25,19 +26,24 @@ public class BananaTagScript : MonoBehaviour
         photonView = GetComponent<PhotonView>();
         
 
-        StartCoroutine(GiveBananaStart());
     }
     IEnumerator GiveBananaStart() {
-        yield return new WaitForSeconds(2);
-        players = GameObject.FindGameObjectsWithTag("IsPlayer");
+        yield return new WaitForSeconds(5);
         Debug.Log("array length is" + players.Length);
-        Collider other;
-        other = players[Random.Range(0, players.Length)].GetComponent<Collider>();
+        hit = players[Random.Range(0, players.Length)].GetComponent<Collider>();
         StartCoroutine(GiveBanan());
         yield return null;
     }
     private void Update()
     {
+        if (!started) {
+            players = GameObject.FindGameObjectsWithTag("IsPlayer");
+            if (PhotonNetwork.PlayerList.Length == players.Length) {
+                started = true;
+                StartCoroutine(GiveBananaStart());
+                
+            }
+        }
         if (timerstart)
         {
             bombTime += Time.deltaTime;
