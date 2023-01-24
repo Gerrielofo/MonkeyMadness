@@ -20,7 +20,7 @@ public class XRGrabNetworkInteractable : XRGrabInteractable
     }
     protected override void Detach()
     {
-        this.gameObject.GetComponent<Rigidbody>().freezeRotation = true;
+        this.gameObject.GetComponent<Rigidbody>().freezeRotation = false;
         this.gameObject.GetComponent<Collider>().isTrigger = false;
         base.Detach();
 
