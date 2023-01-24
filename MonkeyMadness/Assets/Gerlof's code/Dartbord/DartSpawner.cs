@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class DartSpawner : MonoBehaviour
 {
@@ -12,6 +14,6 @@ public class DartSpawner : MonoBehaviour
     }
     public void SpawnDart()
     {
-        Instantiate(dart, transform.position, transform.rotation);
+        NetworkPlayer.Instantiate(dart, transform.position, transform.rotation);
     }
 }
