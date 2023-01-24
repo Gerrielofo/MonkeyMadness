@@ -43,6 +43,10 @@ MonoBehaviour:
   - CooldownEnd
   - BananaTransfer
   - Start
+  - sceneSwitch
+  - SceneSwitch
+  - GiveBanan
+  - SyncBanana
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

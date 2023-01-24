@@ -12,40 +12,25 @@ public class SwitchScenesTest : MonoBehaviour
     public InputField roomToSwitchTo;
     public bool autmaticSwitch;
     [Header("Choose Room")]
-    public string[] miniGameToLoad;
-    public int sceneToLoad;
-    public bool canChange;
-    public ReadyRoomSystem ready;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (ready.canSwitch && canChange)
-        {
-            ready.canSwitch = false;
-            StartCoroutine(SceneSwitch());
-            canChange = false;
-        }
-    }
-    //public void SwitchScene(int RoomSwitch) {
-
-    //    print(RoomSwitch);
-    //    if (maykel == false) {
-    //        sceneToLoad = RoomSwitch;
-    //        StartCoroutine(SceneSwitch());
-    //        maykel = true;
-    //    }
-    //}
-    IEnumerator SceneSwitch() {
+    public static string[] miniGameToLoad;
+    public static int sceneNumberToLoad;
+    public static bool switchs = true;
+    [PunRPC]
+    public static IEnumerator SceneSwitch(string sceneToLoad) {
         yield return new WaitForSeconds(5);
-        if (roomToSwitchTo == null) {
-            PhotonNetwork.LoadLevel(miniGameToLoad[sceneToLoad]);
-        } else {
-            PhotonNetwork.LoadLevel(roomToSwitchTo.ToString());
+        if (switchs)
+        {
+            switchs = false;
+            if (sceneToLoad != null)
+            {
+                PhotonNetwork.LoadLevel(sceneToLoad);
+                sceneToLoad = null;
+            }
+            else
+            {
+                PhotonNetwork.LoadLevel(miniGameToLoad[sceneNumberToLoad]);
+            }
         }
+        
     }
 }

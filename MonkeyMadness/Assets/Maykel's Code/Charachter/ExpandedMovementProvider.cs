@@ -135,9 +135,7 @@ public class ExpandedMovementProvider : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
         }
         Jump();
-    }
-    private void FixedUpdate()
-    {
+
         if (_rightActive || _leftActive)
         {
             DisableMovement();
@@ -162,12 +160,9 @@ public class ExpandedMovementProvider : MonoBehaviour
             {
                 return;
             }
-            
+
             movementProvider.useGravity = true;
         }
-
-        
-        
     }
     private void HandActivated(string _controllerName)
     {

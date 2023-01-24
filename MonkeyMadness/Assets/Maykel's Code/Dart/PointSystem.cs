@@ -5,6 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Photon.Pun.UtilityScripts;
+
 public class PointSystem : MonoBehaviour
 {
     public int[] points;
@@ -34,6 +36,8 @@ public class PointSystem : MonoBehaviour
         playerPoint.Add(4, 10);
         playerPoints = playerPoint;
         Placement();
+
+        
         /*
         playerInfo["pointsP" + PhotonNetwork.LocalPlayer.UserId] = points[Int32.Parse(PhotonNetwork.LocalPlayer.UserId)];
         playerInfo["monkeyP" + PhotonNetwork.LocalPlayer.UserId] = monkey[Int32.Parse(PhotonNetwork.LocalPlayer.UserId)];
@@ -44,53 +48,14 @@ public class PointSystem : MonoBehaviour
     public void AddPoints(int points, int userId) {
         playerPoints[userId] = points;
     }
-    public void Placement(){
+    public void Placement()
+    {
         var ordered = playerPoints.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
-        foreach (KeyValuePair<int, int> kvp in ordered.Reverse()) {
+        foreach (KeyValuePair<int, int> kvp in ordered.Reverse()) 
+        {
             Debug.Log(kvp.Key.ToString() + kvp.Value.ToString());
         }
-    }
-    public void Update()
-    {
-        // vergelijk player id met player die eerste die geworden
-
-        //uncomment na testen
-        //var tList = new List<int>();
-        //tList = minigamePoints.ToList();
-
-
-
-        //for (int i = 0; i < tList.ToArray().Length; i++)
-        //{
-        //    if(tList.ToArray()[i] == tList.ToArray().Max())
-        //    {
-        //        placement[pm] = tList.ToArray()[i];
-        //        pm++;
-        //        tList.Remove(i);
-        //        i = 0;
-        //    }
-        //}
-        //if (!kaas)
-        //{
-        //    Debug.Log(placement.ToString());
-        //    kaas = true;
-        //}
-    }
-    public void CalculateBananaTag()
-    {
-        playerInfo["minigameP" + PhotonNetwork.LocalPlayer.UserId] = placement[Int32.Parse(PhotonNetwork.LocalPlayer.UserId)];
-
 
     }
-    public void CalculateBowling()
-    {
-        playerInfo["minigameP" + PhotonNetwork.LocalPlayer.UserId] = placement[Int32.Parse(PhotonNetwork.LocalPlayer.UserId)];
-    }
-    public void CalculatePlacement()
-    {
-    }
-    public void CalculatePoints()
-    {
-        playerInfo["pointsP" + PhotonNetwork.LocalPlayer.UserId] = +placement[Int32.Parse(PhotonNetwork.LocalPlayer.UserId)];
-    }
+
 }
