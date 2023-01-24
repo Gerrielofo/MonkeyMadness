@@ -127,7 +127,6 @@ GameObject:
   - component: {fileID: 3880112349310315745}
   - component: {fileID: 6244042507021435449}
   - component: {fileID: 5713284849957569567}
-  - component: {fileID: 5806572710060708260}
   - component: {fileID: 2469028251006177021}
   m_Layer: 0
   m_Name: dartbord
@@ -201,22 +200,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5806572710060708260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5523297249493784174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffdf674c353c7484ab72c4c2b44c52b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinigameID: 2
-  MinigameName: BananaTag
-  radius: 0
-  MinigameLoader: {fileID: 0}
 --- !u!114 &2469028251006177021
 MonoBehaviour:
   m_ObjectHideFlags: 0

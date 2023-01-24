@@ -16,7 +16,7 @@ public class DartbordSection : MonoBehaviour
                 if (hitCollider.CompareTag("Dart")) {
                     hit = true;
                     Debug.Log("Dart Hit");
-                    ReadyRoomSystem.sceneToLoad = MinigameName;
+                    SwitchScenesTest.sceneToLoad = MinigameName;
                 }
             }
         }
