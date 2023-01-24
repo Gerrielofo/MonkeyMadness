@@ -612,6 +612,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 81251379624287479, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 81251379624287479, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: MinigameID
       value: 1
       objectReference: {fileID: 0}
@@ -623,6 +627,10 @@ PrefabInstance:
       propertyPath: MinigameLoader
       value: 
       objectReference: {fileID: 2053811991}
+    - target: {fileID: 105585508311792615, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: radius
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 105585508311792615, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: MinigameID
       value: 2
@@ -696,6 +704,10 @@ PrefabInstance:
       value: dartBord
       objectReference: {fileID: 0}
     - target: {fileID: 814739296566137336, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 814739296566137336, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: MinigameID
       value: 1
       objectReference: {fileID: 0}
@@ -722,6 +734,10 @@ PrefabInstance:
     - target: {fileID: 1559764041518722847, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: m_TagString
       value: Dartbord
+      objectReference: {fileID: 0}
+    - target: {fileID: 2002364535163554989, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: radius
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2002364535163554989, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: MinigameID
@@ -804,6 +820,10 @@ PrefabInstance:
       value: Dartbord
       objectReference: {fileID: 0}
     - target: {fileID: 4994869006681475307, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994869006681475307, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: MinigameID
       value: 4
       objectReference: {fileID: 0}
@@ -818,6 +838,10 @@ PrefabInstance:
     - target: {fileID: 5134521954364094565, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: m_TagString
       value: Dartbord
+      objectReference: {fileID: 0}
+    - target: {fileID: 6391519291156754603, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: radius
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6391519291156754603, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: MinigameID
@@ -852,6 +876,10 @@ PrefabInstance:
       value: -0.004
       objectReference: {fileID: 0}
     - target: {fileID: 8178567590985582493, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178567590985582493, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: MinigameID
       value: 3
       objectReference: {fileID: 0}
@@ -874,6 +902,10 @@ PrefabInstance:
     - target: {fileID: 8205645712787060322, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231034266218390048, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: radius
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8231034266218390048, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: MinigameID
