@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3367081478116268263}
   - component: {fileID: 675172201002576941}
   - component: {fileID: 4816542925417606962}
-  - component: {fileID: 6764135890333132007}
   - component: {fileID: 7462383485431595906}
   - component: {fileID: 4562375250123025103}
   - component: {fileID: 664721594487745074}
   - component: {fileID: 617217672469779580}
+  - component: {fileID: 629935624307201882}
   m_Layer: 0
   m_Name: Bananabomb 1
   m_TagString: Untagged
@@ -108,20 +108,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6764135890333132007
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323581076971818488}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4753976898039024662, guid: bd6228ce46784754e8bde0813eec2814, type: 3}
 --- !u!114 &7462383485431595906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +161,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previouseHolder: {fileID: 0}
   players: []
+  bombTime: 0
+  explodeTime: 50
+  timerstart: 0
+  points: 0
+  bananaholder: {fileID: 0}
 --- !u!114 &617217672469779580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,6 +291,19 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!65 &629935624307201882
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323581076971818488}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10720819, y: 0.2185261, z: 0.3586582}
+  m_Center: {x: 0.0016084593, y: 0.10817434, z: 0.012713857}
 --- !u!1 &4553499479508468302
 GameObject:
   m_ObjectHideFlags: 0
