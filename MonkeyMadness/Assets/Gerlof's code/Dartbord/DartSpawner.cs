@@ -14,6 +14,6 @@ public class DartSpawner : MonoBehaviour
     }
     public void SpawnDart()
     {
-        NetworkPlayer.Instantiate(dart, transform.position, transform.rotation);
+        PhotonNetwork.Instantiate("dartPijl", transform.position, transform.rotation);
     }
 }
