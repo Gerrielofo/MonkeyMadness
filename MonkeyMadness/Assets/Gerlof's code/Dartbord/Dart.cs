@@ -20,7 +20,7 @@ public class Dart : MonoBehaviour
             Debug.Log(collision.transform.tag);
             Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
         }
-        else if(collision.transform.tag != "Table" && collision.transform.tag != "Darbord")
+        else if(collision.transform.tag != "Table" && collision.transform.tag != "Darbord" && collision.transform.tag != "Dart")
         {
             DartSpawner.SpawnDart();
             Destroy(gameObject);
