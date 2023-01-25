@@ -33,7 +33,7 @@ public class BananaTagScript : MonoBehaviour
         yield return new WaitForSeconds(5);
         Debug.Log("array length is" + players.Length);
         hit = players[Random.Range(0, players.Length)].GetComponent<Collider>();
-        StartCoroutine(GiveBanan());
+        SyncBanana();
         yield return null;
     }
     private void Update()
@@ -76,13 +76,13 @@ public class BananaTagScript : MonoBehaviour
         if (hit.GetComponentInParent<PhotonView>()) {
             photonView.RequestOwnership();
         }
-        BananaTransfer(hit);
+        BananaTransfer();
         Debug.Log("hai");
         yield return new WaitForSeconds(2);
         photonView.RPC("CooldownEnd", RpcTarget.All);
     }
     [PunRPC]
-    void BananaTransfer(Collider other)
+    void BananaTransfer()
     {
         if (cooldown) {
             bananaholder = hit.transform.parent.GetChild(2).GetChild(1);
@@ -90,7 +90,7 @@ public class BananaTagScript : MonoBehaviour
             Debug.Log("bananaTransfer");
             cooldown = true;
             timerstart = true;
-            previouseHolder = other;
+            previouseHolder = hit;
             transform.parent = null;
             transform.GetComponent<Rigidbody>().isKinematic = true;
             transform.GetComponent<Rigidbody>().useGravity = false;
