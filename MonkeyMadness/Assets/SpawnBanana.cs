@@ -12,9 +12,11 @@ public class SpawnBanana : MonoBehaviour
     }
     IEnumerator BananaSpawnDelay() {
         yield return new WaitForSeconds(3);
+        Debug.Log("trying to spawn banana");
         photonView.RPC("SpawnBananaStart", RpcTarget.MasterClient);
     }
     void SpawnBananaStart() {
         PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
+        Debug.Log("BananaSpawned");
     }
 }
