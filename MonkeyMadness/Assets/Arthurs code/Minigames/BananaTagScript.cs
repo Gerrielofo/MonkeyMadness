@@ -28,25 +28,10 @@ public class BananaTagScript : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
-        StartCoroutine(BananaSpawnDelay());
 
     }
-    [PunRPC]
-    IEnumerator BananaSpawnDelay() {
-        yield return new WaitForSeconds(3);
-        Debug.Log("trying to spawn banana");
-        photonView.RPC("SpawnBananaStart", RpcTarget.MasterClient);
-    }
-    [PunRPC]
-    void SpawnBananaStart() {
-        if (!spawned) {
-            banana = PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
-        }
-        spawned = true;
-        Debug.Log("BananaSpawned");
-    }
     IEnumerator GiveBananaStart() {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         Debug.Log("array length is" + players.Length);
         hit = players[Random.Range(0, players.Length)].GetComponent<Collider>();
         SyncBanana();
