@@ -8,6 +8,10 @@ public class SpawnBanana : MonoBehaviour
 {
     public PhotonView photonView;
     private void Start() {
+        StartCoroutine(BananaSpawnDelay());
+    }
+    IEnumerator BananaSpawnDelay() {
+        yield return new WaitForSeconds(3);
         photonView.RPC("SpawnBananaStart", RpcTarget.MasterClient);
     }
     void SpawnBananaStart() {
