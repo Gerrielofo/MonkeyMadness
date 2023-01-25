@@ -589,6 +589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dartBord
       objectReference: {fileID: 0}
+    - target: {fileID: 582843666896029050, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: m_TagString
+      value: Dartbord
+      objectReference: {fileID: 0}
     - target: {fileID: 814739296566137336, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: radius
       value: 2
@@ -697,6 +701,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Dartbord
       objectReference: {fileID: 0}
+    - target: {fileID: 3880112349310315745, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3996603033794773583, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -730,6 +738,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2053811991}
     - target: {fileID: 5134521954364094565, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+      propertyPath: m_TagString
+      value: Dartbord
+      objectReference: {fileID: 0}
+    - target: {fileID: 5523297249493784174, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
       propertyPath: m_TagString
       value: Dartbord
       objectReference: {fileID: 0}
@@ -813,8 +825,43 @@ PrefabInstance:
       propertyPath: MinigameLoader
       value: 
       objectReference: {fileID: 2053811991}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2469028251006177021, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+--- !u!1 &1239366154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5523297249493784174, guid: 0835c37dc22a57042ab80dc88d40e5fc, type: 3}
+  m_PrefabInstance: {fileID: 1239366150}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1239366157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239366154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdf674c353c7484ab72c4c2b44c52b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MinigameID: 0
+  MinigameName: BananaTag
+  radius: 0
+  MinigameLoader: {fileID: 2053811991}
+--- !u!65 &1239366158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239366154}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 1.2, z: 0.1}
+  m_Center: {x: -0.00000005960466, y: -1.5777218e-30, z: -0.04}
 --- !u!1001 &1668117608
 PrefabInstance:
   m_ObjectHideFlags: 0
