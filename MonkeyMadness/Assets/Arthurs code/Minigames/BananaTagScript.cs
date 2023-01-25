@@ -93,7 +93,9 @@ public class BananaTagScript : MonoBehaviour
         if (cooldown) {
             bananaholder = hit.transform.parent.GetChild(2).GetChild(1);
             PhotonNetwork.Destroy(banana);
-            if (hit.transform.parent.GetComponent<PhotonView>().IsMine) {
+            Debug.Log("Hit is van:" + hit.GetComponent<PhotonView>().IsMine);
+            if (hit.GetComponent<PhotonView>().IsMine) {
+                Debug.Log("Spawned banana");
                 banana = PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
             }
             Debug.Log(bananaholder.name.ToString() + "XD gaste");
