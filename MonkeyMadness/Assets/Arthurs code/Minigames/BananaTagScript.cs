@@ -39,6 +39,7 @@ public class BananaTagScript : MonoBehaviour
     }
     private void Update()
     {
+        banana = GameObject.FindGameObjectWithTag("Banana");
         if (!started) {
             photonView = GetComponent<PhotonView>();
             players = GameObject.FindGameObjectsWithTag("IsPlayer");
@@ -48,7 +49,7 @@ public class BananaTagScript : MonoBehaviour
                     Debug.Log("Spawned banana");
                     banana = PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
                 } else {
-                    banana = GameObject.FindGameObjectWithTag("Banana");
+                    
                 }
                 Debug.Log("BananaStart");
                 StartCoroutine(GiveBananaStart());
@@ -84,9 +85,7 @@ public class BananaTagScript : MonoBehaviour
         if (cooldown) {
             bananaholder = hit.transform.parent.GetChild(2).GetChild(1);
             Debug.Log("Hit is van:" + hit.transform.parent.GetComponent<PhotonView>().IsMine);
-            if (hit.transform.parent.GetComponent<PhotonView>().IsMine) {
-                banana.transform.GetComponent<PhotonView>().RequestOwnership();
-            }
+            banana.transform.GetComponent<PhotonView>().RequestOwnership();
             Debug.Log(bananaholder.name.ToString() + "XD gaste");
             Debug.Log("bananaTransfer");
             cooldown = true;
