@@ -34,6 +34,10 @@ public class BananaTagScript : MonoBehaviour
         yield return new WaitForSeconds(3);
         Debug.Log("array length is" + players.Length);
         hit = players[Random.Range(0, players.Length)].GetComponent<Collider>();
+        if (PhotonNetwork.IsMasterClient) {
+            Debug.Log("Spawned banana");
+            banana = PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
+        }
         SyncBanana();
         yield return null;
     }
@@ -83,7 +87,7 @@ public class BananaTagScript : MonoBehaviour
                 Debug.Log("Spawned banana");
                 banana = PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
             }
-            photonView.TransferOwnership(hit.transform.parent.GetComponent<PhotonView>().ViewID);
+            banana.transform.GetComponent<PhotonView>().TransferOwnership(hit.transform.parent.GetComponent<PhotonView>().ViewID);
             Debug.Log(bananaholder.name.ToString() + "XD gaste");
             Debug.Log("bananaTransfer");
             cooldown = true;
