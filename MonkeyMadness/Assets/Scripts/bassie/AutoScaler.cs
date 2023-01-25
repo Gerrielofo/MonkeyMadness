@@ -9,8 +9,6 @@ public class AutoScaler : MonoBehaviour
     public GameObject cameraHeight;
     public GameObject player;
 
-    float distance;
-
     private void Start()
     {
         StartCoroutine(WaitAndResize());
@@ -23,19 +21,15 @@ public class AutoScaler : MonoBehaviour
 
     void Resize()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(cameraHeight.transform.position, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity))
-        {
-            distance = hit.distance;
-        }
         float headHeight = cameraHeight.transform.localPosition.y;
-        float scale = distance / headHeight * MonkeyHeight;
-        transform.localScale = Vector3.one * scale;
+        float scale = MonkeyHeight / headHeight;
+        player.transform.localScale = Vector3.one * scale;
     }
 
 
     public IEnumerator WaitAndResize()
     {
+        player.transform.localScale = new Vector3(1, 1, 1);
         yield return new WaitForSeconds(2);
         Resize();
     }
