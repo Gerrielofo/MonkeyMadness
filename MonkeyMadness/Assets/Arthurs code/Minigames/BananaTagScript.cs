@@ -39,11 +39,12 @@ public class BananaTagScript : MonoBehaviour
     private void Update()
     {
         if (!started) {
+            photonView = GetComponent<PhotonView>();
             players = GameObject.FindGameObjectsWithTag("IsPlayer");
             if (PhotonNetwork.PlayerList.Length == players.Length) {
                 started = true;
+                Debug.Log("BananaStart");
                 StartCoroutine(GiveBananaStart());
-                
             }
         }
         if (timerstart)
