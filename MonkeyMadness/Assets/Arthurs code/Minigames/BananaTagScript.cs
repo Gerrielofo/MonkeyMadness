@@ -11,7 +11,7 @@ using Unity.XR.CoreUtils;
 public class BananaTagScript : MonoBehaviour 
 {
     private PhotonView photonView;
-    private bool cooldown;
+    public bool cooldown;
     public Collider previouseHolder;
     public Collider hit;
     public GameObject[] players;
@@ -19,15 +19,31 @@ public class BananaTagScript : MonoBehaviour
     public int explodeTime = 50;
     public bool timerstart;
     private bool started;
+    public bool spawned;
     public Transform cage;
+    public GameObject banana;
     //public PointSystem pointsustem;
     public int points;
     public Transform bananaholder;
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
-        
+        StartCoroutine(BananaSpawnDelay());
 
+    }
+    [PunRPC]
+    IEnumerator BananaSpawnDelay() {
+        yield return new WaitForSeconds(3);
+        Debug.Log("trying to spawn banana");
+        photonView.RPC("SpawnBananaStart", RpcTarget.MasterClient);
+    }
+    [PunRPC]
+    void SpawnBananaStart() {
+        if (!spawned) {
+            PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
+        }
+        spawned = true;
+        Debug.Log("BananaSpawned");
     }
     IEnumerator GiveBananaStart() {
         yield return new WaitForSeconds(5);
@@ -58,13 +74,6 @@ public class BananaTagScript : MonoBehaviour
         }
 
     }
-    private void OnTriggerEnter(Collider other) 
-    {
-        if (other.CompareTag("IsPlayer") && !cooldown && other != previouseHolder) {
-            hit = other;
-            photonView.RPC("SyncBanana", RpcTarget.AllBuffered);
-        }
-    }
     [PunRPC]
     public void SyncBanana() {
         cooldown = true;
@@ -73,9 +82,6 @@ public class BananaTagScript : MonoBehaviour
     [PunRPC]
     IEnumerator GiveBanan()
     {
-        if (hit.GetComponentInParent<PhotonView>()) {
-            photonView.RequestOwnership();
-        }
         BananaTransfer();
         Debug.Log("hai");
         yield return new WaitForSeconds(2);
@@ -86,17 +92,21 @@ public class BananaTagScript : MonoBehaviour
     {
         if (cooldown) {
             bananaholder = hit.transform.parent.GetChild(2).GetChild(1);
+            PhotonNetwork.Destroy(banana);
+            if (hit.transform.parent.GetComponent<PhotonView>().IsMine) {
+                banana = PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
+            }
             Debug.Log(bananaholder.name.ToString() + "XD gaste");
             Debug.Log("bananaTransfer");
             cooldown = true;
             timerstart = true;
             previouseHolder = hit;
             transform.parent = null;
-            transform.GetComponent<Rigidbody>().isKinematic = true;
-            transform.GetComponent<Rigidbody>().useGravity = false;
-            transform.GetComponent<BoxCollider>().isTrigger = true;
-            transform.parent = bananaholder;
-            transform.position = bananaholder.position;
+            banana.transform.GetComponent<Rigidbody>().isKinematic = true;
+            banana.transform.GetComponent<Rigidbody>().useGravity = false;
+            banana.transform.GetComponent<BoxCollider>().isTrigger = true;
+            banana.transform.parent = bananaholder;
+            banana.transform.position = bananaholder.position;
         }
     }
     [PunRPC]

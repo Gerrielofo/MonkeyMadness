@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4816542925417606962}
   - component: {fileID: 7462383485431595906}
   - component: {fileID: 4562375250123025103}
-  - component: {fileID: 664721594487745074}
   - component: {fileID: 617217672469779580}
   - component: {fileID: 629935624307201882}
+  - component: {fileID: 5820496734744051074}
   m_Layer: 0
   m_Name: Bananabomb
   m_TagString: Untagged
@@ -147,27 +147,6 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &664721594487745074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323581076971818488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1344f92bb61ca24ea97f88fcb2190ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previouseHolder: {fileID: 0}
-  hit: {fileID: 0}
-  players: []
-  bombTime: 0
-  explodeTime: 50
-  timerstart: 0
-  cage: {fileID: 0}
-  points: 0
-  bananaholder: {fileID: 0}
 --- !u!114 &617217672469779580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +285,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.10720819, y: 0.2185261, z: 0.3586582}
   m_Center: {x: 0.0016084593, y: 0.10817434, z: 0.012713857}
+--- !u!114 &5820496734744051074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323581076971818488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b58dc5d77ad3524e8fc91f51fa22dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4553499479508468302
 GameObject:
   m_ObjectHideFlags: 0
