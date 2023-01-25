@@ -40,7 +40,7 @@ public class BananaTagScript : MonoBehaviour
     [PunRPC]
     void SpawnBananaStart() {
         if (!spawned) {
-            PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
+            banana = PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
         }
         spawned = true;
         Debug.Log("BananaSpawned");
