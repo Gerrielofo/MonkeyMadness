@@ -49,6 +49,7 @@ MonoBehaviour:
   - SyncBanana
   - BananaSpawnDelay
   - SpawnBananaStart
+  - RespawnBanana
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
