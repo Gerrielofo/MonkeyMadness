@@ -26,21 +26,21 @@ public class SoundManager : MonoBehaviour
 
     private void Update()
     {
-        if (volumeSlider.value > -30f)
+        if (volumeSlider.value > 0.7f)
         {
             volume44.SetActive(true);
             volume34.SetActive(false);
             volume24.SetActive(false);
             volume14.SetActive(false);
         }
-        else if (volumeSlider.value <= -30 && volumeSlider.value > -50f)
+        else if (volumeSlider.value < 0.7f && volumeSlider.value > 0.4f)
         {
             volume44.SetActive(false);
             volume34.SetActive(true);
             volume24.SetActive(false);
             volume14.SetActive(false);
         }
-        else if (volumeSlider.value <= -50f && volumeSlider.value > -70f)
+        else if (volumeSlider.value < 0.4f && volumeSlider.value > 0.1f)
         {
             volume44.SetActive(false);
             volume34.SetActive(false);
