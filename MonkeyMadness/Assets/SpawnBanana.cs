@@ -7,6 +7,7 @@ using Photon.Realtime;
 public class SpawnBanana : MonoBehaviour
 {
     public PhotonView photonView;
+    public bool spawned;
     private void Start() {
         StartCoroutine(BananaSpawnDelay());
     }
@@ -14,11 +15,14 @@ public class SpawnBanana : MonoBehaviour
     IEnumerator BananaSpawnDelay() {
         yield return new WaitForSeconds(3);
         Debug.Log("trying to spawn banana");
-        photonView.RPC("SpawnBananaStart", RpcTarget.MasterClient);
+        if (!spawned) {
+            photonView.RPC("SpawnBananaStart", RpcTarget.MasterClient);
+        }
     }
     [PunRPC]
     void SpawnBananaStart() {
         PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
+        spawned = true;
         Debug.Log("BananaSpawned");
     }
 }
