@@ -44,6 +44,10 @@ public class BananaTagScript : MonoBehaviour
             players = GameObject.FindGameObjectsWithTag("IsPlayer");
             if (PhotonNetwork.PlayerList.Length == players.Length) {
                 started = true;
+                if (PhotonNetwork.IsMasterClient) {
+                    Debug.Log("Spawned banana");
+                    banana = PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
+                }
                 Debug.Log("BananaStart");
                 StartCoroutine(GiveBananaStart());
             }
