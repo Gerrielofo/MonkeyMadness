@@ -22,7 +22,7 @@ public class ReadyRoomSystem : MonoBehaviour
         }
         if (playersIN == PhotonNetwork.PlayerList.Length)
         {
-            photonView.RPC("SceneSwitch", RpcTarget.AllBuffered);
+            photonView.RPC("SceneSwitch", RpcTarget.MasterClient);
         }
     }
     [PunRPC]
