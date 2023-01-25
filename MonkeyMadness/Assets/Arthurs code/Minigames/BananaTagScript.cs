@@ -82,6 +82,7 @@ public class BananaTagScript : MonoBehaviour
             if (PhotonNetwork.IsMasterClient) {
                 Debug.Log("Spawned banana");
                 banana = PhotonNetwork.Instantiate("Bananabomb", transform.position, transform.rotation);
+                PhotonNetwork.Destroy(banana);
             }
             photonView.TransferOwnership(hit.transform.parent.GetComponent<PhotonView>().ViewID);
             Debug.Log(bananaholder.name.ToString() + "XD gaste");
