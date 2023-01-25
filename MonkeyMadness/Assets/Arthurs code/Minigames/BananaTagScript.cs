@@ -83,7 +83,7 @@ public class BananaTagScript : MonoBehaviour
             bananaholder = hit.transform.parent.GetChild(2).GetChild(1);
             PhotonNetwork.Destroy(banana);
             Debug.Log("Hit is van:" + hit.transform.parent.GetComponent<PhotonView>().IsMine);
-            banana.transform.GetComponent<PhotonView>().TransferOwnership(hit.transform.parent.GetComponent<PhotonView>().ViewID - 1);
+            banana.transform.GetComponent<PhotonView>().TransferOwnership(hit.transform.parent.GetComponent<PhotonView>().Owner);
             Debug.Log(bananaholder.name.ToString() + "XD gaste");
             Debug.Log("bananaTransfer");
             cooldown = true;
