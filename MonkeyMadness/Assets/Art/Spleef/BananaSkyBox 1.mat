@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BananaSkyBox
+  m_Name: BananaSkyBox 1
   m_Shader: {fileID: -6465566751694194690, guid: 44bf1033fd3792e42bce6b86c1e4e0b5, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -45,11 +45,11 @@ Material:
     - _ZenithBlendPower: 0.5
     m_Colors:
     - _CloudAnimationSpeed: {r: 0.01, g: 0.02, b: 0, a: 0}
-    - _CloudColor: {r: 2.143547, g: 2.143547, b: 2.143547, a: 0}
+    - _CloudColor: {r: 0.047058824, g: 0.039215688, b: 0.039215688, a: 0}
     - _CloudScale: {r: 1, g: 1, b: 1, a: 0}
-    - _HorizonColor: {r: 0.97172797, g: 1, b: 0.57924527, a: 1}
-    - _NadirColor: {r: 0, g: 0.92620325, b: 1, a: 0}
-    - _ZenithColor: {r: 0.27735847, g: 0.9036479, b: 1, a: 0}
+    - _HorizonColor: {r: 0.3018868, g: 0.0071877814, b: 0, a: 1}
+    - _NadirColor: {r: 0, g: 0, b: 0, a: 0}
+    - _ZenithColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3115145601780605512
 MonoBehaviour:
