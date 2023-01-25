@@ -920,6 +920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR_Override
       objectReference: {fileID: 0}
+    - target: {fileID: 228932104418420172, guid: 1fbaa8b1b1dbd15459ab1eca81e2c586, type: 3}
+      propertyPath: xrOrigon
+      value: 
+      objectReference: {fileID: 5142676367258090441}
     - target: {fileID: 228932104418420174, guid: 1fbaa8b1b1dbd15459ab1eca81e2c586, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1751,6 +1755,11 @@ PrefabInstance:
       objectReference: {fileID: 1185570683}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
+--- !u!1 &5142676367258090441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5142676366801722477, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
+  m_PrefabInstance: {fileID: 5142676367258090440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8074167471858135948
 PrefabInstance:
   m_ObjectHideFlags: 0
