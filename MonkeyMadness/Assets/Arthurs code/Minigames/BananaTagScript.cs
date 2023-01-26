@@ -107,6 +107,7 @@ public class BananaTagScript : MonoBehaviour
     public void Explode()
     {
         if (hit.GetComponentInParent<PhotonView>().IsMine) {
+            Debug.Log("Exploded");
             FindObjectOfType<XROrigin>().transform.position = cage.position;
         }
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
