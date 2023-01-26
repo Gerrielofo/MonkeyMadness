@@ -25,10 +25,11 @@ public class NetworkPlayer : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
-        if (VR_Overide.vr_Overide == false) {
+        Debug.Log(GameObject.FindGameObjectWithTag("Vr_Overide"));
+        if (GameObject.FindGameObjectWithTag("Vr_Overide")) {
             XROrigin[] rigs = FindObjectsOfType<XROrigin>();
             foreach(XROrigin xrrig in rigs) {
-                if(xrrig.gameObject.tag == "Player") {
+                if(xrrig.gameObject.tag != "Player") {
                     rig = xrrig;
                 }
             }
@@ -39,7 +40,7 @@ public class NetworkPlayer : MonoBehaviour {
         } else {
             XROrigin[] rigs = FindObjectsOfType<XROrigin>();
             foreach (XROrigin xrrig in rigs) {
-                if (xrrig.gameObject.tag != "Player") {
+                if (xrrig.gameObject.tag == "Player") {
                     rig = xrrig;
                 }
             }

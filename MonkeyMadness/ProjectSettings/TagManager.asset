@@ -25,6 +25,7 @@ TagManager:
   - BowlingLane
   - IsDead
   - BananaTag
+  - Vr_Overide
   layers:
   - Default
   - TransparentFX
