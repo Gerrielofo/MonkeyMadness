@@ -20,6 +20,7 @@ public class BananaTagScript : MonoBehaviour
     public bool timerstart;
     private bool started;
     public bool spawned;
+    private bool transferOnExplode;
     public Transform cage;
     public GameObject banana;
     //public PointSystem pointsustem;
@@ -96,7 +97,7 @@ public class BananaTagScript : MonoBehaviour
             banana.transform.GetComponent<BoxCollider>().isTrigger = true;
             banana.transform.parent = bananaholder;
             banana.transform.position = bananaholder.position;
-            if (hit.transform.parent.GetComponent<PhotonView>().IsMine) {
+            if (hit.transform.parent.GetComponent<PhotonView>().IsMine && !transferOnExplode) {
                 XROrigin[] rigs = FindObjectsOfType<XROrigin>();
                 foreach (XROrigin xrrig in rigs) {
                     if (xrrig.gameObject.tag == "Player") {
@@ -108,6 +109,7 @@ public class BananaTagScript : MonoBehaviour
                     }
                 }
             }
+            transferOnExplode = false;
         }
     }
     [PunRPC]
@@ -120,14 +122,16 @@ public class BananaTagScript : MonoBehaviour
             Debug.Log("Exploded");
             FindObjectOfType<XROrigin>().transform.position = cage.position;
         }
+        transferOnExplode = true;
         hit.tag = "IsDead";
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
+        PointsEnWin();
         hit = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
         SyncBanana();
         bombTime = 0;
     }
     public void PointsEnWin() {
-        if(players.Length == 1) {
+        if(players.Length <= 1) {
             //point system gebeure
             PhotonNetwork.LoadLevel("Game");
         }
