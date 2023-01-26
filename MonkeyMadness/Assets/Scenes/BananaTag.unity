@@ -6313,6 +6313,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1022477921256976691, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1453874785320499976, guid: 37b361b4d3b7faf4db356c9abc250664, type: 3}
       propertyPath: m_TagString
       value: Water
