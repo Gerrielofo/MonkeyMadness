@@ -26,6 +26,7 @@ TagManager:
   - IsDead
   - BananaTag
   - Vr_Overide
+  - Water
   layers:
   - Default
   - TransparentFX
