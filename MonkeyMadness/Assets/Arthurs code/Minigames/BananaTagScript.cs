@@ -100,10 +100,10 @@ public class BananaTagScript : MonoBehaviour
                 XROrigin[] rigs = FindObjectsOfType<XROrigin>();
                 foreach (XROrigin xrrig in rigs) {
                     if (xrrig.gameObject.tag == "Player") {
-                        ExpandedMovementProvider.stunTime = 2;
+                        ExpandedMovementProvider.stunTime = 5;
                         xrrig.GetComponent<ExpandedMovementProvider>().Stun();
                     } else {
-                        VR_Overide.stunTime = 2;
+                        VR_Overide.stunTime = 5;
                         xrrig.GetComponent<VR_Overide>().Stun();
                     }
                 }
