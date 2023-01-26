@@ -135,6 +135,8 @@ public class BananaTagScript : MonoBehaviour
         if(players.Length <= 1) {
             //point system gebeure
             if (PhotonNetwork.IsMasterClient && !ended) {
+                Debug.Log("sceneswitch :" + SwitchScenesTest.switchs);
+                SwitchScenesTest.switchs = true;
                 PhotonNetwork.LoadLevel("Game");
                 ended = true;
             }
