@@ -23,7 +23,7 @@ public class PointSystem : MonoBehaviour
 
     public List<int> tList;
     public bool kaas;
-    public IDictionary<int, int> playerPoints;
+    public static IDictionary<int, int> playerPoints;
     ExitGames.Client.Photon.Hashtable playerInfo = new ExitGames.Client.Photon.Hashtable();
     public void Start()
     {
@@ -45,7 +45,7 @@ public class PointSystem : MonoBehaviour
         playerInfo["minigameP" + PhotonNetwork.LocalPlayer.UserId] = minigamePoints[Int32.Parse(PhotonNetwork.LocalPlayer.UserId)];
         */
     }
-    public void AddPoints(int points, int userId) {
+    public static void AddPoints(int points, int userId) {
         playerPoints[userId] = points;
     }
     public void Placement()

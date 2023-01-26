@@ -25,7 +25,8 @@ public class BananaTagScript : MonoBehaviour
     public Transform cage;
     public GameObject banana;
     //public PointSystem pointsustem;
-    public int points;
+    public int pointsOnExplode = 10;
+    public int pointsExtraPerPosition;
     public Transform bananaholder;
     // Start is called before the first frame update
     void Start() {
@@ -84,7 +85,6 @@ public class BananaTagScript : MonoBehaviour
     void BananaTransfer()
     {
         if (cooldown) {
-            Debug.Log("sceneswitch :" + SwitchScenesTest.test);
             bananaholder = hit.transform.parent.GetChild(2).GetChild(1);
             Debug.Log("Hit is van:" + hit.transform.parent.GetComponent<PhotonView>().IsMine);
             banana.transform.GetComponent<PhotonView>().RequestOwnership();
@@ -123,6 +123,11 @@ public class BananaTagScript : MonoBehaviour
         if (hit.GetComponentInParent<PhotonView>().IsMine) {
             Debug.Log("Exploded");
             FindObjectOfType<XROrigin>().transform.position = cage.position;
+        }
+        if (PhotonNetwork.IsMasterClient) {
+            Debug.Log("adiing points to " + hit.GetComponentInParent<PhotonView>().ViewID);
+            PointSystem.AddPoints(hit.GetComponentInParent<PhotonView>().ViewID, pointsOnExplode);
+            Debug.Log(PointSystem.playerPoints.ToString());
         }
         transferOnExplode = true;
         hit.tag = "IsDead";
