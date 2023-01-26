@@ -104,12 +104,12 @@ public class BananaTagScript : MonoBehaviour
     {
         cooldown = false;
     }
-    public void Explode()
-    {
+    public void Explode() {
         if (hit.GetComponentInParent<PhotonView>().IsMine) {
             Debug.Log("Exploded");
             FindObjectOfType<XROrigin>().transform.position = cage.position;
         }
+        hit.tag = "IsDead";
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
         hit = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
         SyncBanana();
