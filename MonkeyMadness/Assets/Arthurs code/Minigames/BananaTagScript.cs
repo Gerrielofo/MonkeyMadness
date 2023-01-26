@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using Photon.Pun;
@@ -35,7 +36,7 @@ public class BananaTagScript : MonoBehaviour
     IEnumerator GiveBananaStart() {
         yield return new WaitForSeconds(3);
         Debug.Log("array length is" + players.Length);
-        hit = players[Random.Range(0, players.Length)].GetComponent<Collider>();
+        hit = players[UnityEngine.Random.Range(0, players.Length)].GetComponent<Collider>();
         SyncBanana();
         yield return null;
     }
@@ -125,15 +126,15 @@ public class BananaTagScript : MonoBehaviour
             FindObjectOfType<XROrigin>().transform.position = cage.position;
         }
         if (PhotonNetwork.IsMasterClient) {
-            Debug.Log("adiing points to " + hit.GetComponentInParent<PhotonView>().ViewID);
-            PointSystem.AddPoints(hit.GetComponentInParent<PhotonView>().ViewID, pointsOnExplode);
+            Debug.Log("adiing points to " + hit.GetComponentInParent<PhotonView>().Owner.UserId);
+            PointSystem.AddPoints(Int32.Parse(hit.GetComponentInParent<PhotonView>().Owner.UserId), pointsOnExplode);
             Debug.Log(PointSystem.playerPoints.ToString());
         }
         transferOnExplode = true;
         hit.tag = "IsDead";
         players = GameObject.FindGameObjectsWithTag("IsPlayer");
         PointsEnWin();
-        hit = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
+        hit = players[UnityEngine.Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
         SyncBanana();
         bombTime = 0;
     }
