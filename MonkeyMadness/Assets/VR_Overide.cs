@@ -21,6 +21,7 @@ public class VR_Overide : MonoBehaviour {
     }
 
     public void ForceLoadScene() {
+        SwitchScenesTest.sceneToLoad = sceneToLoad;
         StartCoroutine(SwitchScenesTest.SceneSwitch());
     }
 }
