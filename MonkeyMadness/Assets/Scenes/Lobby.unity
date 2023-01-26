@@ -1168,6 +1168,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 228932104418420163, guid: 1fbaa8b1b1dbd15459ab1eca81e2c586, type: 3}
+      propertyPath: m_TagString
+      value: Vr_Overide
+      objectReference: {fileID: 0}
     - target: {fileID: 228932104418420172, guid: 1fbaa8b1b1dbd15459ab1eca81e2c586, type: 3}
       propertyPath: canvas
       value: 
