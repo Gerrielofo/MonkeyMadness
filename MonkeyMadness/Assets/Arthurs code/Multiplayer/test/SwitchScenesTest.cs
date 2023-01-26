@@ -15,9 +15,11 @@ public class SwitchScenesTest : MonoBehaviour
     public static string[] miniGameToLoad;
     public static int sceneNumberToLoad;
     public static bool switchs = true;
+    public static string test;
     [HideInInspector] static public string sceneToLoad;
     [PunRPC]
     public static IEnumerator SceneSwitch() {
+        test = "kaas";
         yield return new WaitForSeconds(5);
         if (switchs)
         {

@@ -84,6 +84,7 @@ public class BananaTagScript : MonoBehaviour
     void BananaTransfer()
     {
         if (cooldown) {
+            Debug.Log("sceneswitch :" + SwitchScenesTest.test);
             bananaholder = hit.transform.parent.GetChild(2).GetChild(1);
             Debug.Log("Hit is van:" + hit.transform.parent.GetComponent<PhotonView>().IsMine);
             banana.transform.GetComponent<PhotonView>().RequestOwnership();
