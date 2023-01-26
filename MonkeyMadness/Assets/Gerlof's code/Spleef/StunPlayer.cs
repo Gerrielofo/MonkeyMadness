@@ -8,7 +8,7 @@ public class StunPlayer : MonoBehaviour
     [SerializeField] private GameObject starsEffect;
     [SerializeField] private GameObject poopSplatter;
     private void OnCollisionEnter(Collision collision)
-    {
+    {/*
         if (collision.transform.CompareTag("IsPlayer"))
         {
             if (collision.transform.GetComponent<ExpandedMovementProvider>().stunDelay <= 0)
@@ -19,5 +19,6 @@ public class StunPlayer : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        */
     }
 }
