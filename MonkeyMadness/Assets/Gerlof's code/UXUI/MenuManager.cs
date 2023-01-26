@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-
-    public void ButtonQuit()
+    // Start is called before the first frame update
+    void Start()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
-        Debug.Log("Quiting");
-        Application.Quit();
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

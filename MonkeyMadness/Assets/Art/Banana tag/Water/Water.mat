@@ -61,8 +61,8 @@ Material:
     - _Float_2: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Scale: -270.3
+    - _Scale: -113.2
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Emission_Color: {r: 0.5, g: 0.39215687, b: 0.34198105, a: 0}
+    - _Emission_Color: {r: 0.5, g: 0.34198108, b: 0.34198108, a: 0}
   m_BuildTextureStacks: []
