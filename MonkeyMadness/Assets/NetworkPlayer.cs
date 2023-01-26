@@ -32,7 +32,7 @@ public class NetworkPlayer : MonoBehaviour {
                     rig = xrrig;
                 }
             }
-            headRig = Camera.main.transform;
+            headRig = rig.transform.Find("Camera Offset/Main Camera");
             leftHandRig = rig.transform.Find("Camera Offset/LeftHand Controller");
             rightHandRig = rig.transform.Find("Camera Offset/RightHand Controller");
             centerRig = rig.transform.Find("Camera Offset/Center");
