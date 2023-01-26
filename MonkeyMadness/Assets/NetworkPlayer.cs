@@ -12,6 +12,7 @@ public class NetworkPlayer : MonoBehaviour {
     public Transform rightHand;
     public Transform center;
     private PhotonView photonView;
+    private XROrigin rig;
 
     public Animator leftHandAnimator;
     public Animator rightHandAnimator;
@@ -24,11 +25,31 @@ public class NetworkPlayer : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
-        XROrigin rig = FindObjectOfType<XROrigin>();
-        headRig = Camera.main.transform;
-        leftHandRig = rig.transform.Find("Camera Offset/LeftHand Controller");
-        rightHandRig = rig.transform.Find("Camera Offset/RightHand Controller");
-        centerRig = rig.transform.Find("Camera Offset/Center");
+        if (VR_Overide.vr_Overide == false) {
+            XROrigin[] rigs = FindObjectsOfType<XROrigin>();
+            foreach(XROrigin xrrig in rigs) {
+                if(xrrig.gameObject.tag == "Player") {
+                    rig = xrrig;
+                }
+            }
+            headRig = Camera.main.transform;
+            leftHandRig = rig.transform.Find("Camera Offset/LeftHand Controller");
+            rightHandRig = rig.transform.Find("Camera Offset/RightHand Controller");
+            centerRig = rig.transform.Find("Camera Offset/Center");
+        } else {
+            XROrigin[] rigs = FindObjectsOfType<XROrigin>();
+            foreach (XROrigin xrrig in rigs) {
+                if (xrrig.gameObject.tag != "Player") {
+                    rig = xrrig;
+                }
+            }
+            headRig = Camera.main.transform;
+            leftHandRig = rig.transform.Find("Camera Offset/LeftHand Controller");
+            rightHandRig = rig.transform.Find("Camera Offset/RightHand Controller");
+            centerRig = rig.transform.Find("Camera Offset/Center");
+        }
+
+
         //leftHandAnimator = rig.transform.Find("Camera Offset/LeftHand Controller/Custom Left Hand Model").GetComponent<Animator>();
         //rightHandAnimator = rig.transform.Find("Camera Offset/RightHand Controller/Custom right Hand Model").GetComponent<Animator>();
         if (photonView.IsMine) {

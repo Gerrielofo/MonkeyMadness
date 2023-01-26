@@ -10,6 +10,7 @@ public class VR_Overide : MonoBehaviour {
     public float mouseSensitivity;
     public float moveSpeed;
     public string sceneToLoad;
+    public static bool vr_Overide = true;
     private void Start() {
         xrOrigon.SetActive(false);
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
