@@ -972,6 +972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR_Override
       objectReference: {fileID: 0}
+    - target: {fileID: 228932104418420163, guid: 1fbaa8b1b1dbd15459ab1eca81e2c586, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 228932104418420172, guid: 1fbaa8b1b1dbd15459ab1eca81e2c586, type: 3}
       propertyPath: xrOrigon
       value: 
@@ -1826,7 +1830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5142676366801722477, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5142676366801722479, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
       propertyPath: m_RootOrder

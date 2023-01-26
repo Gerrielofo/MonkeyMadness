@@ -168,6 +168,13 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: -6300889235378932667, guid: 8568763877eabdb4fb55e992ef9eecc7, type: 2}
+  - {fileID: -4652872763368781119, guid: 5bb5ee23dbce7ea4996160ea5e773f1d, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -186,7 +193,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.Ham.MonkeyMadnessPerformanceTest
-    Standalone: com.adfas.MonkeyMadnessNORENDER
+    Standalone: com.Ham.MonkeyMadnessPerformanceTest
   buildNumber:
     Standalone: 0
     iPhone: 0
