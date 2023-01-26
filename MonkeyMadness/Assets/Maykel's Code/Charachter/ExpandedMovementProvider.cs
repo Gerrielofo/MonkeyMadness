@@ -38,9 +38,9 @@ public class ExpandedMovementProvider : MonoBehaviour
     #endregion
     [Header("Stun")]
     #region
-    [SerializeField] private bool isStunned;
-    public float stunTime;
-    [SerializeField] public float stunDelay;
+    public static bool isStunned;
+    public static float stunTime;
+    public static float stunDelay;
     #endregion
     [Header("Jump")]
     #region
@@ -108,12 +108,6 @@ public class ExpandedMovementProvider : MonoBehaviour
         else
         {
             DisableTurning();
-        }
-
-        //STUN
-        if (isStunned)
-        {
-            stunDelay -= Time.deltaTime;
         }
 
         //SWING

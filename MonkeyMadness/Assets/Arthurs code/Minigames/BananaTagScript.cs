@@ -16,7 +16,7 @@ public class BananaTagScript : MonoBehaviour
     public Collider hit;
     public GameObject[] players;
     public float bombTime;
-    public int explodeTime = 50;
+    public int explodeTime;
     public bool timerstart;
     private bool started;
     public bool spawned;
@@ -28,7 +28,6 @@ public class BananaTagScript : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
-
     }
     IEnumerator GiveBananaStart() {
         yield return new WaitForSeconds(3);
@@ -97,6 +96,18 @@ public class BananaTagScript : MonoBehaviour
             banana.transform.GetComponent<BoxCollider>().isTrigger = true;
             banana.transform.parent = bananaholder;
             banana.transform.position = bananaholder.position;
+            if (hit.transform.parent.GetComponent<PhotonView>().IsMine) {
+                XROrigin[] rigs = FindObjectsOfType<XROrigin>();
+                foreach (XROrigin xrrig in rigs) {
+                    if (xrrig.gameObject.tag == "Player") {
+                        ExpandedMovementProvider.stunTime = 2;
+                        xrrig.GetComponent<ExpandedMovementProvider>().Stun();
+                    } else {
+                        VR_Overide.stunTime = 2;
+                        xrrig.GetComponent<VR_Overide>().Stun();
+                    }
+                }
+            }
         }
     }
     [PunRPC]
@@ -114,5 +125,11 @@ public class BananaTagScript : MonoBehaviour
         hit = players[Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
         SyncBanana();
         bombTime = 0;
+    }
+    public void PointsEnWin() {
+        if(players.Length == 1) {
+            //point system gebeure
+            PhotonNetwork.LoadLevel("Game");
+        }
     }
 }
