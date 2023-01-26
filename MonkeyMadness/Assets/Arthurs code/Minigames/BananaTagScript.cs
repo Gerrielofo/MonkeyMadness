@@ -133,7 +133,9 @@ public class BananaTagScript : MonoBehaviour
     public void PointsEnWin() {
         if(players.Length <= 1) {
             //point system gebeure
-            PhotonNetwork.LoadLevel("Game");
+            if (PhotonNetwork.IsMasterClient) {
+                PhotonNetwork.LoadLevel("Game");
+            }
         }
     }
 }
