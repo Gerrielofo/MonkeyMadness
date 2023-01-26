@@ -126,8 +126,8 @@ public class BananaTagScript : MonoBehaviour
             FindObjectOfType<XROrigin>().transform.position = cage.position;
         }
         if (PhotonNetwork.IsMasterClient) {
-            Debug.Log("adiing points to " + hit.GetComponentInParent<PhotonView>().Owner.UserId);
-            PointSystem.AddPoints(Int32.Parse(hit.GetComponentInParent<PhotonView>().Owner.UserId), pointsOnExplode);
+            Debug.Log("adiing points to " + Math.Round(Convert.ToDouble(hit.GetComponentInParent<PhotonView>().ViewID / 1000), 0));
+            PointSystem.AddPoints(Convert.ToInt32(Math.Round(Convert.ToDouble(hit.GetComponentInParent<PhotonView>().ViewID / 1000))), pointsOnExplode);
             Debug.Log(PointSystem.playerPoints.ToString());
         }
         transferOnExplode = true;
