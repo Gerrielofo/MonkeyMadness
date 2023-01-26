@@ -20,6 +20,7 @@ public class BananaTagScript : MonoBehaviour
     public bool timerstart;
     private bool started;
     public bool spawned;
+    private bool ended;
     private bool transferOnExplode;
     public Transform cage;
     public GameObject banana;
@@ -133,8 +134,9 @@ public class BananaTagScript : MonoBehaviour
     public void PointsEnWin() {
         if(players.Length <= 1) {
             //point system gebeure
-            if (PhotonNetwork.IsMasterClient) {
+            if (PhotonNetwork.IsMasterClient && !ended) {
                 PhotonNetwork.LoadLevel("Game");
+                ended = true;
             }
         }
     }
