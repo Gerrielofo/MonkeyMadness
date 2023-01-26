@@ -14,17 +14,23 @@ public class AutoScaler : MonoBehaviour
         StartCoroutine(WaitAndResize());
     }
 
+    public void ButtonResize()
+    {
+        StartCoroutine(WaitAndResize());
+    }
+
     void Resize()
     {
         float headHeight = cameraHeight.transform.localPosition.y;
         float scale = MonkeyHeight / headHeight;
-        transform.localScale = Vector3.one * scale;
+        player.transform.localScale = Vector3.one * scale;
     }
 
 
     public IEnumerator WaitAndResize()
     {
-        yield return new WaitForSeconds(5);
+        player.transform.localScale = new Vector3(1, 1, 1);
+        yield return new WaitForSeconds(2);
         Resize();
     }
 }
