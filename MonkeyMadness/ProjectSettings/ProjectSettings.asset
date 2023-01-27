@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Ham
-  productName: MonkeyMadnessPerformanceTest
+  productName: MonkeyMadness
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -173,8 +173,9 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: -6300889235378932667, guid: 8568763877eabdb4fb55e992ef9eecc7, type: 2}
-  - {fileID: -4652872763368781119, guid: 5bb5ee23dbce7ea4996160ea5e773f1d, type: 2}
+  - {fileID: 0}
+  - {fileID: -8280651157456040211, guid: 8568763877eabdb4fb55e992ef9eecc7, type: 2}
+  - {fileID: -518206955258885660, guid: 5bb5ee23dbce7ea4996160ea5e773f1d, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
