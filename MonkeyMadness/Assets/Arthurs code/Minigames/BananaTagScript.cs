@@ -27,6 +27,7 @@ public class BananaTagScript : MonoBehaviour
     public Transform cage;
     public GameObject banana;
     public TMP_Text timer;
+    public GameObject stunUI;
     //public PointSystem pointsustem;
     public int pointsOnExplode = 10;
     public int pointsExtraPerPosition;
@@ -115,8 +116,10 @@ public class BananaTagScript : MonoBehaviour
                     if (xrrig.gameObject.tag == "Player") {
                         ExpandedMovementProvider.stunTime = 5;
                         xrrig.GetComponent<ExpandedMovementProvider>().Stun();
+                        stunUI.SetActive(true);
                     } else {
                         VR_Overide.stunTime = 5;
+                        stunUI.SetActive(true);
                         xrrig.GetComponent<VR_Overide>().Stun();
                     }
                 }

@@ -8,6 +8,7 @@ public class ExpandedMovementProvider : MonoBehaviour
 {
     public static event Action ClimbActive;
     public static event Action ClimbInActive;
+    public BananaTagScript bananatagscript;
 
     [SerializeField] private CharacterController charachter;
     [SerializeField] private ContinuousMoveProviderBase movementProvider;
@@ -247,7 +248,7 @@ public class ExpandedMovementProvider : MonoBehaviour
     private IEnumerator Stunned()
     {
         yield return new WaitForSeconds(stunTime);
-
+        bananatagscript.stunUI.SetActive(false);
         EnableMovement();
         isStunned = false;
         canJump = true;
