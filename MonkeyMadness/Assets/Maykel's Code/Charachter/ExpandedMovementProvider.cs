@@ -44,6 +44,7 @@ public class ExpandedMovementProvider : MonoBehaviour
     #endregion
     [Header("Jump")]
     #region
+    public bool waterTouch;
     public bool canJump;
     public bool hasJumped;
     [SerializeField] private Vector3 jumpStrenght;
@@ -120,14 +121,14 @@ public class ExpandedMovementProvider : MonoBehaviour
             Swing();
         }
 
-        if (charachter.isGrounded)
-        {
-            canJump = true;
+        if (charachter.isGrounded) {
 
             hasJumped = false;
+            canJump = true;
 
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
         }
+        
         Jump();
 
         if (_rightActive || _leftActive)
@@ -204,7 +205,7 @@ public class ExpandedMovementProvider : MonoBehaviour
     }
     private void Jump()
     {
-        if (jumpInput && canJump)
+        if (jumpInput && canJump && !waterTouch)
         {
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
