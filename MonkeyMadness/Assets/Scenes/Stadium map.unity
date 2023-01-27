@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 3bab76611f26a77428f646623468474f, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -189,6 +189,10 @@ PrefabInstance:
     - target: {fileID: 7934502504811562206, guid: 44e89e88c72cc6b499593fca40768bfe, type: 3}
       propertyPath: m_Name
       value: Flameholder (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934502504811562206, guid: 44e89e88c72cc6b499593fca40768bfe, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8439182259731440907, guid: 44e89e88c72cc6b499593fca40768bfe, type: 3}
       propertyPath: m_Materials.Array.size
@@ -5369,7 +5373,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &698158041
 MeshRenderer:
@@ -5504,6 +5508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flameholder (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7934502504811562206, guid: 44e89e88c72cc6b499593fca40768bfe, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8439182259731440907, guid: 44e89e88c72cc6b499593fca40768bfe, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -5580,6 +5588,10 @@ PrefabInstance:
     - target: {fileID: 7934502504811562206, guid: 44e89e88c72cc6b499593fca40768bfe, type: 3}
       propertyPath: m_Name
       value: Flameholder (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934502504811562206, guid: 44e89e88c72cc6b499593fca40768bfe, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8439182259731440907, guid: 44e89e88c72cc6b499593fca40768bfe, type: 3}
       propertyPath: m_Materials.Array.size
@@ -6012,7 +6024,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -10918,7 +10930,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!1 &919132148441100980
 GameObject:
@@ -10937,7 +10949,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &1711813854512976737
 MeshRenderer:
@@ -11087,7 +11099,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!23 &5767090251822681137
 MeshRenderer:
