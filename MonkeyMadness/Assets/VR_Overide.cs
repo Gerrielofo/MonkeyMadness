@@ -9,7 +9,6 @@ public class VR_Overide : MonoBehaviour {
     public Canvas canvas;
     public float mouseSensitivity;
     public float moveSpeed;
-    public string sceneToLoad;
     public static bool vr_Overide = true;
 
     public static bool isStunned;
@@ -27,7 +26,7 @@ public class VR_Overide : MonoBehaviour {
         }
     }
 
-    public void ForceLoadScene() {
+    public void ForceLoadScene(string sceneToLoad) {
         SwitchScenesTest.sceneToLoad = sceneToLoad;
         StartCoroutine(SwitchScenesTest.SceneSwitch());
     }
