@@ -4143,7 +4143,7 @@ MonoBehaviour:
   hit: {fileID: 0}
   players: []
   bombTime: 0
-  explodeTime: 30
+  explodeTime: 45
   timerstart: 0
   spawned: 0
   cage: {fileID: 2114989219}
