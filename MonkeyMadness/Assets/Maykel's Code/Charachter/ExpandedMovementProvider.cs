@@ -206,7 +206,7 @@ public class ExpandedMovementProvider : MonoBehaviour
     }
     private void Jump()
     {
-        if (jumpInput && canJump && !waterTouch)
+        if (jumpInput && canJump && !waterTouch && !isStunned)
         {
             this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
