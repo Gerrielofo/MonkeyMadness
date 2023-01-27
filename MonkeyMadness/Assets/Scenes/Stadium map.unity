@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 254541642}
   - component: {fileID: 254541644}
   - component: {fileID: 254541643}
+  - component: {fileID: 254541645}
   m_Layer: 0
   m_Name: Hekje (1)
   m_TagString: Untagged
@@ -368,6 +369,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254541641}
+  m_Mesh: {fileID: -3773493579838455829, guid: 77b38aed02c6eab4fa4dc882445b8892, type: 3}
+--- !u!64 &254541645
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254541641}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -3773493579838455829, guid: 77b38aed02c6eab4fa4dc882445b8892, type: 3}
 --- !u!1001 &298741773
 PrefabInstance:
@@ -10749,6 +10764,7 @@ GameObject:
   - component: {fileID: 543450652174018574}
   - component: {fileID: 3469287838238271403}
   - component: {fileID: 1711813854512976737}
+  - component: {fileID: 3469287838238271404}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Untagged
@@ -10850,6 +10866,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148441100980}
+  m_Mesh: {fileID: -2104641141504007870, guid: 783c9e514b4523246955c4a6bf580e5e, type: 3}
+--- !u!64 &3469287838238271404
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148441100980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2104641141504007870, guid: 783c9e514b4523246955c4a6bf580e5e, type: 3}
 --- !u!33 &3469287838627616060
 MeshFilter:
