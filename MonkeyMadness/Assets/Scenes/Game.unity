@@ -1896,10 +1896,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin
       objectReference: {fileID: 0}
-    - target: {fileID: 5142676366801722477, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5142676366801722479, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1948,14 +1944,6 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1185570683}
-    - target: {fileID: 5142676367807374199, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
-      propertyPath: m_Radius
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 5142676368439100068, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
-      propertyPath: m_Radius
-      value: 0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 5142676368439100069, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
       propertyPath: m_InteractionManager
       value: 

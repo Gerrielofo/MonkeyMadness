@@ -2434,7 +2434,8 @@ MonoBehaviour:
   spawned: 0
   cage: {fileID: 1010173820}
   banana: {fileID: 0}
-  points: 0
+  pointsOnExplode: 10
+  pointsExtraPerPosition: 0
   bananaholder: {fileID: 0}
 --- !u!1 &745825907
 GameObject:
@@ -2548,7 +2549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5142676366801722477, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5142676366801722477, guid: 01c3f54fe69c12b449fb6dd7e8fa3fe4, type: 3}
       propertyPath: m_TagString
@@ -4468,12 +4469,12 @@ GameObject:
   - component: {fileID: 1687833262}
   - component: {fileID: 1687833261}
   m_Layer: 0
-  m_Name: XR Origin
+  m_Name: VR_Overide
   m_TagString: Vr_Overide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1687833261
 Rigidbody:
   m_ObjectHideFlags: 0
