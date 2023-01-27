@@ -26,7 +26,7 @@ public class NetworkPlayer : MonoBehaviour {
     void Start() {
         photonView = GetComponent<PhotonView>();
         Debug.Log(GameObject.FindGameObjectWithTag("Vr_Overide"));
-        if (GameObject.FindGameObjectWithTag("Vr_Overide")) {
+        if (GameObject.FindGameObjectWithTag("Vr_Overide") != null) {
             XROrigin[] rigs = FindObjectsOfType<XROrigin>();
             foreach(XROrigin xrrig in rigs) {
                 if(xrrig.gameObject.tag != "Player") {

@@ -1166,7 +1166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 228932104418420163, guid: 1fbaa8b1b1dbd15459ab1eca81e2c586, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 228932104418420163, guid: 1fbaa8b1b1dbd15459ab1eca81e2c586, type: 3}
       propertyPath: m_TagString
@@ -3888,7 +3888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7488574135830181290, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7488574136119355173, guid: 0926eb9091bf2e143a192e0f72f1e251, type: 3}
       propertyPath: m_RaycastMask.m_Bits
