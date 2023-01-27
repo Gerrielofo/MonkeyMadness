@@ -8,6 +8,7 @@ using Photon.Realtime;
 using Unity.VisualScripting;
 using Photon.Pun.UtilityScripts;
 using Unity.XR.CoreUtils;
+using TMPro;
 
 public class BananaTagScript : MonoBehaviour 
 {
@@ -25,6 +26,7 @@ public class BananaTagScript : MonoBehaviour
     private bool transferOnExplode;
     public Transform cage;
     public GameObject banana;
+    public TMP_Text timer;
     //public PointSystem pointsustem;
     public int pointsOnExplode = 10;
     public int pointsExtraPerPosition;
@@ -37,6 +39,7 @@ public class BananaTagScript : MonoBehaviour
         yield return new WaitForSeconds(3);
         Debug.Log("array length is" + players.Length);
         hit = players[UnityEngine.Random.Range(0, players.Length)].GetComponent<Collider>();
+        bombTime = explodeTime;
         SyncBanana();
         yield return null;
     }
@@ -60,12 +63,18 @@ public class BananaTagScript : MonoBehaviour
         }
         if (timerstart)
         {
-            bombTime += Time.deltaTime;
+            bombTime -= Time.deltaTime;
         }
 
-        if (bombTime >= explodeTime)
+        if (bombTime <= 0)
         {
             Explode();
+        }
+        if (hit.transform.parent.GetComponent<PhotonView>().IsMine) {
+            timer.enabled = true;
+            timer.text = Math.Round(bombTime, 0).ToString();
+        } else {
+            timer.enabled = false;
         }
 
     }
@@ -136,7 +145,7 @@ public class BananaTagScript : MonoBehaviour
         PointsEnWin();
         hit = players[UnityEngine.Random.Range(0, PhotonNetwork.PlayerList.Length)].GetComponent<Collider>();
         SyncBanana();
-        bombTime = 0;
+        bombTime = explodeTime;
     }
     public void PointsEnWin() {
         if(players.Length <= 1) {
