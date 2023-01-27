@@ -28,6 +28,10 @@ public class ReadyRoomSystem : MonoBehaviour
     [PunRPC]
     public void SceneSwitch()
     {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            SwitchScenesTest.switchs = true;
+        }
         Debug.Log("PLayers in ready room is now: " + playersIN);
         Debug.Log(PhotonNetwork.PlayerList.Length);
         Debug.Log("Can Switch = true");

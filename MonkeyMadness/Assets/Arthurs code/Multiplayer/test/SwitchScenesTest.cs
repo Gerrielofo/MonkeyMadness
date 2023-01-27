@@ -20,7 +20,7 @@ public class SwitchScenesTest : MonoBehaviour
     [PunRPC]
     public static IEnumerator SceneSwitch() {
         test = "kaas";
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         if (switchs)
         {
             Debug.Log(sceneToLoad);

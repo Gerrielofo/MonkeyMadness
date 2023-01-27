@@ -4299,7 +4299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1303878647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6246,7 +6246,6 @@ MonoBehaviour:
   canvas: {fileID: 0}
   mouseSensitivity: 2
   moveSpeed: 2
-  sceneToLoad: BananaTag
 --- !u!143 &2092797224
 CharacterController:
   m_ObjectHideFlags: 0

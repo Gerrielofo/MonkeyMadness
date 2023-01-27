@@ -81,12 +81,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Melken.unity
     guid: 516371e98a203d04eb30295b9d088fee
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Spleef map.unity
     guid: 01fc2b1705f1ae046bd503cd7b0a5cbe
   - enabled: 0
     path: Assets/Scenes/Melih.unity
     guid: 2bc67b7aa83483d4ca4ad84129787d16
+  - enabled: 1
+    path: Assets/Scenes/Stadium map.unity
+    guid: d3448eed140fe7345bc97dfbde8f9967
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1e643b60bf32a5049901e04a977ca4c0, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8568763877eabdb4fb55e992ef9eecc7, type: 2}
