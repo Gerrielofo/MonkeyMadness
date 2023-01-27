@@ -235,10 +235,13 @@ public class ExpandedMovementProvider : MonoBehaviour
     }
     public void Stun()
     {
+        
         stunDelay = 2f;
         isStunned = true;
+        canJump = false;
         DisableMovement();
         StartCoroutine(Stunned());
+
     }
     private IEnumerator Stunned()
     {
@@ -246,5 +249,6 @@ public class ExpandedMovementProvider : MonoBehaviour
 
         EnableMovement();
         isStunned = false;
+        canJump = true;
     }
 }
