@@ -25,11 +25,9 @@ public class NetworkPlayer : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         photonView = GetComponent<PhotonView>();
-        Debug.Log(GameObject.FindGameObjectWithTag("Vr_Overide"));
-        if (GameObject.FindGameObjectWithTag("Vr_Overide")) {
             XROrigin[] rigs = FindObjectsOfType<XROrigin>();
             foreach(XROrigin xrrig in rigs) {
-                if(xrrig.gameObject.tag != "Player") {
+                if(xrrig.gameObject.activeInHierarchy == true) {
                     rig = xrrig;
                 }
             }
@@ -37,18 +35,6 @@ public class NetworkPlayer : MonoBehaviour {
             leftHandRig = rig.transform.Find("Camera Offset/LeftHand Controller");
             rightHandRig = rig.transform.Find("Camera Offset/RightHand Controller");
             centerRig = rig.transform.Find("Camera Offset/Center");
-        } else {
-            XROrigin[] rigs = FindObjectsOfType<XROrigin>();
-            foreach (XROrigin xrrig in rigs) {
-                if (xrrig.gameObject.tag == "Player") {
-                    rig = xrrig;
-                }
-            }
-            headRig = rig.transform.Find("Camera Offset/Main Camera");
-            leftHandRig = rig.transform.Find("Camera Offset/LeftHand Controller");
-            rightHandRig = rig.transform.Find("Camera Offset/RightHand Controller");
-            centerRig = rig.transform.Find("Camera Offset/Center");
-        }
 
 
         //leftHandAnimator = rig.transform.Find("Camera Offset/LeftHand Controller/Custom Left Hand Model").GetComponent<Animator>();
